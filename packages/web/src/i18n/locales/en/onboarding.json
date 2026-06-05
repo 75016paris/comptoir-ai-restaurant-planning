@@ -1,0 +1,244 @@
+{
+  "loading": "Loading…",
+  "topBar": {
+    "header": "Initial setup — {{restaurantName}}"
+  },
+  "steps": {
+    "profil": "Restaurant",
+    "sousRoles": "Sub-roles",
+    "equipe": "Team",
+    "services": "Services",
+    "style": "Style",
+    "whatsapp": "WhatsApp",
+    "planning": "Schedule"
+  },
+  "progress": {
+    "stepCount": "Step {{current}} / {{total}}"
+  },
+  "actions": {
+    "back": "Back",
+    "continue": "Continue",
+    "saving": "..."
+  },
+  "errors": {
+    "generic": "Error"
+  },
+  "days": {
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun"
+  },
+  "step1Profile": {
+    "title": "Your restaurant",
+    "subtitle": "A few details to get started.",
+    "nameLabel": "Restaurant name",
+    "namePlaceholder": "Le Comptoir",
+    "streetLabel": "Street",
+    "streetPlaceholder": "12 rue de la Paix",
+    "postalLabel": "Postal code",
+    "postalPlaceholder": "75002",
+    "cityLabel": "City",
+    "cityPlaceholder": "Paris",
+    "postalDetected": "Postal code {{code}} — school zone and public holidays detected automatically.",
+    "postalHint": "Enter a 5-digit postal code to automatically detect the school holidays zone.",
+    "siretLabel": "SIRET (optional)",
+    "siretPlaceholder": "14 digits",
+    "siretHint": "Required for DPAE filings and contracts. You can add it later from Preferences > Profile.",
+    "interfaceLocaleLabel": "Interface language",
+    "botLocaleLabel": "WhatsApp bot language",
+    "botLocaleHint": "Bot currently French-only — other languages coming soon.",
+    "errors": {
+      "missingName": "Please enter the restaurant name",
+      "missingStreet": "Please enter the street",
+      "invalidPostal": "Invalid postal code (5 digits expected)",
+      "missingCity": "Please enter the city",
+      "invalidSiret": "Invalid SIRET (14 digits required)"
+    }
+  },
+  "step2Subroles": {
+    "title": "Team sub-roles",
+    "subtitle": "Select the positions present in your restaurant. The default HCR level is suggested — you can adjust it per employee.",
+    "kitchenLabel": "Kitchen",
+    "floorLabel": "Floor",
+    "errors": {
+      "noneSelected": "Select at least one sub-role"
+    }
+  },
+  "step3Services": {
+    "title": "Your services",
+    "subtitle": "What service rhythm? This choice creates the initial template — you can refine it later.",
+    "openDaysLabel": "Open days",
+    "kitchenCountLabel": "Kitchen staff per service",
+    "floorCountLabel": "Floor staff per service",
+    "options": {
+      "midi": {
+        "label": "Lunch only",
+        "desc": "One service from 11:00 to 15:00."
+      },
+      "soir": {
+        "label": "Dinner only",
+        "desc": "One service from 18:00 to 23:00."
+      },
+      "midi-soir": {
+        "label": "Lunch + Dinner",
+        "desc": "Two distinct services on the same day."
+      },
+      "coupure": {
+        "label": "Split shift",
+        "desc": "A day in two parts separated by a long break (e.g. 11h–15h then 18h–23h)."
+      },
+      "custom": {
+        "label": "Custom",
+        "desc": "Design your services in the visual editor — you'll come back here afterwards."
+      }
+    },
+    "errors": {
+      "noOpenDays": "Select at least one open day",
+      "noStaff": "Indicate at least one headcount (kitchen or floor)"
+    }
+  },
+  "step4Employees": {
+    "title": "Your team",
+    "subtitle": "Add your first employees. Only name, phone and position are required to start — contract, IBAN and contact details can be filled in later.",
+    "kitchenLabel": "Kitchen",
+    "floorLabel": "Floor",
+    "kitchenLower": "kitchen",
+    "floorLower": "floor",
+    "count_one": "{{count}} employee",
+    "count_other": "{{count}} employees",
+    "emptySection": "No employees in {{section}}.",
+    "addInSection": "Add to {{section}}",
+    "missingSideWarn": "No employees in {{section}} — you can add them later from the team page.",
+    "removeTitle": "Remove",
+    "loading": "Loading…"
+  },
+  "stepStyle": {
+    "title": "Your team logic",
+    "subtitle": "How auto-staffing balances stability, payroll and flexibility. Editable any time from Preferences › Rule.",
+    "styleDescriptions": {
+      "equilibre": "Distributes effort evenly. Fills contractual hours before opening overtime.",
+      "equipe-stable": "Favours the same employees on the same services week after week.",
+      "economique": "Avoids overtime — the most direct lever on payroll.",
+      "resilience": "Distributes hours evenly — no one is overloaded and everyone can absorb a surprise."
+    },
+    "advancedRule": "Advanced rule",
+    "loading": "Loading…",
+    "overtime": {
+      "title": "Overtime",
+      "intro": "Legal overtime cap and distribution rule between employees. HCR convention: threshold at 39h/week.",
+      "modeLabel": "Mode",
+      "modes": {
+        "strict": { "label": "Strict", "desc": "No OT — capped at 39h/week" },
+        "controlled": { "label": "Controlled", "desc": "Up to a weekly cap that you set" },
+        "flexible": { "label": "Flexible", "desc": "Up to the legal max (48h)" }
+      },
+      "capLabel": "Weekly cap",
+      "tick39": "39h (no OT)",
+      "tick43": "43h (110%)",
+      "tick47": "47h (120%)",
+      "tick48": "48h (150%)",
+      "capExplanation39": "No overtime — same as strict mode.",
+      "capExplanation110": "Up to {{count}}h of OT at 110% per employee per week.",
+      "capExplanation120": "Up to 4h at 110% + {{count}}h at 120% per employee per week.",
+      "capExplanationMax": "Up to 4h at 110% + 4h at 120% + 1h at 150% per employee per week. Legal maximum.",
+      "distributionLabel": "Distribution",
+      "distributionIntro": "When auto-staffing needs OT, who receives it first.",
+      "distributions": {
+        "willing-first": { "label": "Volunteers first", "desc": "Volunteer employees receive OT first, then by priority" },
+        "by-priority": { "label": "By priority", "desc": "P1 receives OT first, regardless of preferences" },
+        "even": { "label": "Even distribution", "desc": "Distribute OT evenly among eligible employees" }
+      }
+    },
+    "tapInOut": {
+      "label": "Time tracking",
+      "desc": "Clock in / out by employees.",
+      "adminConfirmLabel": "Notify and confirm by manager",
+      "adminConfirmDesc": "On each clock event, WhatsApp asks the manager to confirm. The clock event is recorded but marked pending.",
+      "modeLabel": "Mode",
+      "syncLabel": "Sync hours",
+      "syncDesc": "Clocked hours replace planned hours in the monthly summary — payroll reflects hours actually worked.",
+      "latenessLabel": "Lateness report",
+      "latenessDesc": "The monthly summary stays based on the schedule. Lateness and early departures are just listed on the employee profile (and in the monthly email).",
+      "earlyLabel": "Count early arrivals",
+      "earlyDesc": "If an employee clocks in before the scheduled time, early minutes add up to paid hours. Otherwise, only the clock-out counts — hours start at the scheduled time."
+    },
+    "workerPreferences": {
+      "label": "Employee preferences",
+      "desc": "Employees can indicate their availability and preferences."
+    },
+    "compliance": {
+      "title": "Compliance — Labour law",
+      "intro": "HCR convention. Unchecking a rule disables it for the planner — leave everything checked if unsure."
+    }
+  },
+  "stepWhatsApp": {
+    "title": "WhatsApp assistant",
+    "subtitle": "Send Bernardo a WhatsApp message to check that your number is recognized.",
+    "connectTitle": "Send Bernardo a message",
+    "connectBodyReady": "Open WhatsApp with the button below, send the pre-filled message, then check that Bernardo replies.",
+    "connectBodyMissing": "Bernardo's WhatsApp number is not configured in this environment. Add the WhatsApp link to send the test message.",
+    "openWhatsapp": "Open WhatsApp",
+    "phoneFallbackTitle": "No WhatsApp on this computer?",
+    "phoneFallbackBody": "From your phone, open WhatsApp and send this message to Bernardo's number.",
+    "bernardoNumberLabel": "Bernardo number",
+    "testMessageLabel": "Message to send",
+    "copy": "Copy",
+    "copied": "Copied",
+    "pairingTitle": "Pairing by phone number",
+    "pairingBody": "Bernardo recognizes each person from the number saved in Comptoir. If an employee uses another number, update their profile before inviting them.",
+    "adminPhoneLabel": "Your WhatsApp number",
+    "adminPhoneHelp": "Use the same number you will use to message Bernardo.",
+    "adminPhoneSave": "Save",
+    "adminPhoneSaving": "Saving...",
+    "adminPhoneSaved": "Number saved.",
+    "adminPhoneRequired": "Enter your WhatsApp number.",
+    "phoneRows": {
+      "team_one": "{{count}} employee with a phone number",
+      "team_other": "{{count}} employees with a phone number"
+    },
+    "remindersTitle": "WhatsApp reminders for employees",
+    "remindersBody": "Choose how often planning reminders are sent by WhatsApp. You can change this later in Preferences → Rules.",
+    "reminderOptions": {
+      "off": "OFF",
+      "offDesc": "No automatic reminder.",
+      "daily": "DAILY",
+      "dailyDesc": "A reminder the evening before for next-day services.",
+      "weekly": "WEEKLY",
+      "weeklyDesc": "A summary of the week on Sunday evening."
+    },
+    "whatWorksTitle": "What is Bernardo for?",
+    "whatWorks": {
+      "schedule": "Answer questions about the published schedule.",
+      "replacements": "Receive unavailability reports and help find a replacement.",
+      "timeclock": "Handle clock-in/out if you enable it in the advanced rule."
+    },
+    "continueReady": "I've tested it, continue",
+    "continueMissing": "Configure later"
+  },
+  "step5Finish": {
+    "title": "You're ready",
+    "subtitle": "Summary of your setup. You can change everything later from Preferences and Team.",
+    "summary": {
+      "address": "Address: {{address}}",
+      "zones": "School zone {{schoolZone}} · holidays {{holidayZone}}",
+      "subRoles_one": "{{count}} sub-role in catalog",
+      "subRoles_other": "{{count}} sub-roles in catalog",
+      "profiles_one": "{{count}} service profile configured",
+      "profiles_other": "{{count}} service profiles configured",
+      "employees_one": "{{count}} employee added",
+      "employees_other": "{{count}} employees added"
+    },
+    "afterTitle": "What's next?",
+    "after": {
+      "schedule": "Build your first week on <strong>/schedule</strong>, or let auto-staffing propose a plan.",
+      "preferences": "Tweak service and sub-role details from <strong>/preferences</strong>.",
+      "staff": "Complete employee profiles (address, IBAN, contracts) on <strong>/staff</strong>.",
+      "whatsapp": "WhatsApp remains optional: if you did not test it now, add the link later."
+    },
+    "finishButton": "Finish and go to schedule"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "drawer": {
+    "navigation": "Navegação"
+  },
+  "links": {
+    "holidays": "Férias",
+    "hours": "Horas",
+    "planning": "Planeamento",
+    "preferences": "Preferências",
+    "profile": "Perfil",
+    "team": "Equipa"
+  },
+  "openMenu": "Abrir menu",
+  "restaurantSwitcher": {
+    "addressLabel": "Morada",
+    "cancel": "Cancelar",
+    "create": "Novo restaurante",
+    "createDescription": "Crie um restaurante vazio e conclua o onboarding.",
+    "createFailed": "Não foi possível criar o restaurante",
+    "created": "Restaurante criado",
+    "createSubmit": "Criar",
+    "createTitle": "Novo restaurante",
+    "label": "Mudar de restaurante",
+    "nameLabel": "Nome do restaurante",
+    "switching": "A mudar de restaurante..."
+  },
+  "logout": "Terminar sessão"
+}

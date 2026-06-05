@@ -1,0 +1,74 @@
+{
+  "page": {
+    "subtitle": "Demo",
+    "intro": "Elige un restaurante y un perfil para explorar la aplicación completa. Datos precargados, sin contraseña.",
+    "loginError": "Error de conexión",
+    "connecting": "Conectando...",
+    "signIn": "Iniciar sesión",
+    "backToLogin": "← Volver al inicio de sesión"
+  },
+  "roles": {
+    "manager": "GERENTE",
+    "floor": "SALA"
+  },
+  "restaurants": {
+    "chezReno": {
+      "name": "Chez Reno",
+      "subtitle": "Sencillo",
+      "description": "14 empleados · 2 turnos (COMIDA/CENA) · 1 objetivo de personal",
+      "manager": "Vista completa: planificación, equipo, horas, nómina, cumplimiento, preferencias.",
+      "worker": "Vista empleado: mi planificación, mis horas, sustituciones, vacaciones."
+    },
+    "grandBrasserie": {
+      "name": "The Grand Brasserie",
+      "subtitle": "Complejo",
+      "description": "42 empleados · 3 zonas (Partido/Comida/Cena) · refuerzos de vacaciones · Modo médico",
+      "manager": "Vista completa: planificación compleja, multiperfil, preferencias de empleados.",
+      "worker": "Vista empleado con preferencias activadas."
+    },
+    "monRestaurant": {
+      "name": "Mi restaurante",
+      "subtitle": "Vacío",
+      "description": "Sin empleados, sin turnos — para recorrer el alta inicial desde cero",
+      "manager": "Iniciar la configuración inicial: perfil, sub-roles, equipo, turnos, planificación."
+    }
+  },
+  "demoNames": {
+    "newManager": "Gerente Demo"
+  },
+  "redirect": {
+    "loadingDemo": "Cargando la demo...",
+    "loginError": "Error de conexión"
+  },
+  "whatsapp": {
+    "loading": "Cargando...",
+    "backLink": "Demo",
+    "title": "Demo WhatsApp",
+    "intro": "Prueba el bot de WhatsApp con tres perfiles distintos. El gerente gestiona la planificación, los empleados consultan sus turnos y pueden señalar una indisponibilidad (el gerente busca un reemplazo).",
+    "labels": {
+      "owner": "Propietario",
+      "managerFull": "Gerente · Acceso completo",
+      "floor": "Sala"
+    },
+    "phone": {
+      "appName": "Comptoir",
+      "tagline": "Asistente de planificación",
+      "clear": "Borrar",
+      "clearTitle": "Borrar la conversación",
+      "emptyHint": "Envía un mensaje para empezar",
+      "speakNow": "Habla...",
+      "transcribing": "Transcribiendo...",
+      "messagePlaceholder": "Mensaje...",
+      "stopRecording": "Detener grabación",
+      "startRecording": "Grabar un mensaje de voz"
+    },
+    "suggestions": {
+      "adminA": "¿Quién trabaja mañana?",
+      "adminB": "¿Cuántas horas esta semana?",
+      "adminC": "Añade a Omar mañana al mediodía",
+      "workerA": "¿Cuándo trabajo esta semana?",
+      "workerB": "No puedo venir el viernes",
+      "workerC": "Quiero pedir vacaciones"
+    }
+  }
+}

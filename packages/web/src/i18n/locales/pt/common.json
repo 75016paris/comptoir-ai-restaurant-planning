@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "add": "Adicionar",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "ok": "OK",
+    "save": "Guardar",
+    "saving": "A guardar...",
+    "today": "Hoje"
+  },
+  "fields": {
+    "email": "E-mail",
+    "from": "De",
+    "name": "Nome",
+    "phone": "Telefone",
+    "until": "Até"
+  },
+  "status": {
+    "error": "Erro",
+    "loading": "A carregar...",
+    "loadingEllipsis": "A carregar…",
+    "loadingShort": "...",
+    "warning": "Aviso"
+  }
+}

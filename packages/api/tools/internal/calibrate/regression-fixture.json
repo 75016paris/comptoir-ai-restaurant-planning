@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "seed": 20260421,
+    "scenario": "clean",
+    "weightsVersion": "v2-2026-04-21",
+    "createdAt": "2026-04-21T03:23:49.178Z"
+  },
+  "stats": {
+    "workers": 15,
+    "slots": 96,
+    "assignments": 239
+  },
+  "metrics": {
+    "fillRate": 0.928082191780822,
+    "chefCoverage": 0,
+    "otFairness": 1,
+    "contractAdherence": 0.5940766178266179,
+    "consistency": 0.3812154696132597,
+    "subroleAccuracy": 0.59375,
+    "preferenceMatch": 0,
+    "resilienceRaw": 3.7489539748953975,
+    "composite": 0.531934838823483,
+    "passes": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Registro de auditoría",
+  "buttons": {
+    "filters": "Filtros",
+    "refresh": "Actualizar"
+  },
+  "filters": {
+    "from": "Desde",
+    "to": "Hasta",
+    "allTables": "Todas las tablas",
+    "allActions": "Todas las acciones",
+    "allSources": "Todas las fuentes"
+  },
+  "tables": {
+    "services": "Servicios",
+    "holiday_requests": "Vacaciones",
+    "replacement_requests": "Reemplazos",
+    "restaurant_closures": "Cierres",
+    "restaurants": "Ajustes"
+  },
+  "actions": {
+    "insert": "Creado",
+    "update": "Modificado",
+    "delete": "Eliminado"
+  },
+  "sources": {
+    "dashboard": "Panel",
+    "bot:admin": "Bot (gerente)",
+    "bot:worker": "Bot (empleado)",
+    "auto-scheduler": "Auto-planificación",
+    "cron": "Cron"
+  },
+  "table": {
+    "headers": {
+      "date": "Fecha",
+      "table": "Tabla",
+      "action": "Acción",
+      "source": "Fuente",
+      "actor": "Actor",
+      "summary": "Resumen"
+    }
+  },
+  "loading": "Cargando…",
+  "empty": "No se encontraron eventos",
+  "system": "Sistema",
+  "summaryDash": "—",
+  "moreFields": "+{{count}} campos más...",
+  "limitedNote": "Mostrando máximo 100 entradas — ajusta los filtros para ver más"
+}

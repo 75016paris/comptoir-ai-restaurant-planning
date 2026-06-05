@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=375, initial-scale=1">
+<title>Tutoriel mobile · planning stack view</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --muted: #f4f4f5;
+    --muted-soft: #f9f9fb;
+    --border: #e4e4e7;
+    --fg: #18181b;
+    --muted-fg: #71717a;
+    --accent: #3b82f6;
+    --accent-bg: #eff6ff;
+    --amber: #f59e0b;
+    --amber-bg: #fffbeb;
+
+    --kitchen-bg: #fef3c7;
+    --kitchen-border: #fcd34d;
+    --kitchen-text: #92400e;
+    --salle-bg: #dbeafe;
+    --salle-border: #93c5fd;
+    --salle-text: #1e40af;
+
+    --card-h: 42px;
+    --peek-y: 5px;
+    --gap-expanded: 6px;
+    --label-h: 17px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font: inherit; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f4f4f5;
+    color: var(--fg);
+    padding: 24px 16px 48px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Embed mode — strip page chrome so the file can be iframed cleanly */
+  body.embed-mode {
+    background: transparent;
+    padding: 0;
+    min-height: 0;
+    gap: 0;
+  }
+  body.embed-mode h1,
+  body.embed-mode .controls,
+  body.embed-mode .meta { display: none; }
+  body.embed-mode .device { margin-top: 0; }
+  h1 {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted-fg);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .device {
+    width: 320px;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    position: relative;
+    box-shadow: none;
+    overflow: visible;
+    margin-top: auto;
+  }
+  .nav {
+    font-size: 9px;
+    color: var(--muted-fg);
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: ui-monospace, monospace;
+  }
+  .day-header {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--fg);
+    text-align: center;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .zone-row {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    overflow: visible;
+    max-width: 170px;
+    margin: 0 auto;
+  }
+  .zone-row + .zone-row { margin-top: 8px; }
+  .zone-head {
+    padding: 4px 8px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--muted-fg);
+    text-transform: uppercase;
+    background: var(--muted);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .zone-body {
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: var(--card);
+    border-radius: 12px;
+  }
+
+  .role-stack {
+    border-radius: 4px;
+    padding: 2px;
+    transition: box-shadow 0.25s, background 0.25s;
+    position: relative;
+    /* Own stacking context so the inner label's z=100 doesn't escape and cover
+       cards overflowing from a neighbouring (expanded) stack. */
+    z-index: 1;
+  }
+  .role-stack.target-amber {
+    box-shadow: inset 0 0 0 1px var(--amber);
+    background: var(--amber-bg);
+  }
+  /* Expanded cards overflow the container; raise z so the deployed worker cards
+     (Brad, Léa, etc.) sit above the neighbouring collapsed stack and its label. */
+  .role-stack.expanded { z-index: 30; }
+
+  .card-stack {
+    position: relative;
+    overflow: visible;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .label-card,
+  .worker-card,
+  .ghost-card {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: var(--card-h);
+    border-radius: 1.2rem;
+    transition: transform 0.32s ease, height 0.32s ease, font-size 0.32s ease, opacity 0.25s ease, box-shadow 0.2s ease;
+    will-change: transform;
+  }
+  .label-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted-fg);
+    letter-spacing: 0.04em;
+  }
+  .label-card.kitchen,
+  .label-card.salle {
+    background: var(--card);
+    border-color: var(--border);
+    color: var(--muted-fg);
+  }
+  .worker-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-shadow: none;
+  }
+  .worker-card .wname {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--fg);
+  }
+  .worker-card .wsub {
+    font-size: 7px;
+    font-weight: 200;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    color: var(--muted-fg);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .worker-card.selected {
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.35), 0 4px 8px rgba(0,0,0,0.08);
+    z-index: 50;
+  }
+  .worker-card.placed-ready {
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.55), 0 4px 10px rgba(16,185,129,0.25);
+  }
+  .worker-card.hidden { opacity: 0; pointer-events: none; }
+  .ghost-card {
+    background: var(--card);
+    border: 1px dashed var(--border);
+    color: var(--muted-fg);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+  }
+  .ghost-card.hidden { opacity: 0; }
+  .ghost-card.origin {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: transparent;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* Carried card — floats over the placeholder, foreground above everything */
+  .carried-card {
+    position: absolute;
+    width: 90px;
+    height: var(--card-h);
+    border-radius: 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    transform: translate(-50%, -50%) rotate(-1.5deg);
+    pointer-events: none;
+    z-index: 200;
+    transition: top 0.5s ease, left 0.5s ease, opacity 0.25s ease, transform 0.25s ease,
+                border-color 0.12s ease, box-shadow 0.12s ease;
+    opacity: 0;
+  }
+  .carried-card.visible { opacity: 1; }
+  .carried-card.ready {
+    border-color: #10b981;
+    box-shadow: 0 0 0 2px rgba(16,185,129,0.55);
+  }
+  @keyframes carried-ready-blink {
+    0%, 100% { box-shadow: 0 0 0 2px rgba(16,185,129,0.55); }
+    50%      { box-shadow: 0 0 0 4px rgba(16,185,129,0.95), 0 6px 14px rgba(16,185,129,0.4); }
+  }
+  .carried-card.ready.blink {
+    animation: carried-ready-blink 0.25s ease-out 1;
+  }
+  .carried-card .wname { font-size: 11px; font-weight: 500; color: var(--fg); }
+  .carried-card .wsub {
+    font-size: 7px; font-weight: 200;
+    padding: 2px 7px; border-radius: 999px;
+    background: var(--muted); border: 1px solid var(--border);
+    color: var(--muted-fg); letter-spacing: 0.04em; text-transform: uppercase;
+  }
+
+  .finger {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.18);
+    border: 2px solid rgba(0,0,0,0.45);
+    pointer-events: none;
+    /* transform is intentionally not transitioned so the press scale
+       (translate + scale(0.82)) snaps in place — otherwise the finger
+       appears to drift slightly when long-press engages over a stationary card. */
+    transition: top 0.5s ease, left 0.5s ease, opacity 0.25s, background 0.2s, border-color 0.2s;
+    transform: translate(-50%, -50%);
+    z-index: 210;
+  }
+  .finger.press {
+    background: rgba(59,130,246,0.4);
+    border-color: var(--accent);
+    transform: translate(-50%, -50%) scale(0.82);
+  }
+  @keyframes selected-confirm-blink {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(59,130,246,0.35), 0 4px 8px rgba(0,0,0,0.08); }
+    50%      { box-shadow: 0 0 0 4px rgba(59,130,246,0.9),  0 6px 14px rgba(59,130,246,0.3); }
+  }
+  .worker-card.selected.blink {
+    animation: selected-confirm-blink 0.25s ease-out 1;
+  }
+
+  .caption-box {
+    width: 320px;
+    margin: 8px auto 0;
+    padding: 8px 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .caption {
+    font-size: 11px;
+    color: var(--fg);
+    text-align: center;
+    line-height: 1.4;
+    min-height: 30px;
+  }
+  .caption strong { color: var(--accent); font-weight: 600; }
+  .caption em { font-style: normal; color: var(--amber); font-weight: 600; }
+  .caption .sub { display: block; font-size: 10px; font-weight: 300; color: var(--muted-fg); margin-top: 2px; }
+  .controls { display: flex; gap: 8px; }
+  button {
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  button:hover { background: var(--muted); }
+  .meta { font-size: 10px; color: var(--muted-fg); }
+  .meta code { font-family: ui-monospace, monospace; background: var(--muted); padding: 1px 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <script>
+    if (new URLSearchParams(location.search).get('embed') === '1') {
+      document.body.classList.add('embed-mode');
+    }
+  </script>
+  <h1>Tutoriel mobile · planning stack view</h1>
+
+  <div class="device" id="device">
+    <div class="zone-row">
+      <div class="zone-body">
+
+        <!-- Kitchen stack -->
+        <div class="role-stack" id="rs-kitchen">
+          <div class="card-stack" id="stack-kitchen" data-mode="collapsed">
+            <div class="label-card kitchen" id="k-label">CUISINE — 2</div>
+            <div class="worker-card" id="k-card-0">
+              <span class="wname">Brad</span>
+              <span class="wsub">Cuisinier</span>
+            </div>
+            <div class="worker-card" id="k-card-1">
+              <span class="wname">Léa</span>
+              <span class="wsub">Chef</span>
+            </div>
+            <div class="ghost-card hidden" id="k-ghost-origin">point d'origine</div>
+          </div>
+        </div>
+
+        <!-- Salle stack -->
+        <div class="role-stack" id="rs-salle">
+          <div class="card-stack" id="stack-salle" data-mode="collapsed">
+            <div class="label-card salle" id="s-label">SALLE — 1/2</div>
+            <div class="worker-card" id="s-card-0">
+              <span class="wname">Omar</span>
+              <span class="wsub">Serveur</span>
+            </div>
+            <div class="ghost-card" id="s-ghost-0">manquant</div>
+            <div class="worker-card hidden" id="s-placed">
+              <span class="wname">Brad</span>
+              <span class="wsub">Cuisinier</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Floating carried card + finger -->
+    <div class="carried-card" id="carried-card">
+      <span class="wname">Brad</span>
+      <span class="wsub">Cuisinier</span>
+    </div>
+    <div class="finger" id="finger" style="left: 110%; top: 50%; opacity: 0;"></div>
+  </div>
+
+  <!-- Caption — separate container below the device -->
+  <div class="caption-box">
+    <div class="caption" id="caption">Tutoriel — gestes mobiles</div>
+  </div>
+
+  <div class="controls">
+    <button onclick="play()">Rejouer</button>
+    <button onclick="togglePause()" id="pauseBtn">Pause</button>
+  </div>
+  <div class="meta">Édite <code>FRAMES</code> dans &lt;script&gt; pour régler timings/positions.</div>
+
+<script>
+  // ── Layout constants (mirror :root vars and card-stack-layout.ts) ──
+  const CARD_H = 42;
+  const PEEK_Y = 5;
+  const GAP_EXPANDED = 6;
+  const LABEL_H = 17;
+
+  // ── Layout helper ──
+  // Container height stays at collapsedH; expanded cards overflow via absolute positioning.
+  // direction "down" — label at top, cards extend downward when expanded.
+  // direction "up"   — label at bottom, cards extend upward (mirrors stacks placed near
+  //                   the bottom of the schedule grid).
+  function layoutStack(stackEl, mode, direction = 'down') {
+    const labelCard = stackEl.querySelector('.label-card');
+    const allCards = [...stackEl.querySelectorAll('.worker-card, .ghost-card')];
+    const visibleCards = allCards.filter(c => !c.classList.contains('hidden'));
+    allCards.forEach(c => {
+      if (c.classList.contains('hidden')) {
+        c.style.transform = 'translateY(0)';
+        c.style.zIndex = 0;
+      }
+    });
+    const n = visibleCards.length;
+    const collapsedH = CARD_H + n * PEEK_Y;
+    stackEl.style.height = collapsedH + 'px';
+
+    if (mode === 'collapsed') {
+      labelCard.style.height = CARD_H + 'px';
+      labelCard.style.fontSize = '10px';
+      labelCard.style.zIndex = 100;
+      if (direction === 'down') {
+        labelCard.style.transform = 'translateY(0)';
+        visibleCards.forEach((c, i) => {
+          c.style.transform = `translateY(${PEEK_Y * (i + 1)}px)`;
+          c.style.zIndex = 50 - i;
+        });
+      } else {
+        labelCard.style.transform = `translateY(${n * PEEK_Y}px)`;
+        visibleCards.forEach((c, i) => {
+          c.style.transform = `translateY(${(n - 1 - i) * PEEK_Y}px)`;
+          c.style.zIndex = 50 - i;
+        });
+      }
+    } else {
+      labelCard.style.height = LABEL_H + 'px';
+      labelCard.style.fontSize = '9px';
+      labelCard.style.zIndex = 100;
+      if (direction === 'down') {
+        labelCard.style.transform = 'translateY(0)';
+        visibleCards.forEach((c, i) => {
+          const y = LABEL_H + GAP_EXPANDED + i * (CARD_H + GAP_EXPANDED);
+          c.style.transform = `translateY(${y}px)`;
+          c.style.zIndex = 50;
+        });
+      } else {
+        labelCard.style.transform = `translateY(${collapsedH - LABEL_H}px)`;
+        visibleCards.forEach((c, i) => {
+          const y = collapsedH - LABEL_H - (i + 1) * (CARD_H + GAP_EXPANDED);
+          c.style.transform = `translateY(${y}px)`;
+          c.style.zIndex = 50;
+        });
+      }
+    }
+    stackEl.dataset.mode = mode;
+    stackEl.parentElement?.classList.toggle('expanded', mode === 'expanded');
+  }
+
+  // ── Animation state ──
+  const state = {
+    kitchenMode: 'collapsed',
+    salleMode:   'collapsed',
+    bradSelected: false,   // ring on Brad while still in cuisine stack
+    bradCarried:  false,   // Brad lifted out of cuisine, floats with finger
+    bradPlaced:   false,   // Brad sits in salle
+    placedReady:  false,   // green ring on the just-placed worker card
+    salleTarget:  null,    // 'amber' | null
+    carriedReady: false,   // green ring on carried card — "you can release"
+    fingerX: '110%',
+    fingerY: '50%',
+  };
+
+  function render() {
+    // Kitchen card states
+    const k0 = document.getElementById('k-card-0');
+    const kOriginGhost = document.getElementById('k-ghost-origin');
+    if (state.bradPlaced) {
+      // Brad permanently moved → cuisine becomes 1/2 with manquant ghost in his slot
+      k0.classList.add('hidden');
+      kOriginGhost.classList.remove('hidden');
+      kOriginGhost.classList.remove('origin');
+      kOriginGhost.textContent = 'manquant';
+    } else if (state.bradCarried) {
+      // Brad lifted off → ghost shown in his slot ("point d'origine")
+      k0.classList.add('hidden');
+      kOriginGhost.classList.remove('hidden');
+      kOriginGhost.classList.add('origin');
+      kOriginGhost.textContent = 'origine';
+    } else {
+      k0.classList.remove('hidden');
+      kOriginGhost.classList.add('hidden');
+    }
+    k0.classList.toggle('selected', state.bradSelected && !state.bradCarried);
+
+    // Kitchen label
+    document.getElementById('k-label').textContent =
+      (state.bradCarried || state.bradPlaced) ? 'CUISINE — 1/2' : 'CUISINE — 2';
+
+    // Salle cards
+    document.getElementById('s-placed').classList.toggle('hidden', !state.bradPlaced);
+    document.getElementById('s-ghost-0').classList.toggle('hidden', state.bradPlaced);
+    document.getElementById('s-label').textContent =
+      state.bradPlaced ? 'SALLE — 2/2' : 'SALLE — 1/2';
+
+    // Apply stack layouts — cuisine expands downward, salle (bottom row) expands upward
+    layoutStack(document.getElementById('stack-kitchen'), state.kitchenMode, 'down');
+    layoutStack(document.getElementById('stack-salle'),   state.salleMode,   'up');
+
+    // Salle target ring
+    document.getElementById('rs-salle').classList.toggle('target-amber', state.salleTarget === 'amber');
+
+    // Finger
+    const finger = document.getElementById('finger');
+    finger.style.left = state.fingerX;
+    finger.style.top = state.fingerY;
+
+    // Carried card — follows finger by default, but a snap step can override its
+    // position independently (state.carriedX/Y) so the ghost card teleports onto
+    // the manquant slot while the finger stays still.
+    const carried = document.getElementById('carried-card');
+    carried.classList.toggle('visible', state.bradCarried);
+    carried.classList.toggle('ready', state.carriedReady);
+    carried.style.left = state.carriedX ?? state.fingerX;
+    carried.style.top  = state.carriedY ?? state.fingerY;
+
+    // Green confirmation ring on the freshly placed worker card
+    document.getElementById('s-placed').classList.toggle('placed-ready', state.placedReady);
+  }
+
+  // ── Frames ──
+  // Flow: tap cuisine label → long-press worker → stack collapses, Brad carried →
+  //       tap salle label → long-press manquant slot → confirmed.
+  // Positions are CSS values relative to .device (320px wide, padding 12px → usable ≈ 296px).
+  const FRAMES = [
+    {
+      caption: "Pour modifier le planning …",
+      x: '110%', y: '50%', press: false, opacity: 0, hold: 1300,
+      apply: (s) => {
+        s.kitchenMode='collapsed'; s.salleMode='collapsed';
+        s.bradSelected=false; s.bradCarried=false; s.bradPlaced=false;
+        s.placedReady=false; s.salleTarget=null; s.carriedReady=false;
+        s.carriedX=null; s.carriedY=null;
+      }
+    },
+    // ── Geste 1 : TAP source label
+    {
+      caption: "<strong>①</strong> Touchez une carte pour la déplier.",
+      x: '170px', y: '32px', press: false, opacity: 1, hold: 650,
+      apply: (s) => {}
+    },
+    {
+      caption: "<strong>①</strong> Touchez une carte pour la déplier.",
+      x: '170px', y: '32px', press: true, opacity: 1, hold: 280,
+      apply: (s) => { s.kitchenMode = 'expanded'; }
+    },
+    // ── Geste 2 : LONG-PRESS worker (grab)
+    {
+      caption: "<strong>②</strong> Appuyez longuement pour sélectionner une carte.",
+      x: '170px', y: '62px', press: false, opacity: 1, hold: 600,
+      apply: (s) => {}
+    },
+    {
+      caption: "<strong>②</strong> Appuyez longuement pour sélectionner une carte.",
+      x: '170px', y: '62px', press: true, opacity: 1, hold: 700,
+      apply: (s) => { s.bradSelected = true; }
+    },
+    {
+      caption: "<strong>②</strong> Appuyez longuement pour sélectionner une carte.",
+      x: '170px', y: '62px', press: true, opacity: 1, hold: 500, blinkCard: true,
+      apply: (s) => {}
+    },
+    // ── Brad lifted, source stack collapses with origin ghost (caption advances to ③)
+    {
+      caption: "<strong>③</strong> Glissez la carte vers la zone souhaitée.",
+      x: '170px', y: '62px', press: true, opacity: 1, hold: 700,
+      apply: (s) => { s.bradCarried = true; s.bradSelected = false; s.kitchenMode = 'collapsed'; }
+    },
+    // ── Geste 3 : drag to target zone (Brad floats along)
+    {
+      caption: "<strong>③</strong> Glissez la carte vers la zone souhaitée.",
+      x: '170px', y: '110px', press: true, opacity: 1, hold: 450,
+      apply: (s) => {}
+    },
+    // Long-press on the target — the zone unfolds after ~1 s (caption transitions to (4))
+    {
+      caption: "<strong>③</strong> Glissez la carte vers la zone souhaitée.",
+      x: '170px', y: '110px', press: true, opacity: 1, hold: 450,
+      apply: (s) => { s.salleTarget = 'amber'; }
+    },
+    {
+      caption: "<strong>④</strong> Après 1 s, la zone d'arrivée se déplie.",
+      x: '170px', y: '110px', press: true, opacity: 1, hold: 1000,
+      apply: (s) => { s.salleMode = 'expanded'; }
+    },
+    // Brief beat — ring blinks green on the carried card: "you can release"
+    {
+      caption: "<strong>⑤</strong> Relâchez pour confirmer,<span class=\"sub\">ou glissez vers une autre zone.</span>",
+      x: '170px', y: '110px', press: true, opacity: 1, hold: 320, blinkCard: true,
+      apply: (s) => { s.carriedReady = true; }
+    },
+    // Release — carried card vanishes and Brad's final worker card appears at the
+    // manquant slot in one motion (no intermediate snap, no slide-in animation).
+    {
+      caption: "<strong>⑤</strong> Relâchez pour confirmer,<span class=\"sub\">ou glissez vers une autre zone.</span>",
+      x: '170px', y: '110px', press: true, opacity: 1, hold: 350, instantPlace: true,
+      apply: (s) => {
+        s.bradPlaced = true; s.bradCarried = false; s.carriedReady = false;
+        s.salleTarget = null; s.placedReady = true;
+      }
+    },
+    // Hold the green ring on the placed card for ~1s, finger releases
+    {
+      caption: "<strong>⑤</strong> Relâchez pour confirmer,<span class=\"sub\">ou glissez vers une autre zone.</span>",
+      x: '170px', y: '110px', press: false, opacity: 1, hold: 1000,
+      apply: (s) => {}
+    },
+    // Collapse salle back into a stack and fade the finger out
+    {
+      caption: "<strong>⑤</strong> Relâchez pour confirmer,<span class=\"sub\">ou glissez vers une autre zone.</span>",
+      x: '170px', y: '110px', press: false, opacity: 0, hold: 1700,
+      apply: (s) => { s.salleMode = 'collapsed'; s.placedReady = false; }
+    },
+  ];
+
+  function applyFrame(f) {
+    f.apply(state);
+    const carriedEl = document.getElementById('carried-card');
+    state.fingerX = f.x;
+    state.fingerY = f.y;
+    if (f.instantPlace) {
+      // Carried card disappears and the final s-placed worker card appears at
+      // its slot in a single motionless step — disable the relevant transitions
+      // for one render so neither element animates into position.
+      const placed = document.getElementById('s-placed');
+      const prevCarriedT = carriedEl.style.transition;
+      const prevPlacedT  = placed.style.transition;
+      carriedEl.style.transition = 'none';
+      placed.style.transition = 'none';
+      render();
+      void carriedEl.offsetWidth;
+      void placed.offsetWidth;
+      carriedEl.style.transition = prevCarriedT;
+      placed.style.transition = prevPlacedT;
+    } else {
+      // Normal frames: carried card tracks the finger.
+      render();
+    }
+    const finger = document.getElementById('finger');
+    finger.style.opacity = f.opacity;
+    finger.classList.toggle('press', f.press);
+    // Force restart of blink on whichever card is currently active:
+    // — selected Brad card in cuisine (selection confirmation)
+    // — carried card on target (green ready confirmation)
+    const brad = document.getElementById('k-card-0');
+    brad.classList.remove('blink');
+    carriedEl.classList.remove('blink');
+    if (f.blinkCard) {
+      void brad.offsetWidth;
+      void carriedEl.offsetWidth;
+      brad.classList.add('blink');
+      carriedEl.classList.add('blink');
+    }
+    document.getElementById('caption').innerHTML = f.caption;
+  }
+
+  let timer = null;
+  let i = 0;
+  let paused = false;
+
+  function tick() {
+    if (paused) return;
+    applyFrame(FRAMES[i]);
+    timer = setTimeout(() => {
+      i = (i + 1) % FRAMES.length;
+      tick();
+    }, FRAMES[i].hold);
+  }
+
+  function play() {
+    clearTimeout(timer);
+    i = 0;
+    paused = false;
+    document.getElementById('pauseBtn').textContent = 'Pause';
+    tick();
+  }
+
+  function togglePause() {
+    paused = !paused;
+    document.getElementById('pauseBtn').textContent = paused ? 'Reprendre' : 'Pause';
+    if (!paused) tick();
+  }
+
+  render();
+  play();
+</script>
+</body>
+</html>

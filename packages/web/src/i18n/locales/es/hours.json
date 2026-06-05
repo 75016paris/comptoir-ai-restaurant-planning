@@ -1,0 +1,92 @@
+{
+  "title": "Horas",
+  "tabs": {
+    "weekly": "Semanal",
+    "monthly": "Mensual",
+    "payroll": "Nómina"
+  },
+  "nav": {
+    "thisWeek": "Esta semana",
+    "thisMonth": "Este mes"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "total": "Total",
+    "noServicesThisMonth": "Sin servicios este mes",
+    "noServices": "Sin servicios",
+    "dualValueLegend": "Arriba = real · Abajo = previsto"
+  },
+  "summary": {
+    "hours": "Horas",
+    "worked": "Trabajado",
+    "overtime": "HE",
+    "services": "Servicios",
+    "totalHours": "Total",
+    "baseHours": "Normales",
+    "holidays": "Vacaciones",
+    "sickDays": "Baja"
+  },
+  "alerts": {
+    "workersWithOTWeekly_one": "{{count}} empleado con horas extra esta semana",
+    "workersWithOTWeekly_other": "{{count}} empleados con horas extra esta semana",
+    "workersWithOTMonthly_one": "{{count}} empleado con horas extra este mes",
+    "workersWithOTMonthly_other": "{{count}} empleados con horas extra este mes"
+  },
+  "table": {
+    "headers": {
+      "name": "Nombre",
+      "role": "Puesto",
+      "contract": "Contrato",
+      "services": "Servicios",
+      "hours": "Horas",
+      "worked": "Trabajado",
+      "paidLeave": "Vac. pagadas",
+      "delta": "Δ",
+      "weekDelta": "Δ sem.",
+      "payrollDelta": "Δ nómina",
+      "ot110": "HE sem. 110%",
+      "ot120": "HE sem. 120%",
+      "ot150": "HE sem. 150%"
+    }
+  },
+  "payroll": {
+    "noData": "Sin datos de nómina este mes",
+    "loadError": "Error al cargar los datos de nómina",
+    "downloadSuccess": "{{filename}} descargado",
+    "downloadError": "Error de descarga",
+    "headerInfo": "{{name}} — Base {{base}}h/mes — Umbral HE {{threshold}}h/sem (HCR)",
+    "headers": {
+      "days": "Días",
+      "baseHours": "H. Norm",
+      "ot110": "HE 110%",
+      "ot120": "HE 120%",
+      "ot150": "HE 150%",
+      "holidays": "Vacaciones",
+      "meals": "Comidas"
+    },
+    "weekRow": {
+      "label": "S{{num}} · {{from}} → {{to}}",
+      "straddling": "(superpuesta)",
+      "weekHoursSuffix": "({{hours}}h sem)"
+    },
+    "legend": {
+      "abbr": "H. Norm = horas normales (excl. HE) · HE = horas extra · Comidas = días con manutención",
+      "calc": "HE calculadas por semana ISO (lun→dom) · Semanas a caballo: HE imputadas al mes del domingo",
+      "exports": "CSV = recap contable · Silae = importación directa (Matrícula;Código;Valor;Fecha inicio;Fecha fin;Sección analítica) · Mat. = matrícula Silae (ficha de empleado)"
+    }
+  },
+  "worker": {
+    "title": "Mis Horas",
+    "prevMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "thisYear": "Este año",
+    "actual": "Real",
+    "servicesDone": "Servicios hechos",
+    "actualOT": "HE reales",
+    "projected": "Previsto",
+    "servicesTotal": "Servicios totales",
+    "projectedOT": "HE previstas",
+    "actualHoursSuffix": "{{hours}}h real",
+    "weeklyDetail": "Detalle por semana"
+  }
+}

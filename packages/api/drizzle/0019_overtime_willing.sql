@@ -1,0 +1,1 @@
+ALTER TABLE users ADD COLUMN overtime_willing INTEGER NOT NULL DEFAULT 0;

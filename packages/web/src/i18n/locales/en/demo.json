@@ -1,0 +1,74 @@
+{
+  "page": {
+    "subtitle": "Demo",
+    "intro": "Pick a restaurant and a profile to explore the full app. Data is pre-filled, no password required.",
+    "loginError": "Sign-in error",
+    "connecting": "Signing in...",
+    "signIn": "Sign in",
+    "backToLogin": "← Back to sign in"
+  },
+  "roles": {
+    "manager": "MANAGER",
+    "floor": "FLOOR"
+  },
+  "restaurants": {
+    "chezReno": {
+      "name": "Chez Reno",
+      "subtitle": "Simple",
+      "description": "14 employees · 2 shifts (LUNCH/DINNER) · 1 staffing target",
+      "manager": "Full view: schedule, team, hours, payroll, compliance, preferences.",
+      "worker": "Employee view: my schedule, my hours, replacements, time off."
+    },
+    "grandBrasserie": {
+      "name": "The Grand Brasserie",
+      "subtitle": "Complex",
+      "description": "42 employees · 3 zones (Split/Lunch/Dinner) · Leave reinforcements · Medical mode",
+      "manager": "Full view: complex schedule, multiple profiles, employee preferences.",
+      "worker": "Employee view with preferences enabled."
+    },
+    "monRestaurant": {
+      "name": "My restaurant",
+      "subtitle": "Empty",
+      "description": "No employees, no shifts — to walk through the onboarding funnel from scratch",
+      "manager": "Start the initial setup: profile, sub-roles, team, shifts, schedule."
+    }
+  },
+  "demoNames": {
+    "newManager": "Demo Manager"
+  },
+  "redirect": {
+    "loadingDemo": "Loading the demo...",
+    "loginError": "Sign-in error"
+  },
+  "whatsapp": {
+    "loading": "Loading...",
+    "backLink": "Demo",
+    "title": "WhatsApp Demo",
+    "intro": "Try the WhatsApp bot with three different profiles. The manager runs the schedule, employees check their shifts and can flag an unavailability (the manager then finds a replacement).",
+    "labels": {
+      "owner": "Owner",
+      "managerFull": "Manager · Full access",
+      "floor": "Floor"
+    },
+    "phone": {
+      "appName": "Comptoir",
+      "tagline": "Schedule assistant",
+      "clear": "Clear",
+      "clearTitle": "Clear the conversation",
+      "emptyHint": "Send a message to get started",
+      "speakNow": "Speak...",
+      "transcribing": "Transcribing...",
+      "messagePlaceholder": "Message...",
+      "stopRecording": "Stop recording",
+      "startRecording": "Record a voice message"
+    },
+    "suggestions": {
+      "adminA": "Who's working tomorrow?",
+      "adminB": "How many hours this week?",
+      "adminC": "Add Omar tomorrow lunch",
+      "workerA": "When am I working this week?",
+      "workerB": "I can't come on Friday",
+      "workerC": "I want to request time off"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sous-traitants — Comptoir</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:980px;margin:2.5rem auto;padding:0 1.25rem;color:#1a1815;line-height:1.5}h1{font-size:2rem;margin-bottom:.25rem}h2{margin-top:2rem;font-size:1.25rem}.meta,.muted{color:#6b6258;font-size:.92rem}a{color:#b3541e}table{border-collapse:collapse;width:100%;margin:.75rem 0;font-size:.92rem}th,td{text-align:left;vertical-align:top;padding:.45rem .55rem;border-bottom:1px solid #e8e2d4}th{border-bottom:2px solid #1a1815}</style>
+</head>
+<body>
+<h1>Inventaire des sous-traitants</h1>
+<p class="meta">Comptoir — dernière mise à jour&nbsp;: 13 mai 2026</p>
+<table>
+<thead><tr><th>Fournisseur</th><th>Usage</th><th>Données concernées</th><th>Zone</th><th>Garanties / statut</th></tr></thead>
+<tbody>
+<tr><td>OVHcloud</td><td>VPS applicatif, base SQLite, e-mail SMTP/SMS OVH, éventuellement stockage objet OVH</td><td>Toutes données hébergées par l'application, e-mails/SMS transactionnels, documents si stockage OVH actif</td><td>France / UE</td><td>DPA OVHcloud à valider dans le compte client. Hébergement et stockage UE privilégiés.</td></tr>
+<tr><td>Stripe Payments Europe / Stripe Inc.</td><td>Paiement et gestion d'abonnement</td><td>Administrateur client, e-mail, identifiant client, abonnement, métadonnées de facturation. Pas de carte bancaire stockée par Comptoir.</td><td>UE + accès groupe Stripe</td><td>DPA Stripe et clauses contractuelles types via conditions Stripe.</td></tr>
+<tr><td>Meta Platforms Ireland / WhatsApp</td><td>Transport WhatsApp Cloud API (entrant et sortant) — canal unique en production depuis le retrait de Twilio</td><td>Numéros de téléphone, messages texte et messages vocaux WhatsApp, métadonnées de conversation</td><td>UE + infrastructure globale Meta</td><td>Conditions WhatsApp Business/Meta. À encadrer par le client et Comptoir selon la configuration.</td></tr>
+<tr><td>DeepInfra</td><td>Inférence IA WhatsApp via API OpenAI-compatible : (1) génération des réponses de Bernardo (Qwen3.5-27B) et (2) transcription des messages vocaux entrants (Whisper large-v3-turbo)</td><td>Messages texte et transcriptions de messages vocaux nécessaires à la réponse de Bernardo et contexte court, sans secrets applicatifs. L'audio brut est envoyé pour transcription puis n'est pas conservé par Comptoir.</td><td>Hors UE possible</td><td>DPA, politique de rétention et garanties de transfert à confirmer avant généralisation commerciale.</td></tr>
+<tr><td>Prestataire e-mail futur éventuel</td><td>Non actif par défaut — migration envisagée seulement si OVH SMTP ne suffit plus</td><td>E-mail, nom, notifications transactionnelles</td><td>Selon fournisseur</td><td>Ajout public requis avant activation en production.</td></tr>
+</tbody>
+</table>
+<h2>Fournisseurs non sous-traitants de production</h2>
+<p>Les outils de développement internes, notamment les assistants de code, ne doivent pas recevoir de données réelles clients. S'ils devaient traiter des données de production, ils seraient ajoutés à cet inventaire avant usage.</p>
+<p class="muted"><a href="/rgpd/">Retour au pack RGPD</a></p>
+</body>
+</html>

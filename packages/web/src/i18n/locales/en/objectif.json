@@ -1,0 +1,196 @@
+{
+  "shared": {
+    "kitchen": "Kitchen",
+    "floor": "Floor",
+    "kitchenLower": "kitchen",
+    "floorLower": "floor",
+    "save": "Save",
+    "savePending": "...",
+    "saved": "Saved",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "loadError": "Failed to load",
+    "saveError": "Failed to save",
+    "continue": "Continue →"
+  },
+  "calendar": {
+    "back": {
+      "onboarding": "Setup",
+      "preferences": "Preferences"
+    },
+    "header": {
+      "renameTitle": "Rename target",
+      "untitled": "Untitled",
+      "titulairesButton": "Core team",
+      "titulairesNeedReview": "{{count}} member(s) to review",
+      "continueOnboarding": "Continue →",
+      "continueKitchen": "Continue to Kitchen →",
+      "continueTitulaires": "Core team →",
+      "needsFloorTooltip": "Add at least one Floor service to continue"
+    },
+    "tabs": {
+      "floor": "Floor",
+      "kitchen": "Kitchen"
+    },
+    "priority": {
+      "label": "Priority",
+      "tooltip": "What is priority for?",
+      "popupTitle": "Day priority",
+      "popupP1": "The auto-staffing solver fills days in priority order: <strong>Priority 1</strong> first, then Priority 2, and so on.",
+      "popupP2": "Use it to guarantee coverage of the most important days (Friday night, Sunday brunch…) when staff is short — the solver favours these days when it has to make trade-offs.",
+      "popupP3": "Several days can share the same priority — they are then handled together.",
+      "raise": "Raise priority",
+      "lower": "Lower priority",
+      "value": "Priority {{n}}"
+    },
+    "palette": {
+      "drag": "Drag:",
+      "classic": "Classic",
+      "coupure": "Split"
+    },
+    "copyDay": {
+      "instruction": "Click the target day to paste {{day}}",
+      "cancel": "Cancel copy",
+      "copyTitle": "Copy {{day}}",
+      "toast": "{{from}} copied to {{to}}"
+    },
+    "day": {
+      "openTitle": "Open {{day}}",
+      "closeTitle": "Close {{day}}",
+      "closed": "closed"
+    },
+    "missing": {
+      "badgeKitchen": "Kitchen not scheduled",
+      "badgeFloor": "Floor not scheduled",
+      "titleKitchen": "Kitchen missing",
+      "titleFloor": "Floor missing",
+      "explainKitchen": "<day>{{day}}</day> has at least one floor service but no <em>kitchen</em> service. The restaurant cannot run without a kitchen team that day.",
+      "explainFloor": "<day>{{day}}</day> has at least one kitchen service but no <em>floor</em> service. The restaurant cannot run without a floor team that day.",
+      "actionKitchen": "Drag a <strong>Classic</strong> or <strong>Split</strong> card onto the {{day}} column in the Kitchen view to fill in.",
+      "actionFloor": "Drag a <strong>Classic</strong> or <strong>Split</strong> card onto the {{day}} column in the Floor view to fill in."
+    },
+    "warning": {
+      "title": "HCR non-compliance",
+      "amplitude": "Span {{value}} > 13h (HCR-L3121-34)",
+      "coupure": "Split {{value}} > 5h max",
+      "amplitudeExplain": "The total span between start and end of the day (splits included) must not exceed <strong>13 hours</strong>. Reduce the span or shift the hours.",
+      "coupureExplain": "The split between two work periods must not exceed <strong>5 hours</strong>. Shorten the split."
+    },
+    "block": {
+      "configure": "Configure service",
+      "totalShort": "Total {{value}}",
+      "amplitudeShort": "Span: {{value}}",
+      "coupureShort": "split {{value}}"
+    },
+    "footer": {
+      "help": "Drag to create · Edges ↕ time · Grip → headcount · Double-click to edit"
+    },
+    "namePrompt": {
+      "title": "Name the profile",
+      "description": "Give a name to this profile to save it. Otherwise it will be applied only to the selected week.",
+      "placeholder": "Profile name…",
+      "useWeekOnly": "Use only from {{from}} to {{to}}",
+      "applyThisWeek": "Apply this week",
+      "save": "Save"
+    },
+    "shiftLabels": {
+      "night": "Night",
+      "morning": "Morning",
+      "midday": "Midday",
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "coupure": "Split",
+      "coupureMorning": "Split morning",
+      "coupureEvening": "Split evening"
+    },
+    "toast": {
+      "saved": "Target saved",
+      "appliedWeek": "Target applied to this week",
+      "saveFailed": "Save failed",
+      "loadError": "Failed to load",
+      "profileNotFound": "Profile not found - it may have been changed",
+      "nameRequired": "Give a name to this target"
+    },
+    "edit": {
+      "name": "Name",
+      "nameTaken": "This name already exists for this role",
+      "start": "Start",
+      "end": "End",
+      "worked": "worked",
+      "service": "of service",
+      "coupureLabel": "Split",
+      "coupureValue": "{{value}} of split",
+      "staffPerRole": "Staff per role",
+      "total": "Total: <b>{{n}}</b>"
+    },
+    "names": {
+      "standard": "Standard",
+      "temporary": "Temporary"
+    }
+  },
+  "titulaires": {
+    "header": {
+      "back": "Back to target",
+      "title": "Core team — {{name}}",
+      "untitled": "Target",
+      "needsReview": "{{count}} member(s) to review"
+    },
+    "intro": {
+      "title": "Why define a core team?",
+      "p1": "Until Comptoir has historical data on your restaurant, auto-staffing has no idea who you usually placed in each slot. The generated schedule remains viable but may diverge significantly from the habits established on paper — a source of friction for your teams when switching over.",
+      "p2": "By designating a core team, you give the solver a reference schedule that it favours. It is a guideline, not a strict rule: if a stronger constraint requires it (leave, unavailability, hours cap, HCR legal rest…), it will substitute another employee to produce a valid week.",
+      "p3": "After about 12 weeks of real scheduling, the model has enough history to infer these habits automatically and follow your team's natural evolution. Core team assignments then become optional and can be lightened.",
+      "drag": "Drag employees onto the slots to define the core team for each day."
+    },
+    "pool": {
+      "title": "Employees",
+      "subtitle": "(drag onto a slot)"
+    },
+    "card": {
+      "pinnedTitle": "{{count}} slot(s) · {{hours}}h planned",
+      "pinnedTitleWithContract": "{{count}} slot(s) · {{hours}}h planned / {{contract}}h contract",
+      "viewReason": "View reason",
+      "viewAlert": "View alert reason",
+      "endingTitle": "Contract ending",
+      "close": "Close",
+      "removeAll": "Remove from all slots",
+      "removeShift": "Remove this slot",
+      "viewWarning": "View warning reason"
+    },
+    "tooltip": {
+      "subRoleNotCovered": "Sub-role not covered: {{sub}} ({{roles}})",
+      "noSubRoles": "none",
+      "substitution": "Substitution: {{sub}} (original role {{roles}})",
+      "substitutionVerbose": "Substitution: {{name}} ({{roles}}) covers a {{sub}} position.",
+      "subRoleMissing": "{{sub}} missing"
+    },
+    "errors": {
+      "wrongRole": "{{name}} cannot cover a {{role}} position",
+      "profileNotFound": "Profile not found.",
+      "noTargets": "No staffing target defined for this profile. First define services and headcount on the Target page."
+    },
+    "staleness": {
+      "inactive": "Inactive",
+      "tempInactive": "Unavailable (period)",
+      "contractEnded": "Contract ended",
+      "contractEndedOn": "Contract ended on {{date}}",
+      "contractEnding": "Fixed-term contract ending soon",
+      "contractEndingOn": "Fixed-term contract ends on {{date}}"
+    },
+    "verdict": {
+      "header": "Conformity",
+      "ok": "Plannable",
+      "tendu": "Tight",
+      "insuffisant": "Insufficient",
+      "slotsPinned": "Pinned slots",
+      "capacity": "Core team capacity",
+      "demand": "Target demand",
+      "coverageHours": "Coverage in hours",
+      "substitutions": "Substitutions",
+      "overContract": "Over contract",
+      "overContractItem": "{{name}} · {{pinned}}h vs {{contract}}h",
+      "stale_one": "{{count}} member inactive or contract ending",
+      "stale_other": "{{count}} members inactive or contracts ending"
+    }
+  }
+}

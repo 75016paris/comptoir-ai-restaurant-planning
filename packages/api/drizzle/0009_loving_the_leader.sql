@@ -1,0 +1,1 @@
+ALTER TABLE `documents` ADD `holiday_request_id` text REFERENCES holiday_requests(id);

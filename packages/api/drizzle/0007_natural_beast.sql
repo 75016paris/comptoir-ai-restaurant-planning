@@ -1,0 +1,1 @@
+ALTER TABLE `restaurant_closures` ADD `schedule` text;

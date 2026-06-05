@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1774016784046,
+      "tag": "0000_flawless_princess_powerful",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1774023223193,
+      "tag": "0001_quick_shen",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1774060549923,
+      "tag": "0002_powerful_psylocke",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1774060846661,
+      "tag": "0003_lonely_human_fly",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1774440711729,
+      "tag": "0004_elite_tyger_tiger",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1774443661693,
+      "tag": "0005_damp_eternity",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1774443993947,
+      "tag": "0006_third_vindicator",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1774451991079,
+      "tag": "0007_natural_beast",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1774461100116,
+      "tag": "0008_brown_silver_surfer",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1774461767007,
+      "tag": "0009_loving_the_leader",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1713020400000,
+      "tag": "0041_rename_shift_to_service",
+      "breakpoints": true
+    }
+  ]
+}

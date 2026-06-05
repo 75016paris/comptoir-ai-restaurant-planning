@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "add": "Add",
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "ok": "OK",
+    "save": "Save",
+    "saving": "Saving...",
+    "today": "Today"
+  },
+  "fields": {
+    "email": "Email",
+    "from": "From",
+    "name": "Name",
+    "phone": "Phone",
+    "until": "Until"
+  },
+  "status": {
+    "error": "Error",
+    "loading": "Loading...",
+    "loadingEllipsis": "Loading…",
+    "loadingShort": "...",
+    "warning": "Warning"
+  }
+}

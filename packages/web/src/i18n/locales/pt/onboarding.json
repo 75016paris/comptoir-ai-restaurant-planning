@@ -1,0 +1,244 @@
+{
+  "loading": "A carregar…",
+  "topBar": {
+    "header": "Configuração inicial — {{restaurantName}}"
+  },
+  "steps": {
+    "profil": "Restaurante",
+    "sousRoles": "Subfunções",
+    "equipe": "Equipa",
+    "services": "Serviços",
+    "style": "Estilo",
+    "whatsapp": "WhatsApp",
+    "planning": "Planeamento"
+  },
+  "progress": {
+    "stepCount": "Passo {{current}} / {{total}}"
+  },
+  "actions": {
+    "back": "Voltar",
+    "continue": "Continuar",
+    "saving": "..."
+  },
+  "errors": {
+    "generic": "Erro"
+  },
+  "days": {
+    "mon": "Seg",
+    "tue": "Ter",
+    "wed": "Qua",
+    "thu": "Qui",
+    "fri": "Sex",
+    "sat": "Sáb",
+    "sun": "Dom"
+  },
+  "step1Profile": {
+    "title": "O seu restaurante",
+    "subtitle": "Algumas informações para começar.",
+    "nameLabel": "Nome do restaurante",
+    "namePlaceholder": "Le Comptoir",
+    "streetLabel": "Rua",
+    "streetPlaceholder": "12 rue de la Paix",
+    "postalLabel": "Código postal",
+    "postalPlaceholder": "75002",
+    "cityLabel": "Cidade",
+    "cityPlaceholder": "Paris",
+    "postalDetected": "Código postal {{code}} — zona escolar e feriados calculados automaticamente.",
+    "postalHint": "Indique um código postal de 5 dígitos para detetar automaticamente a zona das férias escolares.",
+    "siretLabel": "SIRET (opcional)",
+    "siretPlaceholder": "14 dígitos",
+    "siretHint": "Necessário para DPAE e contratos. Pode adicioná-lo mais tarde em Preferências > Perfil.",
+    "interfaceLocaleLabel": "Idioma da interface",
+    "botLocaleLabel": "Idioma do bot WhatsApp",
+    "botLocaleHint": "Bot atualmente apenas em francês — outros idiomas em breve.",
+    "errors": {
+      "missingName": "Indique o nome do restaurante",
+      "missingStreet": "Indique a rua",
+      "invalidPostal": "Código postal inválido (5 dígitos esperados)",
+      "missingCity": "Indique a cidade",
+      "invalidSiret": "SIRET inválido (14 dígitos obrigatórios)"
+    }
+  },
+  "step2Subroles": {
+    "title": "Subfunções da equipa",
+    "subtitle": "Selecione as funções presentes no seu restaurante. O nível HCR é sugerido por defeito, poderá ajustá-lo por colaborador.",
+    "kitchenLabel": "Cozinha",
+    "floorLabel": "Sala",
+    "errors": {
+      "noneSelected": "Selecione pelo menos uma subfunção"
+    }
+  },
+  "step3Services": {
+    "title": "Os seus serviços",
+    "subtitle": "Que ritmo de serviço? Esta escolha cria o modelo inicial — poderá refiná-lo depois.",
+    "openDaysLabel": "Dias de abertura",
+    "kitchenCountLabel": "Efetivo de cozinha por serviço",
+    "floorCountLabel": "Efetivo de sala por serviço",
+    "options": {
+      "midi": {
+        "label": "Apenas almoço",
+        "desc": "Um serviço das 11h00 às 15h00."
+      },
+      "soir": {
+        "label": "Apenas jantar",
+        "desc": "Um serviço das 18h00 às 23h00."
+      },
+      "midi-soir": {
+        "label": "Almoço + Jantar",
+        "desc": "Dois serviços distintos no mesmo dia."
+      },
+      "coupure": {
+        "label": "Horário partido",
+        "desc": "Um dia em duas partes separadas por uma pausa longa (ex. 11h–15h e 18h–23h)."
+      },
+      "custom": {
+        "label": "Personalizado",
+        "desc": "Conceba os seus serviços no editor visual — voltará aqui depois."
+      }
+    },
+    "errors": {
+      "noOpenDays": "Selecione pelo menos um dia de abertura",
+      "noStaff": "Indique pelo menos um efetivo (cozinha ou sala)"
+    }
+  },
+  "step4Employees": {
+    "title": "A sua equipa",
+    "subtitle": "Adicione os seus primeiros colaboradores. Apenas o nome, telefone e função são necessários para começar — contrato, IBAN e contactos podem ser preenchidos mais tarde.",
+    "kitchenLabel": "Cozinha",
+    "floorLabel": "Sala",
+    "kitchenLower": "cozinha",
+    "floorLower": "sala",
+    "count_one": "{{count}} colaborador",
+    "count_other": "{{count}} colaboradores",
+    "emptySection": "Sem colaboradores em {{section}}.",
+    "addInSection": "Adicionar em {{section}}",
+    "missingSideWarn": "Sem colaboradores em {{section}} — poderá adicioná-los mais tarde a partir da equipa.",
+    "removeTitle": "Remover",
+    "loading": "A carregar…"
+  },
+  "stepStyle": {
+    "title": "A sua lógica de equipa",
+    "subtitle": "Como o auto-staffing equilibra estabilidade, massa salarial e flexibilidade. Modificável a qualquer momento em Preferências › Regra.",
+    "styleDescriptions": {
+      "equilibre": "Distribui o esforço equitativamente. Preenche as horas contratuais antes de abrir HE.",
+      "equipe-stable": "Favorece os mesmos colaboradores nos mesmos serviços de semana para semana.",
+      "economique": "Evita as horas extra — a alavanca mais direta sobre a massa salarial.",
+      "resilience": "Distribui as horas equitativamente — ninguém fica sobrecarregado e todos podem absorver um imprevisto."
+    },
+    "advancedRule": "Regra avançada",
+    "loading": "A carregar…",
+    "overtime": {
+      "title": "Horas extra",
+      "intro": "Tecto legal das HE e regra de distribuição entre colaboradores. Convenção HCR: limite a 39h/semana.",
+      "modeLabel": "Modo",
+      "modes": {
+        "strict": { "label": "Estrito", "desc": "Sem HE — limitado a 39h/sem" },
+        "controlled": { "label": "Controlado", "desc": "Até um tecto semanal que define" },
+        "flexible": { "label": "Flexível", "desc": "Até ao máximo legal (48h)" }
+      },
+      "capLabel": "Tecto semanal",
+      "tick39": "39h (sem HE)",
+      "tick43": "43h (110%)",
+      "tick47": "47h (120%)",
+      "tick48": "48h (150%)",
+      "capExplanation39": "Sem horas extra — equivalente ao modo estrito.",
+      "capExplanation110": "Até {{count}}h de HE a 110% por colaborador por semana.",
+      "capExplanation120": "Até 4h a 110% + {{count}}h a 120% por colaborador por semana.",
+      "capExplanationMax": "Até 4h a 110% + 4h a 120% + 1h a 150% por colaborador por semana. Máximo legal.",
+      "distributionLabel": "Distribuição",
+      "distributionIntro": "Quando o auto-staffing precisa de HE, quem as recebe primeiro.",
+      "distributions": {
+        "willing-first": { "label": "Voluntários primeiro", "desc": "Os colaboradores voluntários recebem as HE primeiro, depois por prioridade" },
+        "by-priority": { "label": "Por prioridade", "desc": "P1 recebe as HE primeiro, independentemente das preferências" },
+        "even": { "label": "Distribuição igual", "desc": "Distribuir as HE equitativamente entre os colaboradores elegíveis" }
+      }
+    },
+    "tapInOut": {
+      "label": "Controlo de tempo",
+      "desc": "Picagem de entradas/saídas pelos colaboradores.",
+      "adminConfirmLabel": "Notificar e confirmar pelo gerente",
+      "adminConfirmDesc": "A cada picagem, o WhatsApp pede ao gerente para confirmar. A picagem fica registada mas marcada como pendente.",
+      "modeLabel": "Modo",
+      "syncLabel": "Sincronizar as horas",
+      "syncDesc": "As horas picadas substituem as horas planeadas no resumo mensal — a massa salarial reflete as horas efetivamente trabalhadas.",
+      "latenessLabel": "Relatório de atrasos",
+      "latenessDesc": "O resumo mensal continua baseado no planeamento. Os atrasos e saídas antecipadas são apenas listados na ficha do colaborador (e no email mensal).",
+      "earlyLabel": "Contar as chegadas antecipadas",
+      "earlyDesc": "Se um colaborador picar antes da hora prevista, os minutos de antecedência somam-se às suas horas pagas. Caso contrário, apenas a picagem de saída conta — as horas começam à hora planeada."
+    },
+    "workerPreferences": {
+      "label": "Preferências dos colaboradores",
+      "desc": "Os colaboradores podem indicar as suas disponibilidades e preferências."
+    },
+    "compliance": {
+      "title": "Conformidade — Direito do trabalho",
+      "intro": "Convenção HCR. Desmarcar uma regra desativa-a para o planeador — deixe tudo marcado se não tiver a certeza."
+    }
+  },
+  "stepWhatsApp": {
+    "title": "Assistente WhatsApp",
+    "subtitle": "Envie uma mensagem ao Bernardo no WhatsApp para confirmar que o seu número é reconhecido.",
+    "connectTitle": "Enviar uma mensagem ao Bernardo",
+    "connectBodyReady": "Abra o WhatsApp com o botão abaixo, envie a mensagem pré-preenchida e confirme que o Bernardo responde.",
+    "connectBodyMissing": "O número WhatsApp do Bernardo não está configurado neste ambiente. Adicione o link WhatsApp para enviar a mensagem de teste.",
+    "openWhatsapp": "Abrir WhatsApp",
+    "phoneFallbackTitle": "Não tem WhatsApp neste computador?",
+    "phoneFallbackBody": "No seu telefone, abra o WhatsApp e envie esta mensagem para o número do Bernardo.",
+    "bernardoNumberLabel": "Número do Bernardo",
+    "testMessageLabel": "Mensagem a enviar",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "pairingTitle": "Associação por número de telefone",
+    "pairingBody": "O Bernardo reconhece cada pessoa pelo número guardado no Comptoir. Se um colaborador usar outro número, atualize a ficha antes de o convidar.",
+    "adminPhoneLabel": "O seu número WhatsApp",
+    "adminPhoneHelp": "Use o mesmo número com que vai escrever ao Bernardo.",
+    "adminPhoneSave": "Guardar",
+    "adminPhoneSaving": "A guardar...",
+    "adminPhoneSaved": "Número guardado.",
+    "adminPhoneRequired": "Introduza o seu número WhatsApp.",
+    "phoneRows": {
+      "team_one": "{{count}} colaborador com número de telefone",
+      "team_other": "{{count}} colaboradores com número de telefone"
+    },
+    "remindersTitle": "Lembretes WhatsApp para colaboradores",
+    "remindersBody": "Escolha a frequência dos lembretes de planeamento enviados por WhatsApp. Pode alterá-la mais tarde em Preferências → Regras.",
+    "reminderOptions": {
+      "off": "OFF",
+      "offDesc": "Sem lembrete automático.",
+      "daily": "DIÁRIO",
+      "dailyDesc": "Um lembrete na véspera à noite para os serviços do dia seguinte.",
+      "weekly": "SEMANAL",
+      "weeklyDesc": "Um resumo da semana ao domingo à noite."
+    },
+    "whatWorksTitle": "Para que serve o Bernardo?",
+    "whatWorks": {
+      "schedule": "Responder a perguntas sobre o planeamento publicado.",
+      "replacements": "Receber indisponibilidades e ajudar a encontrar substituto.",
+      "timeclock": "Gerir picagens se o ativar na regra avançada."
+    },
+    "continueReady": "Testei, continuar",
+    "continueMissing": "Configurar mais tarde"
+  },
+  "step5Finish": {
+    "title": "Está pronto",
+    "subtitle": "Resumo da sua configuração. Pode alterar tudo mais tarde a partir de Preferências e Equipa.",
+    "summary": {
+      "address": "Morada: {{address}}",
+      "zones": "Zona escolar {{schoolZone}} · feriados {{holidayZone}}",
+      "subRoles_one": "{{count}} subfunção no catálogo",
+      "subRoles_other": "{{count}} subfunções no catálogo",
+      "profiles_one": "{{count}} perfil de serviço configurado",
+      "profiles_other": "{{count}} perfis de serviço configurados",
+      "employees_one": "{{count}} colaborador adicionado",
+      "employees_other": "{{count}} colaboradores adicionados"
+    },
+    "afterTitle": "E depois?",
+    "after": {
+      "schedule": "Construa a sua primeira semana em <strong>/schedule</strong>, ou deixe o auto-staffing propor um planeamento.",
+      "preferences": "Ajuste o detalhe dos serviços e subfunções a partir de <strong>/preferences</strong>.",
+      "staff": "Complete as fichas dos colaboradores (morada, IBAN, contratos) em <strong>/staff</strong>.",
+      "whatsapp": "O WhatsApp continua opcional: se não o testou agora, adicione o link mais tarde."
+    },
+    "finishButton": "Terminar e aceder ao planeamento"
+  }
+}

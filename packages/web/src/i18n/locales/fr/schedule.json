@@ -1,0 +1,441 @@
+{
+  "page": {
+    "title": "Planning",
+    "loading": "Chargement..."
+  },
+  "viewModes": {
+    "stack": "Stack",
+    "calendar": "Calendrier",
+    "list": "Liste"
+  },
+  "timeRange": {
+    "week": "Semaine",
+    "month": "Mois"
+  },
+  "roleFilter": {
+    "all": "Tous",
+    "kitchen": "Cuisine ({{count}})",
+    "floor": "Salle ({{count}})",
+    "missing": "Manquants ({{count}})"
+  },
+  "roles": {
+    "kitchen": "Cuisine",
+    "floor": "Salle",
+    "kitchenMobile": "CUISINE",
+    "floorMobile": "SALLE",
+    "kitchenMobileWithCount": "CUISINE ({{count}})",
+    "floorMobileWithCount": "SALLE ({{count}})",
+    "kitchenColon": "CUISINE:",
+    "floorColon": "SALLE:",
+    "kitchenAbbr": "CUI",
+    "floorAbbr": "SER"
+  },
+  "actions": {
+    "today": "Aujourd'hui",
+    "todayShort": "Auj.",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "back": "Retour",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "understood": "Compris",
+    "clear": "Effacer",
+    "scrollTop": "Top",
+    "scrollBottom": "Bas",
+    "expand": "Déplier",
+    "restack": "Restacker",
+    "configureServices": "Configurer les services",
+    "print": "Imprimer",
+    "printAria": "Imprimer le planning",
+    "refreshPreview": "Actualiser l'aperçu",
+    "addServices": "Ajouter les services",
+    "complete": "Compléter",
+    "replace": "Remplacer",
+    "unlock": "Déverrouiller",
+    "deleteWeek": "Effacer la semaine",
+    "scheduleAnyway": "Planifier quand même",
+    "loadingShort": "..."
+  },
+  "buttons": {
+    "wipeWeek": "Effacer toute la semaine",
+    "gridVertical": "Vue verticale (jours en colonnes)",
+    "gridHorizontal": "Vue horizontale (jours en lignes)",
+    "exitFullscreen": "Quitter le plein écran",
+    "fullscreen": "Plein écran",
+    "stackDayView": "Vue 2 jours",
+    "stackWeekView": "Vue semaine (7 jours)",
+    "auto": "Auto",
+    "autoStaff": "Auto-staffing",
+    "optimizationStyle": "Style d'optimisation pour le prochain auto-staffing"
+  },
+  "status": {
+    "published": "Publié",
+    "draft": "Brouillon",
+    "locked": "Verrouillée",
+    "unlocked": "Déverrouillée",
+    "publishedTooltip": "Planning publié — cliquer pour gérer",
+    "draftTooltip": "Planning non publié — cliquer pour vérifier la conformité et publier",
+    "lockedTooltip": "Semaine passée et publiée — cliquer pour déverrouiller et corriger",
+    "unlockedTooltip": "Déverrouillée pour cette session — vos modifications sont tracées dans le journal d'audit",
+    "manual": "Manuel",
+    "auto": "Auto",
+    "autoWithProfile": "Auto · {{name}}",
+    "autoModifiedSuffix": " · modifié",
+    "closed": "FERMÉ",
+    "closedWithReason": "FERMÉ - {{reason}}",
+    "noService": "Pas de service",
+    "todayBadge": "Auj."
+  },
+  "profiles": {
+    "default": "Défaut",
+    "objectiveLabel": "Objectif",
+    "noneObjective": "Aucun objectif",
+    "editProfile": "Modifier le profil",
+    "createProfile": "Créer un profil"
+  },
+  "gaps": {
+    "missingPositions_one": "{{count}} poste manquant",
+    "missingPositions_other": "{{count}} postes manquants"
+  },
+  "legend": {
+    "selected_one": "{{count}} sélectionné",
+    "selected_other": "{{count}} sélectionnés",
+    "employees": "{{count}} employés",
+    "sharedWorker": "Employé partagé"
+  },
+  "empty": {
+    "noServicesConfiguredTitle": "Aucun service configuré",
+    "noServicesConfiguredHint": "Configurez vos horaires de service (midi, soir, etc.) dans le calendrier des objectifs avant de créer votre planning."
+  },
+  "ghost": {
+    "missing": "Manquant",
+    "tooltip": "Manquant · {{label}} · {{start}}–{{end}}"
+  },
+  "coupure": {
+    "tooltip": "Coupure {{start}}–{{end}}",
+    "description": "Coupure · {{date}} ({{legs}})"
+  },
+  "touch": {
+    "holdToPlace": "→ appui long pour placer"
+  },
+  "drag": {
+    "release": "Relâcher",
+    "delete": "Supprimer",
+    "willDelete": "Le shift sera supprimé"
+  },
+  "moveDescription": {
+    "moved": "{{src}} ({{srcLeft}} restant) → {{dst}} (était {{was}}, maintenant {{now}})",
+    "addedToZone": "Ajouté à {{date}} {{zone}} (était {{was}}, maintenant {{now}})",
+    "addedToTimes": "Ajouté à {{date}} {{start}}-{{end}}",
+    "addedToType": "Ajouté à {{date}} {{type}}"
+  },
+  "deleteToast": {
+    "removed": "{{name}} supprimé",
+    "rangeDescription": "{{date}} {{start}}-{{end}}"
+  },
+  "toasts": {
+    "previewFailed": "Échec de l'aperçu",
+    "servicesGenerated_one": "{{count}} service généré",
+    "servicesGenerated_other": "{{count}} services générés",
+    "skippedOverlaps": " ({{count}} ignorés - chevauchements)",
+    "skippedSimple": " ({{count}} ignorés)",
+    "generationFailed": "Échec de la génération",
+    "saveFailed": "Échec de la sauvegarde",
+    "servicesAdded_one": "{{count}} service ajouté",
+    "servicesAdded_other": "{{count}} services ajoutés",
+    "fillFailed": "Échec du remplissage",
+    "servicesReplaced_one": "{{count}} service créé (remplacement)",
+    "servicesReplaced_other": "{{count}} services créés (remplacement)",
+    "replaceFailed": "Échec du remplacement",
+    "servicesDeleted_one": "{{count}} service supprimé",
+    "servicesDeleted_other": "{{count}} services supprimés",
+    "deleteFailed": "Échec de la suppression",
+    "wipePastAndDelay": "Cette semaine contient des dates passées et des jours dans le délai de modification de 8 jours (HCR-L3121-47). Les salariés peuvent refuser ces changements.",
+    "wipePast": "Cette semaine contient des dates passées. Cela affectera l'historique.",
+    "wipeDelay": "Cette semaine contient des jours dans le délai de modification de 8 jours (HCR-L3121-47). Les salariés peuvent refuser ces changements.",
+    "weekPublished": "Semaine publiée — visible par les employés",
+    "publishRemoved": "Publication retirée",
+    "failed": "Échec",
+    "weekUnlocked": "Semaine déverrouillée pour cette session — vos modifications seront tracées",
+    "moveFailed": "Échec du déplacement",
+    "undoFailed": "Échec de l'annulation",
+    "undo": "Annuler",
+    "createServiceFailed": "Échec de la création du service",
+    "modificationFailed": "Échec de la modification"
+  },
+  "dialogs": {
+    "autoStaffing": {
+      "title": "Auto-staffing",
+      "existsDescription": "Un staffing automatique existe déjà pour cette semaine."
+    },
+    "unlockWeek": {
+      "title": "Déverrouiller la semaine",
+      "description": "La semaine du <strong>{{from}}</strong> au <strong>{{to}}</strong> est passée et publiée — elle est en principe verrouillée (dossier paie et conformité HCR).",
+      "details": "Vous pouvez la déverrouiller pour cette session afin de corriger un service. Chaque modification sera marquée <em>[Semaine verrouillée — override]</em> dans le journal d'audit."
+    },
+    "wipeWeek": {
+      "title": "Effacer toute la semaine",
+      "description": "Tous les services de la semaine du <strong>{{from}}</strong> au <strong>{{to}}</strong> seront supprimés définitivement. Cette action est irréversible."
+    },
+    "pastDate": {
+      "title": "Date passée",
+      "description": "Vous allez modifier un service sur une date passée. Cela affectera l'historique."
+    },
+    "closure": {
+      "title": "Restaurant fermé",
+      "description": "Cette date tombe pendant une période de fermeture. Aucun personnel ne devrait être planifié. Voulez-vous continuer ?",
+      "descriptionWithReason": "Cette date tombe pendant une période de fermeture ({{reason}}). Aucun personnel ne devrait être planifié. Voulez-vous continuer ?"
+    },
+    "autoStaffPreview": {
+      "title": "Génération automatique",
+      "description": "{{from}} → {{to}} · {{count}} services",
+      "targetsLabel": "Objectifs de staffing",
+      "zeroMeansAll": "0 = tous les disponibles",
+      "rowLabel": "{{role}} {{zone}}"
+    },
+    "gapWarning": {
+      "title": "Postes non pourvus",
+      "description": "L'auto-staffing n'a pas pu compléter tous les postes demandés. Les créneaux manquants sont indiqués en rouge sur le planning."
+    },
+    "auditLog": {
+      "title": "Historique de la semaine",
+      "noChanges": "Aucune modification cette semaine.",
+      "actionInsert": "ajout",
+      "actionUpdate": "modif",
+      "actionDelete": "suppr"
+    },
+    "timeEdit": {
+      "title": "Modifier les horaires",
+      "description": "{{name}} — {{date}}",
+      "startLabel": "Début",
+      "endLabel": "Fin",
+      "note": "Ces horaires modifient uniquement ce service cette semaine. L'objectif de référence n'est pas touché."
+    }
+  },
+  "modals": {
+    "serviceType": {
+      "zoneTitle": "Service de {{zone}}",
+      "zoneTimes": "{{start}} - {{end}}",
+      "customTitle": "Personnalisé",
+      "customSubtitle": "Horaires personnalisés",
+      "startLabel": "Début",
+      "endLabel": "Fin"
+    }
+  },
+  "help": {
+    "scheduleTitle": "Le planning",
+    "engineTitle": "Moteur CP-SAT (Constraint Programming)",
+    "engineExplanation": "Technique d'optimisation par programmation par contraintes : chaque affectation employé × créneau est une variable binaire (0 ou 1). Le solveur <link>CP-SAT</link> trouve l'affectation optimale en respectant toutes les contraintes légales.",
+    "priorityTitle": "Hiérarchie des priorités (fonction objectif)",
+    "priorityIntro": "Le solveur optimise plusieurs objectifs pondérés, du plus important au moins important :",
+    "engineFooter": "Moteur : <link1>CP-SAT</link1> (Google OR-Tools) — <link2>code source</link2>.",
+    "items": {
+      "dragDrop": "<strong>Glisser-déposer</strong> — faites glisser un employé depuis la légende vers un jour pour créer un service, ou déplacez un service existant entre jours.",
+      "objectives": "<strong>Profils d'objectifs</strong> — sélectionnez un profil de staffing pour afficher les cibles par créneau et les postes manquants.",
+      "fillTeam": "<strong>Compléter l'équipe</strong> — le moteur <link>CP-SAT</link> remplit automatiquement les créneaux vides en respectant les contraintes.",
+      "compliance": "<strong>Conformité</strong> — le badge de conformité vérifie en temps réel les règles HCR : max 10h/jour, repos 10h minimum, 6 jours consécutifs max, moyenne 46h sur 12 semaines.",
+      "views": "<strong>Vues</strong> — calendrier (grille horaire), liste (compact), ou stack (empilé par zone)."
+    },
+    "priorities": {
+      "fillSlots": "<strong>Remplir les créneaux</strong> (poids 1000) — objectif dominant : couvrir chaque service.",
+      "underHours": "<strong>Heures sous-contrat</strong> (poids 80/h) — privilégier les employés qui n'ont pas encore atteint leurs heures contractuelles.",
+      "moderateOT": "<strong>Pénalité heures sup. modérées</strong> (poids −40/h) — décourager le dépassement au-delà de 115% du contrat.",
+      "lightOT": "<strong>Léger dépassement</strong> (poids 20/h) — accepter les heures sup. légères (100-115%) si nécessaire.",
+      "consistency": "<strong>Cohérence planning</strong> (poids 5) — favoriser les employés déjà assignés à d'autres créneaux la même journée.",
+      "preferences": "<strong>Préférences employé</strong> (poids 3) — respecter les préférences de disponibilité quand possible.",
+      "priority": "<strong>Priorité employé</strong> (poids 2) — favoriser les employés prioritaires pour chaque créneau.",
+      "flexibility": "<strong>Flexibilité résiduelle</strong> (poids 1) — préserver la capacité d'adaptation pour les changements imprévus."
+    }
+  },
+  "laborCost": {
+    "title": "Masse salariale",
+    "perWeek": "/ sem",
+    "tooltip": "Masse salariale — estimation basée sur les taux horaires, les heures planifiées et les majorations HS HCR",
+    "weekHeader": "Semaine",
+    "unpricedNote_one": "* {{count}} employé sans taux renseigné (exclu du calcul).",
+    "unpricedNote_other": "* {{count}} employés sans taux renseigné (exclus du calcul).",
+    "footnote": "Brut indicatif avec majorations HS HCR, charges non comprises."
+  },
+  "worker": {
+    "title": "Mon Planning",
+    "viewModes": {
+      "week": "Semaine",
+      "month": "Mois",
+      "list": "Liste"
+    },
+    "dismissAria": "Fermer",
+    "imposedLeave": {
+      "title": "Congés imposés par votre employeur",
+      "dateRange": "Du {{from}} au {{to}}",
+      "dateRangeWithReason": "Du {{from}} au {{to}} · {{reason}}",
+      "legalNote": "Code du travail art. L3141-16 — dates bloquées dans votre planning."
+    },
+    "proposedLeave": {
+      "title": "Congés proposés par votre employeur"
+    },
+    "yes": "Oui",
+    "no": "Non",
+    "toasts": {
+      "proposalAccepted": "Proposition acceptée",
+      "proposalRejected": "Proposition refusée",
+      "error": "Erreur"
+    },
+    "servicesSummary_one": "{{count}} service · {{hours}}h",
+    "servicesSummary_other": "{{count}} services · {{hours}}h",
+    "notPublished": {
+      "title": "Planning non publié",
+      "body": "Votre gérant n'a pas encore publié le planning de cette semaine. Vous le verrez ici dès qu'il sera disponible."
+    },
+    "timeclock": {
+      "clockedIn": "Pointé",
+      "clockedOut": "Non pointé",
+      "since": "Depuis {{time}}",
+      "tapIn": "Pointer à l'arrivée",
+      "tapOut": "Pointer au départ",
+      "tapping": "..."
+    },
+    "todayBadge": "AUJ.",
+    "requestReplacement": "Demander un remplacement",
+    "noServicesThisWeek": "Aucun service cette semaine",
+    "replacementModal": {
+      "title": "Signaler une indisponibilité",
+      "successTitle": "Demande transmise",
+      "successBody": "Votre responsable recherche un remplaçant. Vous serez informé dès qu'une solution est trouvée.",
+      "ittReminder": "Merci de transmettre votre ITT dès que possible. Une relance automatique vous sera envoyée si le document n'est pas reçu dans les délais.",
+      "intro": "Votre responsable sera notifié et organisera votre remplacement. Aucune action supplémentaire ne vous sera demandée après l'envoi.",
+      "reasonLabel": "Raison",
+      "reasonPlaceholder": "Facultatif",
+      "medicalToggle": "Arrêt maladie",
+      "medicalExplanation": "La recherche d'un remplaçant est lancée immédiatement. Votre <itt>ITT</itt> (Interruption Temporaire de Travail), délivré par votre médecin, peut être transmis ici ou directement à votre responsable dès réception. Une relance automatique sera envoyée en cas de non-réception.",
+      "submit": "Transmettre la demande",
+      "submitFailed": "Échec de l'envoi",
+      "fileDropZone": "Déposez votre ITT ici ou ",
+      "fileDropZoneBrowse": "parcourir"
+    }
+  },
+  "cards": {
+    "errorBadge": "Erreur",
+    "warningBadge": "Attention",
+    "dropTag": "Ici"
+  },
+  "mobileTutorial": {
+    "closeAria": "Fermer le tutoriel",
+    "iframeTitle": "Tutoriel mobile — planning"
+  },
+  "compliance": {
+    "dialog": {
+      "title": "Conformité légale",
+      "description": "Vérification Convention Collective HCR — Code du travail français"
+    },
+    "badges": {
+      "error": "ERREUR",
+      "warning": "ALERTE",
+      "info": "INFO",
+      "compliant": "Conforme",
+      "errCount": "{{count}} err.",
+      "alertCount_one": "{{count}} alerte",
+      "alertCount_other": "{{count}} alertes"
+    },
+    "panel": {
+      "verifying": "Vérification...",
+      "loadError": "Erreur de vérification",
+      "weekRange": "Semaine {{from}} — {{to}}",
+      "workersChecked_one": "{{count}} employé",
+      "workersChecked_other": "{{count}} employés",
+      "errors_one": "{{count}} erreur",
+      "errors_other": "{{count}} erreurs",
+      "warnings_one": "{{count}} alerte",
+      "warnings_other": "{{count}} alertes",
+      "info_one": "{{count}} info",
+      "info_other": "{{count}} infos",
+      "subroleSubstitutionTitle": "Couverture par substitution de sous-rôle",
+      "subroleSubstitutionBody": "Ces postes sont assurés par un employé avec un sous-rôle différent du sous-rôle requis. Acceptable mais à surveiller.",
+      "filledAs": "(assure le poste comme {{name}})",
+      "noViolations": "Aucune violation détectée",
+      "noViolationsBody": "Le planning respecte la convention HCR",
+      "points_one": "{{count}} point",
+      "points_other": "{{count}} points",
+      "viewSchedule": "Voir sur le planning",
+      "overtimeTitle": "Heures supplémentaires",
+      "totalHours": "{{value}}h total",
+      "overtimeHours": "{{value}}h sup",
+      "rate": "{{rate}}%: {{value}}h",
+      "legend": "Convention HCR · 39h seuil · 46h moy. 12 sem · 48h max absolu · 11h repos (10h HCR)",
+      "publishWarning_one": "⚠ Publier maintenant rendra ce planning visible aux employés malgré {{count}} manquement HCR.",
+      "publishWarning_other": "⚠ Publier maintenant rendra ce planning visible aux employés malgré {{count}} manquements HCR.",
+      "unpublishButton": "Retirer la publication",
+      "publishWithErrorsButton_one": "Publier malgré {{count}} erreur",
+      "publishWithErrorsButton_other": "Publier malgré {{count}} erreurs",
+      "publishButton": "Publier la semaine",
+      "publishedFooter": "Les employés voient actuellement ce planning sur leur application.",
+      "unpublishedFooter": "Une fois publié, les employés verront leur planning et leurs heures."
+    }
+  },
+  "actionsMenu": {
+    "trigger": "Actions du service",
+    "ghostTrigger": "Affecter un employé",
+    "swap": "Échanger",
+    "assign": "Affecter",
+    "solver": "Choix du solver",
+    "subRoleEmpty": "Sous-rôle (—)",
+    "subRoleWith": "Sous-rôle ({{name}})",
+    "allKitchen": "Tous · Cuisine",
+    "allFloor": "Tous · Salle",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleteService": {
+      "title": "Supprimer ce service ?",
+      "irreversible": "Cette action ne peut pas être annulée.",
+      "cancel": "Annuler",
+      "confirm": "Supprimer"
+    },
+    "editTime": {
+      "title": "Modifier les horaires",
+      "startLabel": "Début",
+      "endLabel": "Fin",
+      "cancel": "Annuler",
+      "save": "Enregistrer"
+    },
+    "swapDialog": {
+      "solverTitle": "Choix du solver",
+      "subRoleTitle": "Sous-rôle",
+      "subRoleTitleWith": "Sous-rôle · {{name}}",
+      "allKitchenTitle": "Tous les employés · Cuisine",
+      "allFloorTitle": "Tous les employés · Salle",
+      "description": "Remplacer {{name}} sur le service du {{date}} ({{start}}–{{end}})",
+      "calculating": "Calcul des candidats…",
+      "noCandidates": "Aucun candidat trouvé.",
+      "noEligible": "Aucun employé éligible.",
+      "close": "Fermer"
+    },
+    "assignDialog": {
+      "subRoleTitle": "Sous-rôle",
+      "subRoleTitleWith": "Sous-rôle · {{name}}",
+      "allKitchenTitle": "Tous les employés · Cuisine",
+      "allFloorTitle": "Tous les employés · Salle",
+      "description": "Affecter un employé au créneau {{date}} ({{start}}–{{end}}) · {{role}}",
+      "descriptionWithSub": "Affecter un employé au créneau {{date}} ({{start}}–{{end}}) · {{role}} · {{sub}}",
+      "noEligible": "Aucun employé éligible.",
+      "close": "Fermer"
+    },
+    "candidateLegend": {
+      "subRoleFallback": "sous-rôle",
+      "matchFree": "{{label}} · libre",
+      "matchBusy": "{{label}} · occupé",
+      "otherFree": "autre sous-rôle · libre",
+      "otherBusy": "autre sous-rôle · occupé"
+    },
+    "toasts": {
+      "deleted": "Service de {{name}} supprimé",
+      "deleteFailed": "Échec de la suppression",
+      "saveFailed": "Échec de la modification",
+      "solverFailed": "Échec du solver",
+      "swapped": "{{from}} → {{to}}",
+      "swapFailed": "Échec de l'échange",
+      "assigned": "{{name}} affecté(e) à ce créneau",
+      "assignFailed": "Échec de l'affectation"
+    }
+  }
+}

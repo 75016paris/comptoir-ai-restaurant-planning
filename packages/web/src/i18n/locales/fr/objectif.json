@@ -1,0 +1,196 @@
+{
+  "shared": {
+    "kitchen": "Cuisine",
+    "floor": "Salle",
+    "kitchenLower": "cuisine",
+    "floorLower": "salle",
+    "save": "Enregistrer",
+    "savePending": "...",
+    "saved": "Enregistré",
+    "delete": "Supprimer",
+    "loading": "Chargement...",
+    "loadError": "Erreur de chargement",
+    "saveError": "Erreur lors de l'enregistrement",
+    "continue": "Continuer →"
+  },
+  "calendar": {
+    "back": {
+      "onboarding": "Installation",
+      "preferences": "Préférences"
+    },
+    "header": {
+      "renameTitle": "Renommer l'objectif",
+      "untitled": "Sans nom",
+      "titulairesButton": "Équipe titulaire",
+      "titulairesNeedReview": "{{count}} titulaire(s) à revoir",
+      "continueOnboarding": "Continuer →",
+      "continueKitchen": "Continuer vers Cuisine →",
+      "continueTitulaires": "Équipe titulaire →",
+      "needsFloorTooltip": "Ajoutez au moins un service Salle pour continuer"
+    },
+    "tabs": {
+      "floor": "Salle",
+      "kitchen": "Cuisine"
+    },
+    "priority": {
+      "label": "Priorité",
+      "tooltip": "À quoi sert la priorité ?",
+      "popupTitle": "Priorité des jours",
+      "popupP1": "Le solver d'auto-staffing traite les jours dans l'ordre de leur priorité : <strong>Priorité 1</strong> est rempli en premier, puis Priorité 2, etc.",
+      "popupP2": "Utilisez-la pour garantir la couverture des jours les plus importants (vendredi soir, brunch dominical…) en cas de manque de personnel — le solver privilégie ces jours quand il doit faire des compromis.",
+      "popupP3": "Plusieurs jours peuvent partager la même priorité — ils sont alors traités ensemble.",
+      "raise": "Augmenter la priorité",
+      "lower": "Baisser la priorité",
+      "value": "Priorité {{n}}"
+    },
+    "palette": {
+      "drag": "Glisser :",
+      "classic": "Classique",
+      "coupure": "Coupure"
+    },
+    "copyDay": {
+      "instruction": "Cliquez sur le jour cible pour coller {{day}}",
+      "cancel": "Annuler la copie",
+      "copyTitle": "Copier {{day}}",
+      "toast": "{{from}} copié vers {{to}}"
+    },
+    "day": {
+      "openTitle": "Ouvrir {{day}}",
+      "closeTitle": "Fermer {{day}}",
+      "closed": "fermé"
+    },
+    "missing": {
+      "badgeKitchen": "Cuisine non plannifié",
+      "badgeFloor": "Salle non plannifiée",
+      "titleKitchen": "Cuisine manquante",
+      "titleFloor": "Salle manquante",
+      "explainKitchen": "<day>{{day}}</day> a au moins un service en salle mais aucun service <em>cuisine</em>. Le restaurant ne peut pas tourner sans équipe cuisine ce jour-là.",
+      "explainFloor": "<day>{{day}}</day> a au moins un service de cuisine mais aucun service <em>salle</em>. Le restaurant ne peut pas tourner sans équipe salle ce jour-là.",
+      "actionKitchen": "Glissez une carte <strong>Classique</strong> ou <strong>Coupure</strong> sur la colonne {{day}} dans la vue Cuisine pour combler.",
+      "actionFloor": "Glissez une carte <strong>Classique</strong> ou <strong>Coupure</strong> sur la colonne {{day}} dans la vue Salle pour combler."
+    },
+    "warning": {
+      "title": "Non-conformité HCR",
+      "amplitude": "Amplitude {{value}} > 13h (HCR-L3121-34)",
+      "coupure": "Coupure {{value}} > 5h max",
+      "amplitudeExplain": "La durée entre le début et la fin de journée (coupures incluses) ne doit pas dépasser <strong>13 heures</strong>. Réduisez l'amplitude ou décalez les horaires.",
+      "coupureExplain": "La coupure entre deux périodes de travail ne doit pas excéder <strong>5 heures</strong>. Réduisez la durée de la coupure."
+    },
+    "block": {
+      "configure": "Configurer le service",
+      "totalShort": "Total {{value}}",
+      "amplitudeShort": "Amplitude: {{value}}",
+      "coupureShort": "coupure {{value}}"
+    },
+    "footer": {
+      "help": "Glisser pour créer · Bords ↕ horaire · Grip → effectif · Double-clic modifier"
+    },
+    "namePrompt": {
+      "title": "Nommer le profil",
+      "description": "Donnez un nom à ce profil pour le sauvegarder. Sinon, il sera appliqué uniquement à la semaine sélectionnée.",
+      "placeholder": "Nom du profil…",
+      "useWeekOnly": "Utiliser uniquement du {{from}} au {{to}}",
+      "applyThisWeek": "Appliquer cette semaine",
+      "save": "Sauvegarder"
+    },
+    "shiftLabels": {
+      "night": "Nuit",
+      "morning": "Matin",
+      "midday": "Midi",
+      "afternoon": "Après-midi",
+      "evening": "Soir",
+      "coupure": "Coupure",
+      "coupureMorning": "Coupure matin",
+      "coupureEvening": "Coupure soir"
+    },
+    "toast": {
+      "saved": "Objectif enregistré",
+      "appliedWeek": "Objectif appliqué à cette semaine",
+      "saveFailed": "Échec de l'enregistrement",
+      "loadError": "Erreur de chargement",
+      "profileNotFound": "Profil introuvable - il a peut-être été modifié",
+      "nameRequired": "Donnez un nom à cet objectif"
+    },
+    "edit": {
+      "name": "Nom",
+      "nameTaken": "Ce nom existe déjà pour ce rôle",
+      "start": "Début",
+      "end": "Fin",
+      "worked": "travaillées",
+      "service": "de service",
+      "coupureLabel": "Coupure",
+      "coupureValue": "{{value}} de coupure",
+      "staffPerRole": "Effectif par poste",
+      "total": "Total : <b>{{n}}</b>"
+    },
+    "names": {
+      "standard": "Standard",
+      "temporary": "Temporaire"
+    }
+  },
+  "titulaires": {
+    "header": {
+      "back": "Retour à l'objectif",
+      "title": "Équipe titulaire — {{name}}",
+      "untitled": "Objectif",
+      "needsReview": "{{count}} titulaire(s) à revoir"
+    },
+    "intro": {
+      "title": "Pourquoi définir une équipe titulaire ?",
+      "p1": "Tant que Comptoir ne dispose pas d'historique sur votre restaurant, l'auto-staffing ignore qui vous placiez habituellement à chaque créneau. Le planning généré reste viable, mais peut s'éloigner notablement des habitudes prises sur papier — source de friction pour vos équipes au moment du basculement.",
+      "p2": "En désignant une équipe titulaire, vous fournissez au solveur un planning de référence qu'il privilégie. C'est une orientation, pas une règle stricte : si une contrainte plus forte l'impose (congé, indisponibilité, plafond d'heures, repos légal HCR…), il s'autorisera à substituer un autre employé pour produire une semaine valide.",
+      "p3": "Après environ 12 semaines de planning réel, le modèle dispose de suffisamment d'historique pour inférer ces habitudes automatiquement et suit l'évolution naturelle de votre équipe. Les titulaires deviennent alors facultatifs et peuvent être allégés.",
+      "drag": "Glissez les employés sur les créneaux pour définir l'équipe titulaire de chaque jour."
+    },
+    "pool": {
+      "title": "Employés",
+      "subtitle": "(glissez vers un créneau)"
+    },
+    "card": {
+      "pinnedTitle": "{{count}} créneau(x) · {{hours}}h planées",
+      "pinnedTitleWithContract": "{{count}} créneau(x) · {{hours}}h planées / {{contract}}h contrat",
+      "viewReason": "Voir le motif",
+      "viewAlert": "Voir le motif d'alerte",
+      "endingTitle": "Contrat se termine",
+      "close": "Fermer",
+      "removeAll": "Retirer de tous les créneaux",
+      "removeShift": "Retirer ce créneau",
+      "viewWarning": "Voir le motif de l'avertissement"
+    },
+    "tooltip": {
+      "subRoleNotCovered": "Sous-rôle non couvert : {{sub}} ({{roles}})",
+      "noSubRoles": "aucun",
+      "substitution": "Substitution : {{sub}} (rôle d'origine {{roles}})",
+      "substitutionVerbose": "Substitution : {{name}} ({{roles}}) couvre un poste {{sub}}.",
+      "subRoleMissing": "{{sub}} manquant"
+    },
+    "errors": {
+      "wrongRole": "{{name}} ne peut pas couvrir un poste {{role}}",
+      "profileNotFound": "Profil introuvable.",
+      "noTargets": "Aucun objectif de staffing défini pour ce profil. Définissez d'abord les services et les effectifs sur la page Objectif."
+    },
+    "staleness": {
+      "inactive": "Inactif",
+      "tempInactive": "Indisponible (période)",
+      "contractEnded": "Contrat terminé",
+      "contractEndedOn": "Contrat terminé le {{date}}",
+      "contractEnding": "CDD se termine bientôt",
+      "contractEndingOn": "CDD se termine le {{date}}"
+    },
+    "verdict": {
+      "header": "Conformité",
+      "ok": "Plannable",
+      "tendu": "Tendu",
+      "insuffisant": "Insuffisant",
+      "slotsPinned": "Slots pinés",
+      "capacity": "Capacité titulaires",
+      "demand": "Demande objectif",
+      "coverageHours": "Couverture en heures",
+      "substitutions": "Substitutions",
+      "overContract": "Au-delà du contrat",
+      "overContractItem": "{{name}} · {{pinned}}h vs {{contract}}h",
+      "stale_one": "{{count}} titulaire inactif ou contrat se terminant",
+      "stale_other": "{{count}} titulaires inactifs ou contrats se terminant"
+    }
+  }
+}

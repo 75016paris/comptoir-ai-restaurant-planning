@@ -1,0 +1,441 @@
+{
+  "page": {
+    "title": "Schedule",
+    "loading": "Loading..."
+  },
+  "viewModes": {
+    "stack": "Stack",
+    "calendar": "Calendar",
+    "list": "List"
+  },
+  "timeRange": {
+    "week": "Week",
+    "month": "Month"
+  },
+  "roleFilter": {
+    "all": "All",
+    "kitchen": "Kitchen ({{count}})",
+    "floor": "Floor ({{count}})",
+    "missing": "Missing ({{count}})"
+  },
+  "roles": {
+    "kitchen": "Kitchen",
+    "floor": "Floor",
+    "kitchenMobile": "KITCHEN",
+    "floorMobile": "FLOOR",
+    "kitchenMobileWithCount": "KITCHEN ({{count}})",
+    "floorMobileWithCount": "FLOOR ({{count}})",
+    "kitchenColon": "KITCHEN:",
+    "floorColon": "FLOOR:",
+    "kitchenAbbr": "KIT",
+    "floorAbbr": "FLR"
+  },
+  "actions": {
+    "today": "Today",
+    "todayShort": "Today",
+    "previous": "Previous",
+    "next": "Next",
+    "back": "Back",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "close": "Close",
+    "understood": "Got it",
+    "clear": "Clear",
+    "scrollTop": "Top",
+    "scrollBottom": "Bottom",
+    "expand": "Expand",
+    "restack": "Restack",
+    "configureServices": "Configure services",
+    "print": "Print",
+    "printAria": "Print schedule",
+    "refreshPreview": "Refresh preview",
+    "addServices": "Add services",
+    "complete": "Complete",
+    "replace": "Replace",
+    "unlock": "Unlock",
+    "deleteWeek": "Delete the week",
+    "scheduleAnyway": "Schedule anyway",
+    "loadingShort": "..."
+  },
+  "buttons": {
+    "wipeWeek": "Clear the entire week",
+    "gridVertical": "Vertical view (days as columns)",
+    "gridHorizontal": "Horizontal view (days as rows)",
+    "exitFullscreen": "Exit fullscreen",
+    "fullscreen": "Fullscreen",
+    "stackDayView": "2-day view",
+    "stackWeekView": "Week view (7 days)",
+    "auto": "Auto",
+    "autoStaff": "Auto-staffing",
+    "optimizationStyle": "Optimization style for the next auto-staffing"
+  },
+  "status": {
+    "published": "Published",
+    "draft": "Draft",
+    "locked": "Locked",
+    "unlocked": "Unlocked",
+    "publishedTooltip": "Schedule published — click to manage",
+    "draftTooltip": "Schedule not published — click to check compliance and publish",
+    "lockedTooltip": "Past, published week — click to unlock and edit",
+    "unlockedTooltip": "Unlocked for this session — your changes are tracked in the audit log",
+    "manual": "Manual",
+    "auto": "Auto",
+    "autoWithProfile": "Auto · {{name}}",
+    "autoModifiedSuffix": " · modified",
+    "closed": "CLOSED",
+    "closedWithReason": "CLOSED - {{reason}}",
+    "noService": "No service",
+    "todayBadge": "Today"
+  },
+  "profiles": {
+    "default": "Default",
+    "objectiveLabel": "Target",
+    "noneObjective": "No target",
+    "editProfile": "Edit profile",
+    "createProfile": "Create profile"
+  },
+  "gaps": {
+    "missingPositions_one": "{{count}} unfilled position",
+    "missingPositions_other": "{{count}} unfilled positions"
+  },
+  "legend": {
+    "selected_one": "{{count}} selected",
+    "selected_other": "{{count}} selected",
+    "employees": "{{count}} employees",
+    "sharedWorker": "Shared worker"
+  },
+  "empty": {
+    "noServicesConfiguredTitle": "No services configured",
+    "noServicesConfiguredHint": "Set up your service hours (lunch, dinner, etc.) in the targets calendar before building your schedule."
+  },
+  "ghost": {
+    "missing": "Unfilled",
+    "tooltip": "Unfilled · {{label}} · {{start}}–{{end}}"
+  },
+  "coupure": {
+    "tooltip": "Split shift {{start}}–{{end}}",
+    "description": "Split shift · {{date}} ({{legs}})"
+  },
+  "touch": {
+    "holdToPlace": "→ long-press to place"
+  },
+  "drag": {
+    "release": "Release",
+    "delete": "Delete",
+    "willDelete": "Shift will be deleted"
+  },
+  "moveDescription": {
+    "moved": "{{src}} ({{srcLeft}} left) → {{dst}} (was {{was}}, now {{now}})",
+    "addedToZone": "Added to {{date}} {{zone}} (was {{was}}, now {{now}})",
+    "addedToTimes": "Added to {{date}} {{start}}-{{end}}",
+    "addedToType": "Added to {{date}} {{type}}"
+  },
+  "deleteToast": {
+    "removed": "{{name}} removed",
+    "rangeDescription": "{{date}} {{start}}-{{end}}"
+  },
+  "toasts": {
+    "previewFailed": "Preview failed",
+    "servicesGenerated_one": "{{count}} service generated",
+    "servicesGenerated_other": "{{count}} services generated",
+    "skippedOverlaps": " ({{count}} skipped — overlaps)",
+    "skippedSimple": " ({{count}} skipped)",
+    "generationFailed": "Generation failed",
+    "saveFailed": "Save failed",
+    "servicesAdded_one": "{{count}} service added",
+    "servicesAdded_other": "{{count}} services added",
+    "fillFailed": "Fill failed",
+    "servicesReplaced_one": "{{count}} service created (replacement)",
+    "servicesReplaced_other": "{{count}} services created (replacement)",
+    "replaceFailed": "Replacement failed",
+    "servicesDeleted_one": "{{count}} service deleted",
+    "servicesDeleted_other": "{{count}} services deleted",
+    "deleteFailed": "Deletion failed",
+    "wipePastAndDelay": "This week contains past dates and days within the 8-day modification window (HCR-L3121-47). Employees may refuse these changes.",
+    "wipePast": "This week contains past dates. This will affect history.",
+    "wipeDelay": "This week contains days within the 8-day modification window (HCR-L3121-47). Employees may refuse these changes.",
+    "weekPublished": "Week published — visible to employees",
+    "publishRemoved": "Publication withdrawn",
+    "failed": "Failed",
+    "weekUnlocked": "Week unlocked for this session — your changes will be tracked",
+    "moveFailed": "Move failed",
+    "undoFailed": "Undo failed",
+    "undo": "Undo",
+    "createServiceFailed": "Failed to create service",
+    "modificationFailed": "Edit failed"
+  },
+  "dialogs": {
+    "autoStaffing": {
+      "title": "Auto-staffing",
+      "existsDescription": "An automatic staffing already exists for this week."
+    },
+    "unlockWeek": {
+      "title": "Unlock the week",
+      "description": "The week of <strong>{{from}}</strong> to <strong>{{to}}</strong> is past and published — it is normally locked (payroll record and HCR compliance).",
+      "details": "You can unlock it for this session to edit a service. Each change will be tagged <em>[Locked week — override]</em> in the audit log."
+    },
+    "wipeWeek": {
+      "title": "Clear the entire week",
+      "description": "All services in the week of <strong>{{from}}</strong> to <strong>{{to}}</strong> will be permanently deleted. This action cannot be undone."
+    },
+    "pastDate": {
+      "title": "Past date",
+      "description": "You are about to edit a service on a past date. This will affect history."
+    },
+    "closure": {
+      "title": "Restaurant closed",
+      "description": "This date falls during a closure period. No staff should be scheduled. Continue?",
+      "descriptionWithReason": "This date falls during a closure period ({{reason}}). No staff should be scheduled. Continue?"
+    },
+    "autoStaffPreview": {
+      "title": "Automatic generation",
+      "description": "{{from}} → {{to}} · {{count}} services",
+      "targetsLabel": "Staffing targets",
+      "zeroMeansAll": "0 = all available",
+      "rowLabel": "{{role}} {{zone}}"
+    },
+    "gapWarning": {
+      "title": "Unfilled positions",
+      "description": "Auto-staffing could not fill all the requested positions. Missing slots are highlighted in red on the schedule."
+    },
+    "auditLog": {
+      "title": "Week history",
+      "noChanges": "No changes this week.",
+      "actionInsert": "add",
+      "actionUpdate": "edit",
+      "actionDelete": "del"
+    },
+    "timeEdit": {
+      "title": "Edit times",
+      "description": "{{name}} — {{date}}",
+      "startLabel": "Start",
+      "endLabel": "End",
+      "note": "These times only affect this service for this week. The reference target is not changed."
+    }
+  },
+  "modals": {
+    "serviceType": {
+      "zoneTitle": "{{zone}} service",
+      "zoneTimes": "{{start}} - {{end}}",
+      "customTitle": "Custom",
+      "customSubtitle": "Custom hours",
+      "startLabel": "Start",
+      "endLabel": "End"
+    }
+  },
+  "help": {
+    "scheduleTitle": "The schedule",
+    "engineTitle": "CP-SAT engine (Constraint Programming)",
+    "engineExplanation": "A constraint-programming optimization technique: each employee × slot assignment is a binary variable (0 or 1). The <link>CP-SAT</link> solver finds the optimal assignment while respecting every legal constraint.",
+    "priorityTitle": "Priority hierarchy (objective function)",
+    "priorityIntro": "The solver optimizes several weighted objectives, from most important to least important:",
+    "engineFooter": "Engine: <link1>CP-SAT</link1> (Google OR-Tools) — <link2>source code</link2>.",
+    "items": {
+      "dragDrop": "<strong>Drag and drop</strong> — drag an employee from the legend onto a day to create a service, or move an existing service between days.",
+      "objectives": "<strong>Target profiles</strong> — pick a staffing profile to display per-slot targets and unfilled positions.",
+      "fillTeam": "<strong>Complete the team</strong> — the <link>CP-SAT</link> engine automatically fills empty slots while respecting all constraints.",
+      "compliance": "<strong>Compliance</strong> — the compliance badge checks HCR rules in real time: max 10h/day, 10h minimum rest, 6 consecutive days max, 46h average over 12 weeks.",
+      "views": "<strong>Views</strong> — calendar (time grid), list (compact), or stack (grouped by zone)."
+    },
+    "priorities": {
+      "fillSlots": "<strong>Fill slots</strong> (weight 1000) — dominant goal: cover every service.",
+      "underHours": "<strong>Under-contract hours</strong> (weight 80/h) — favour employees who haven't yet reached their contractual hours.",
+      "moderateOT": "<strong>Moderate overtime penalty</strong> (weight −40/h) — discourage going beyond 115% of contract.",
+      "lightOT": "<strong>Light overtime</strong> (weight 20/h) — accept light overtime (100-115%) when needed.",
+      "consistency": "<strong>Schedule consistency</strong> (weight 5) — favour employees already assigned to other slots on the same day.",
+      "preferences": "<strong>Employee preferences</strong> (weight 3) — respect availability preferences when possible.",
+      "priority": "<strong>Employee priority</strong> (weight 2) — favour high-priority employees for each slot.",
+      "flexibility": "<strong>Residual flexibility</strong> (weight 1) — preserve capacity to adapt to unexpected changes."
+    }
+  },
+  "laborCost": {
+    "title": "Payroll",
+    "perWeek": "/ week",
+    "tooltip": "Payroll — estimate based on hourly rates, scheduled hours, and HCR overtime premiums",
+    "weekHeader": "Week",
+    "unpricedNote_one": "* {{count}} employee with no rate set (excluded from the total).",
+    "unpricedNote_other": "* {{count}} employees with no rate set (excluded from the total).",
+    "footnote": "Gross estimate with HCR overtime premiums, employer charges not included."
+  },
+  "worker": {
+    "title": "My Schedule",
+    "viewModes": {
+      "week": "Week",
+      "month": "Month",
+      "list": "List"
+    },
+    "dismissAria": "Close",
+    "imposedLeave": {
+      "title": "Leave imposed by your employer",
+      "dateRange": "From {{from}} to {{to}}",
+      "dateRangeWithReason": "From {{from}} to {{to}} · {{reason}}",
+      "legalNote": "Labour Code art. L3141-16 — dates blocked in your schedule."
+    },
+    "proposedLeave": {
+      "title": "Leave proposed by your employer"
+    },
+    "yes": "Yes",
+    "no": "No",
+    "toasts": {
+      "proposalAccepted": "Proposal accepted",
+      "proposalRejected": "Proposal declined",
+      "error": "Error"
+    },
+    "servicesSummary_one": "{{count}} service · {{hours}}h",
+    "servicesSummary_other": "{{count}} services · {{hours}}h",
+    "notPublished": {
+      "title": "Schedule not published",
+      "body": "Your manager hasn't published this week's schedule yet. You'll see it here as soon as it's available."
+    },
+    "timeclock": {
+      "clockedIn": "Clocked in",
+      "clockedOut": "Not clocked in",
+      "since": "Since {{time}}",
+      "tapIn": "Clock in",
+      "tapOut": "Clock out",
+      "tapping": "..."
+    },
+    "todayBadge": "TODAY",
+    "requestReplacement": "Request replacement",
+    "noServicesThisWeek": "No service this week",
+    "replacementModal": {
+      "title": "Report unavailability",
+      "successTitle": "Request submitted",
+      "successBody": "Your manager is looking for a replacement. You'll be notified as soon as a solution is found.",
+      "ittReminder": "Please send your sick-leave certificate as soon as possible. An automatic reminder will be sent if the document is not received in time.",
+      "intro": "Your manager will be notified and will arrange your replacement. No further action will be required from you after submission.",
+      "reasonLabel": "Reason",
+      "reasonPlaceholder": "Optional",
+      "medicalToggle": "Sick leave",
+      "medicalExplanation": "The search for a replacement starts immediately. Your <itt>ITT</itt> (Temporary Work Interruption certificate), issued by your doctor, can be uploaded here or sent directly to your manager once received. An automatic reminder will be sent if not received.",
+      "submit": "Submit request",
+      "submitFailed": "Submission failed",
+      "fileDropZone": "Drop your certificate here or ",
+      "fileDropZoneBrowse": "browse"
+    }
+  },
+  "cards": {
+    "errorBadge": "Error",
+    "warningBadge": "Warning",
+    "dropTag": "Here"
+  },
+  "mobileTutorial": {
+    "closeAria": "Close tutorial",
+    "iframeTitle": "Mobile tutorial — schedule"
+  },
+  "compliance": {
+    "dialog": {
+      "title": "Legal compliance",
+      "description": "HCR Collective Agreement check — French Labour Code"
+    },
+    "badges": {
+      "error": "ERROR",
+      "warning": "ALERT",
+      "info": "INFO",
+      "compliant": "Compliant",
+      "errCount": "{{count}} err.",
+      "alertCount_one": "{{count}} alert",
+      "alertCount_other": "{{count}} alerts"
+    },
+    "panel": {
+      "verifying": "Checking...",
+      "loadError": "Check failed",
+      "weekRange": "Week {{from}} — {{to}}",
+      "workersChecked_one": "{{count}} employee",
+      "workersChecked_other": "{{count}} employees",
+      "errors_one": "{{count}} error",
+      "errors_other": "{{count}} errors",
+      "warnings_one": "{{count}} alert",
+      "warnings_other": "{{count}} alerts",
+      "info_one": "{{count}} info",
+      "info_other": "{{count}} info",
+      "subroleSubstitutionTitle": "Coverage by sub-role substitution",
+      "subroleSubstitutionBody": "These slots are covered by an employee with a different sub-role than the required one. Acceptable but worth monitoring.",
+      "filledAs": "(covering as {{name}})",
+      "noViolations": "No violations detected",
+      "noViolationsBody": "The schedule complies with the HCR convention",
+      "points_one": "{{count}} point",
+      "points_other": "{{count}} points",
+      "viewSchedule": "View on schedule",
+      "overtimeTitle": "Overtime",
+      "totalHours": "{{value}}h total",
+      "overtimeHours": "{{value}}h OT",
+      "rate": "{{rate}}%: {{value}}h",
+      "legend": "HCR Convention · 39h threshold · 46h avg over 12 weeks · 48h absolute max · 11h rest (10h HCR)",
+      "publishWarning_one": "⚠ Publishing now will make this schedule visible to employees despite {{count}} HCR breach.",
+      "publishWarning_other": "⚠ Publishing now will make this schedule visible to employees despite {{count}} HCR breaches.",
+      "unpublishButton": "Unpublish",
+      "publishWithErrorsButton_one": "Publish despite {{count}} error",
+      "publishWithErrorsButton_other": "Publish despite {{count}} errors",
+      "publishButton": "Publish week",
+      "publishedFooter": "Employees can currently see this schedule on their app.",
+      "unpublishedFooter": "Once published, employees will see their schedule and hours."
+    }
+  },
+  "actionsMenu": {
+    "trigger": "Service actions",
+    "ghostTrigger": "Assign an employee",
+    "swap": "Swap",
+    "assign": "Assign",
+    "solver": "Solver's pick",
+    "subRoleEmpty": "Sub-role (—)",
+    "subRoleWith": "Sub-role ({{name}})",
+    "allKitchen": "All · Kitchen",
+    "allFloor": "All · Floor",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteService": {
+      "title": "Delete this service?",
+      "irreversible": "This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "editTime": {
+      "title": "Edit times",
+      "startLabel": "Start",
+      "endLabel": "End",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "swapDialog": {
+      "solverTitle": "Solver's pick",
+      "subRoleTitle": "Sub-role",
+      "subRoleTitleWith": "Sub-role · {{name}}",
+      "allKitchenTitle": "All employees · Kitchen",
+      "allFloorTitle": "All employees · Floor",
+      "description": "Replace {{name}} on the {{date}} service ({{start}}–{{end}})",
+      "calculating": "Calculating candidates…",
+      "noCandidates": "No candidate found.",
+      "noEligible": "No eligible employee.",
+      "close": "Close"
+    },
+    "assignDialog": {
+      "subRoleTitle": "Sub-role",
+      "subRoleTitleWith": "Sub-role · {{name}}",
+      "allKitchenTitle": "All employees · Kitchen",
+      "allFloorTitle": "All employees · Floor",
+      "description": "Assign an employee to the {{date}} slot ({{start}}–{{end}}) · {{role}}",
+      "descriptionWithSub": "Assign an employee to the {{date}} slot ({{start}}–{{end}}) · {{role}} · {{sub}}",
+      "noEligible": "No eligible employee.",
+      "close": "Close"
+    },
+    "candidateLegend": {
+      "subRoleFallback": "sub-role",
+      "matchFree": "{{label}} · free",
+      "matchBusy": "{{label}} · busy",
+      "otherFree": "other sub-role · free",
+      "otherBusy": "other sub-role · busy"
+    },
+    "toasts": {
+      "deleted": "{{name}}'s service deleted",
+      "deleteFailed": "Delete failed",
+      "saveFailed": "Save failed",
+      "solverFailed": "Solver failed",
+      "swapped": "{{from}} → {{to}}",
+      "swapFailed": "Swap failed",
+      "assigned": "{{name}} assigned to this slot",
+      "assignFailed": "Assignment failed"
+    }
+  }
+}

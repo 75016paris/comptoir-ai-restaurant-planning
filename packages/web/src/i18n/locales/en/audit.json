@@ -1,0 +1,49 @@
+{
+  "title": "Audit log",
+  "buttons": {
+    "filters": "Filters",
+    "refresh": "Refresh"
+  },
+  "filters": {
+    "from": "From",
+    "to": "To",
+    "allTables": "All tables",
+    "allActions": "All actions",
+    "allSources": "All sources"
+  },
+  "tables": {
+    "services": "Services",
+    "holiday_requests": "Leave",
+    "replacement_requests": "Replacements",
+    "restaurant_closures": "Closures",
+    "restaurants": "Settings"
+  },
+  "actions": {
+    "insert": "Created",
+    "update": "Edited",
+    "delete": "Deleted"
+  },
+  "sources": {
+    "dashboard": "Dashboard",
+    "bot:admin": "Bot (manager)",
+    "bot:worker": "Bot (employee)",
+    "auto-scheduler": "Auto-staffing",
+    "cron": "Cron"
+  },
+  "table": {
+    "headers": {
+      "date": "Date",
+      "table": "Table",
+      "action": "Action",
+      "source": "Source",
+      "actor": "Actor",
+      "summary": "Summary"
+    }
+  },
+  "loading": "Loading…",
+  "empty": "No events found",
+  "system": "System",
+  "summaryDash": "—",
+  "moreFields": "+{{count}} more fields...",
+  "limitedNote": "Showing 100 entries max — refine filters to see more"
+}

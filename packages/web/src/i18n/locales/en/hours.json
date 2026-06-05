@@ -1,0 +1,92 @@
+{
+  "title": "Hours",
+  "tabs": {
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "payroll": "Payroll"
+  },
+  "nav": {
+    "thisWeek": "This week",
+    "thisMonth": "This month"
+  },
+  "common": {
+    "loading": "Loading...",
+    "total": "Total",
+    "noServicesThisMonth": "No service this month",
+    "noServices": "No service",
+    "dualValueLegend": "Top = actual · Bottom = projected"
+  },
+  "summary": {
+    "hours": "Hours",
+    "worked": "Worked",
+    "overtime": "OT",
+    "services": "Services",
+    "totalHours": "Total",
+    "baseHours": "Regular",
+    "holidays": "Leave",
+    "sickDays": "Sick"
+  },
+  "alerts": {
+    "workersWithOTWeekly_one": "{{count}} employee with overtime this week",
+    "workersWithOTWeekly_other": "{{count}} employees with overtime this week",
+    "workersWithOTMonthly_one": "{{count}} employee with overtime this month",
+    "workersWithOTMonthly_other": "{{count}} employees with overtime this month"
+  },
+  "table": {
+    "headers": {
+      "name": "Name",
+      "role": "Role",
+      "contract": "Contract",
+      "services": "Services",
+      "hours": "Hours",
+      "worked": "Worked",
+      "paidLeave": "Paid PTO",
+      "delta": "Δ",
+      "weekDelta": "Week Δ",
+      "payrollDelta": "Payroll Δ",
+      "ot110": "Weekly OT 110%",
+      "ot120": "Weekly OT 120%",
+      "ot150": "Weekly OT 150%"
+    }
+  },
+  "payroll": {
+    "noData": "No payroll data this month",
+    "loadError": "Failed to load payroll data",
+    "downloadSuccess": "{{filename}} downloaded",
+    "downloadError": "Download failed",
+    "headerInfo": "{{name}} — Base {{base}}h/month — OT threshold {{threshold}}h/week (HCR)",
+    "headers": {
+      "days": "Days",
+      "baseHours": "Reg. h",
+      "ot110": "OT 110%",
+      "ot120": "OT 120%",
+      "ot150": "OT 150%",
+      "holidays": "Leave",
+      "meals": "Meals"
+    },
+    "weekRow": {
+      "label": "W{{num}} · {{from}} → {{to}}",
+      "straddling": "(straddling)",
+      "weekHoursSuffix": "({{hours}}h wk)"
+    },
+    "legend": {
+      "abbr": "Reg. h = regular hours (excl. OT) · OT = overtime · Meals = benefit-in-kind days",
+      "calc": "OT calculated by ISO week (Mon→Sun) · Straddling weeks: OT counted in the Sunday's month",
+      "exports": "CSV = accounting recap · Silae = direct import (PayrollID;Code;Value;Start date;End date;Analytic section) · ID = Silae payroll ID (employee record)"
+    }
+  },
+  "worker": {
+    "title": "My Hours",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "thisYear": "This year",
+    "actual": "Actual",
+    "servicesDone": "Services done",
+    "actualOT": "Actual OT",
+    "projected": "Projected",
+    "servicesTotal": "Total services",
+    "projectedOT": "Projected OT",
+    "actualHoursSuffix": "{{hours}}h actual",
+    "weeklyDetail": "Weekly breakdown"
+  }
+}

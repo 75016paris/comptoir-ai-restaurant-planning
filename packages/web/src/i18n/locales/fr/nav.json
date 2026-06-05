@@ -1,0 +1,28 @@
+{
+  "drawer": {
+    "navigation": "Navigation"
+  },
+  "links": {
+    "holidays": "Congés",
+    "hours": "Heures",
+    "planning": "Planning",
+    "preferences": "Préférences",
+    "profile": "Profil",
+    "team": "Équipe"
+  },
+  "openMenu": "Ouvrir le menu",
+  "restaurantSwitcher": {
+    "addressLabel": "Adresse",
+    "cancel": "Annuler",
+    "create": "Nouveau restaurant",
+    "createDescription": "Créez un restaurant vide, puis terminez son onboarding.",
+    "createFailed": "Impossible de créer le restaurant",
+    "created": "Restaurant créé",
+    "createSubmit": "Créer",
+    "createTitle": "Nouveau restaurant",
+    "label": "Changer de restaurant",
+    "nameLabel": "Nom du restaurant",
+    "switching": "Changement de restaurant..."
+  },
+  "logout": "Déconnexion"
+}

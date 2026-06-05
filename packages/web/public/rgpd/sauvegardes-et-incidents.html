@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sauvegardes et incidents — Comptoir</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:860px;margin:2.5rem auto;padding:0 1.25rem;color:#1a1815;line-height:1.55}h1{font-size:2rem;margin-bottom:.25rem}h2{margin-top:2rem;font-size:1.25rem}.meta,.muted{color:#6b6258;font-size:.92rem}a{color:#b3541e}ol,ul{padding-left:1.25rem}.box{background:#fbf7ee;border:1px solid #eadfcb;border-radius:12px;padding:1rem}</style>
+</head>
+<body>
+<h1>Sauvegardes, restauration et incidents de sécurité</h1>
+<p class="meta">Comptoir — dernière mise à jour&nbsp;: 11 mai 2026</p>
+<h2>1. Politique de sauvegarde</h2>
+<ul>
+  <li>Sauvegardes de la base et des documents nécessaires à la continuité d'activité.</li>
+  <li>Rétention cible&nbsp;: 90 jours glissants, sans archive permanente non justifiée.</li>
+  <li>Accès limité aux personnes techniques habilitées.</li>
+  <li>Les restaurations doivent être tracées et réservées à un incident, une erreur opérationnelle ou une demande client validée.</li>
+</ul>
+<h2>2. Suppression et sauvegardes</h2>
+<p>Une suppression validée est appliquée dans la base active. Les copies de sauvegarde ne sont pas réécrites individuellement, mais disparaissent au fil de la rotation de 90 jours. En cas de restauration d'une sauvegarde contenant une donnée supprimée, Comptoir réapplique la suppression/anonymisation à partir du registre de demande ou des traces disponibles.</p>
+<h2>3. Processus incident</h2>
+<ol>
+  <li><strong>Détection</strong>&nbsp;: alerte, log, signalement client ou utilisateur.</li>
+  <li><strong>Confinement</strong>&nbsp;: couper l'accès fautif, révoquer les secrets ou désactiver la fonctionnalité si nécessaire.</li>
+  <li><strong>Qualification</strong>&nbsp;: données concernées, volume, personnes, restaurants, risque pour les droits et libertés.</li>
+  <li><strong>Notification client</strong>&nbsp;: informer les restaurants concernés dans les meilleurs délais, cible interne moins de 48 h après qualification.</li>
+  <li><strong>CNIL/personnes concernées</strong>&nbsp;: assister le client responsable du traitement pour notifier la CNIL sous 72 h si le risque l'exige, et les personnes concernées si le risque est élevé.</li>
+  <li><strong>Remédiation</strong>&nbsp;: correctif, vérification, compte rendu, prévention de récurrence.</li>
+</ol>
+<div class="box"><p>Contact incident et RGPD&nbsp;: <a href="mailto:info@cosmobot.fr">info@cosmobot.fr</a>.</p></div>
+<p class="muted"><a href="/rgpd/">Retour au pack RGPD</a></p>
+</body>
+</html>

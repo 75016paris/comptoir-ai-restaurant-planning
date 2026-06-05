@@ -1,0 +1,74 @@
+{
+  "page": {
+    "subtitle": "Demo",
+    "intro": "Escolha um restaurante e um perfil para explorar a aplicação completa. Dados pré-preenchidos, sem palavra-passe.",
+    "loginError": "Erro ao iniciar sessão",
+    "connecting": "A entrar...",
+    "signIn": "Entrar",
+    "backToLogin": "← Voltar ao início de sessão"
+  },
+  "roles": {
+    "manager": "GERENTE",
+    "floor": "SALA"
+  },
+  "restaurants": {
+    "chezReno": {
+      "name": "Chez Reno",
+      "subtitle": "Simples",
+      "description": "14 empregados · 2 turnos (ALMOÇO/JANTAR) · 1 objetivo de pessoal",
+      "manager": "Vista completa: escala, equipa, horas, salários, conformidade, preferências.",
+      "worker": "Vista de empregado: a minha escala, as minhas horas, substituições, férias."
+    },
+    "grandBrasserie": {
+      "name": "The Grand Brasserie",
+      "subtitle": "Complexo",
+      "description": "42 empregados · 3 zonas (Partido/Almoço/Jantar) · reforços de férias · Modo médico",
+      "manager": "Vista completa: escala complexa, multi-perfil, preferências dos empregados.",
+      "worker": "Vista de empregado com preferências ativadas."
+    },
+    "monRestaurant": {
+      "name": "O meu restaurante",
+      "subtitle": "Vazio",
+      "description": "Sem empregados, sem turnos — para percorrer o registo inicial desde o zero",
+      "manager": "Iniciar a configuração inicial: perfil, sub-funções, equipa, turnos, escala."
+    }
+  },
+  "demoNames": {
+    "newManager": "Gerente Demo"
+  },
+  "redirect": {
+    "loadingDemo": "A carregar a demo...",
+    "loginError": "Erro ao iniciar sessão"
+  },
+  "whatsapp": {
+    "loading": "A carregar...",
+    "backLink": "Demo",
+    "title": "Demo WhatsApp",
+    "intro": "Experimente o bot WhatsApp com três perfis diferentes. O gerente gere a escala, os empregados consultam os seus turnos e podem assinalar uma indisponibilidade (o gerente procura um substituto).",
+    "labels": {
+      "owner": "Proprietário",
+      "managerFull": "Gerente · Acesso completo",
+      "floor": "Sala"
+    },
+    "phone": {
+      "appName": "Comptoir",
+      "tagline": "Assistente de escala",
+      "clear": "Limpar",
+      "clearTitle": "Limpar a conversa",
+      "emptyHint": "Envie uma mensagem para começar",
+      "speakNow": "Fale...",
+      "transcribing": "A transcrever...",
+      "messagePlaceholder": "Mensagem...",
+      "stopRecording": "Parar a gravação",
+      "startRecording": "Gravar uma mensagem de voz"
+    },
+    "suggestions": {
+      "adminA": "Quem trabalha amanhã?",
+      "adminB": "Quantas horas esta semana?",
+      "adminC": "Adiciona o Omar amanhã ao almoço",
+      "workerA": "Quando trabalho esta semana?",
+      "workerB": "Não posso vir na sexta",
+      "workerC": "Quero pedir férias"
+    }
+  }
+}

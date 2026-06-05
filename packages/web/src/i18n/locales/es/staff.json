@@ -1,0 +1,207 @@
+{
+  "analysis": {
+    "title": "Análisis de plantilla",
+    "loading": "Cargando...",
+    "loadError": "Error de carga",
+    "noTargetsTitle": "Sin objetivos de plantilla",
+    "noTargetsBody": "Define cuántos empleados quieres por servicio en Prefs → Staffing Targets para activar el análisis.",
+    "objectiveLabel": "Objetivo",
+    "objectivePlanned": "Planificado",
+    "objectiveDefault": "Por defecto",
+    "refreshTitle": "Actualizar el análisis",
+    "demand": "Demanda",
+    "contract": "Contrato",
+    "perWeekUnit": "/sem.",
+    "hoursPerWeek": "{{n}}h/sem.",
+    "verdict": {
+      "oversized": "SOBREDIMENSIONADO",
+      "undersized": "INFRADIMENSIONADO",
+      "tight": "AJUSTADO",
+      "balanced": "EQUILIBRADO"
+    },
+    "surplusOne": "~{{n}} PUESTO DE MÁS",
+    "surplusMany": "~{{n}} PUESTOS DE MÁS",
+    "toHire": "~{{n}} A CONTRATAR",
+    "slotsUncovered": "TURNOS SIN CUBRIR",
+    "surplus": "SUPERÁVIT",
+    "slotsUnderstaffed": "{{n}} turnos infradotados",
+    "slotsTight": "{{n}} turnos ajustados",
+    "heatmap": {
+      "label": "Turnos",
+      "legendCovered": "Cubierto",
+      "legendTight": "Ajustado",
+      "legendUnderstaffed": "Infra.",
+      "legendOverstaffed": "Sobre."
+    },
+    "utilization": "Utilización por empleado ({{n}})",
+    "howItWorks": {
+      "toggle": "¿Cómo funciona este análisis?",
+      "indicatorsHeader": "Los indicadores mostrados",
+      "indicator1": "Demanda (h/sem) — total de horas requeridas por tus objetivos de plantilla en una semana tipo.",
+      "indicator2": "Contrato (h/sem) — suma de las horas contratadas de todos los empleados del rol (cocina o sala).",
+      "indicator3": "Superávit / Déficit (h/sem) — diferencia entre contrato y demanda. Positivo = horas de sobra, negativo = horas faltantes.",
+      "indicator4": "Veredicto — sobredimensionado (>20% superávit), equilibrado (10-20%), ajustado (<10%), infradimensionado (déficit).",
+      "indicator5": "Turnos infradotados / ajustados — número de turnos donde el solver no alcanza el objetivo, o lo logra justo.",
+      "engineHeader": "Cómo funciona el motor",
+      "engineBody": "Optimización por restricciones CP-SAT — técnica de optimización matemática. El solver <link>Google OR-Tools CP-SAT</link> resuelve este programa para encontrar la mejor asignación posible.",
+      "engineFooter": "Motor: CP-SAT (Google OR-Tools)."
+    },
+    "expansion": {
+      "title": "Aperturas posibles",
+      "analyze": "Analizar",
+      "running": "Solver en curso…",
+      "empty": "Ninguna apertura adicional pertinente — todos los turnos ya están abiertos o no hay historial comparable.",
+      "viable": "Viable",
+      "needsHire": "Contratación requerida",
+      "unrealistic": "Poco realista",
+      "demandAdded": "Demanda añadida: {{kitchen}}h cocina + {{floor}}h sala"
+    },
+    "holidaysCard": {
+      "title": "Inteligencia de vacaciones",
+      "subtitle": "Consejos + saldos + recomendaciones en /holidays"
+    },
+    "optimizeCta": "Simular y optimizar"
+  },
+  "actions": {
+    "cancelTempAbsence": "Cancelar la ausencia temporal",
+    "deactivate": "Desactivar",
+    "deactivateConfirm": "¿Desactivar este empleado? Será retirado de la lista activa y del staffing automático.",
+    "reactivate": "Reactivar",
+    "tempAbsence": "Ausencia temporal"
+  },
+  "addModal": {
+    "contact": {
+      "address": "Dirección",
+      "emergencyContact": "Contacto de emergencia",
+      "emergencyPhone": "Teléfono de emergencia",
+      "iban": "IBAN",
+      "notes": "Notas"
+    },
+    "errors": {
+      "createFailed": "Error al crear el empleado"
+    },
+    "hiring": {
+      "generateContractHint": "(listo para imprimir / firmar)",
+      "generateContractLabel": "Generar inmediatamente el contrato {{type}} tras la creación",
+      "inviteSelfServiceHint": "— recibirá un enlace para introducir dirección, IBAN y contacto de emergencia antes del DPAE.",
+      "inviteSelfServiceLabel": "Invitar al empleado a completar su ficha"
+    },
+    "identity": {
+      "firstName": "Nombre",
+      "lastName": "Apellidos"
+    },
+    "legendRequired": "campo obligatorio",
+    "legendSelfService": "= puede ser completado por el empleado desde su espacio",
+    "position": {
+      "addCustomButton": "Añadir el personalizado",
+      "addSubRoleButton": "+ Nuevo",
+      "addSubRoleButtonTooltip": "Añadir un sub-rol al catálogo {{role}}",
+      "customLabel": "Crear un sub-rol personalizado",
+      "customLabelOr": "O crear un sub-rol personalizado",
+      "customNameLabel": "Nombre",
+      "customNamePlaceholderFloor": "p. ej. Sumiller",
+      "customNamePlaceholderKitchen": "p. ej. Pastelero",
+      "errors": {
+        "saveFailed": "Error al guardar",
+        "subRoleExists": "Este sub-rol ya existe.",
+        "subRoleNameRequired": "El nombre es obligatorio."
+      },
+      "newSubRoleHeader": "Nuevo sub-rol para {{role}} — se añadirá al catálogo del restaurante.",
+      "noSkillsWarning": "Sin competencia, el staffing automático no podrá asignar puestos específicos.",
+      "startDate": "Fecha de incorporación",
+      "subRoleHelpHcr": "El sub-rol más alto determina automáticamente el nivel HCR a continuación.",
+      "subRolesLabel": "Competencias / sub-roles"
+    },
+    "priority": {
+      "helpBody1Highlight": "prioridad 1",
+      "helpBody1Prefix": "Cuando el auto-staffing debe elegir entre varios empleados disponibles para el mismo turno, prioriza a los de ",
+      "helpBody1Suffix": ", luego 2, luego 3.",
+      "helpBody2": "Útil para distinguir un titular (prioridad 1) de un trabajador estacional o extra (prioridad 3) sin excluirlos del todo — siguen disponibles si el equipo principal no cubre todo.",
+      "helpButtonTitle": "¿Para qué sirve la prioridad?",
+      "helpTitle": "Prioridad del empleado",
+      "label": "Prioridad"
+    },
+    "sections": {
+      "contact": "Datos de contacto",
+      "contract": "Contrato",
+      "hiring": "Contratación y trámites",
+      "identity": "Identidad",
+      "positionSkills": "Puesto y competencias",
+      "role": "Rol"
+    },
+    "selfServiceBadge": "empleado",
+    "selfServiceBadgeTooltip": "El empleado puede completar este campo desde su espacio personal",
+    "submit": "Añadir el empleado",
+    "successBody": "{{name}} ya forma parte del equipo.",
+    "successInviteNote": "Se enviará una invitación para recoger la información restante (dirección, IBAN, contacto de emergencia).",
+    "successTitle": "Añadido",
+    "title": "Nuevo empleado"
+  },
+  "alerts": {
+    "holidayApproved": "Vacaciones",
+    "holidayPending": "Vacaciones (pendientes)",
+    "replacementIncoming": "Sustitución entrante",
+    "replacementOutgoing": "Sustitución saliente"
+  },
+  "page": {
+    "addButton": "+ Añadir un empleado",
+    "addButtonShort": "+ Añadir",
+    "title": "Equipo"
+  },
+  "stats": {
+    "active": "Activos",
+    "managerShort": "Resp."
+  },
+  "table": {
+    "contractAbbr": {
+      "saisonnier": "Estac."
+    },
+    "deactivatedSection": "Desactivados",
+    "headers": {
+      "contract": "Contrato",
+      "name": "Nombre",
+      "phone": "Teléfono",
+      "priority": "P",
+      "skills": "Competencias"
+    },
+    "subRolePlaceholder": "Nombre...",
+    "tempAbsentRange": "ausente {{from}} – {{until}}",
+    "tempReturning": "vuelta {{date}}"
+  },
+  "tempAbsenceModal": {
+    "description": "<0>{{name}}</0> aparecerá en gris en la lista e ignorado por el staffing automático durante este periodo.",
+    "title": "Ausencia temporal"
+  },
+  "permissions": {
+    "title": "Permisos del responsable",
+    "intro": "Marca / desmarca para ajustar lo que este responsable puede hacer. Por defecto un responsable tiene acceso a todo salvo facturación, preferencias y gestión de roles.",
+    "modifiedBadge": "(modificado)",
+    "saveButton": "Guardar",
+    "savingButton": "Guardando...",
+    "resetButton": "Restablecer valores por defecto",
+    "errors": {
+      "updateFailed": "Error al actualizar",
+      "network": "Error de red"
+    },
+    "items": {
+      "BILLING": { "label": "Facturación", "help": "Stripe, suscripción, portal cliente" },
+      "RESTAURANT_SETTINGS": { "label": "Preferencias del restaurante", "help": "Tabla HCR, sub-roles, días de apertura, fichaje" },
+      "MANAGE_ROLES": { "label": "Gestión de roles", "help": "Promover / degradar / eliminar un empleado" },
+      "PLANNING_EDIT": { "label": "Edición del planning", "help": "Añadir, mover, eliminar servicios" },
+      "PUBLISH_WEEK": { "label": "Publicación", "help": "Publicar la semana al equipo" },
+      "REPLACEMENT_APPROVE": { "label": "Reemplazos", "help": "Elegir un reemplazo o cancelar una solicitud" },
+      "LEAVE_APPROVE": { "label": "Aprobación de ausencias", "help": "Aprobar / rechazar una solicitud de ausencia" },
+      "TEAM_VIEW": { "label": "Ver equipo", "help": "Lista de empleados, contratos, contactos" },
+      "TEAM_EDIT": { "label": "Editar equipo", "help": "Notas, contrato, HCR, disponibilidad" },
+      "HR_DATA_VIEW": { "label": "Ver datos RR. HH. sensibles", "help": "IBAN, NIR, dirección y campos DPAE" },
+      "HR_DATA_EDIT": { "label": "Editar datos RR. HH. sensibles", "help": "Editar IBAN, NIR, dirección y campos DPAE" },
+      "PAYROLL_VIEW": { "label": "Ver nómina / contrato", "help": "Tarifa horaria, nivel HCR y campos de contrato" },
+      "DPAE_EXPORT": { "label": "Exportar DPAE", "help": "Generar exportaciones URSSAF DPAE" },
+      "MEDICAL_DOC_VIEW": { "label": "Documentos médicos", "help": "Ver y gestionar documentos médicos" },
+      "MANAGER_NOTES_EDIT": { "label": "Notas internas", "help": "Editar notas internas de gerente/admin" },
+      "HOURS_VIEW": { "label": "Ver horas", "help": "Panel de horas + horas extra" },
+      "AUDIT_VIEW": { "label": "Registro de actividad", "help": "Audit log del restaurante" },
+      "OPTIMIZE_RUN": { "label": "Auto-staffing", "help": "Lanzar el optimizador" }
+    }
+  }
+}

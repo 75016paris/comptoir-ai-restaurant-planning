@@ -1,0 +1,244 @@
+{
+  "loading": "Chargement…",
+  "topBar": {
+    "header": "Configuration initiale — {{restaurantName}}"
+  },
+  "steps": {
+    "profil": "Restaurant",
+    "sousRoles": "Sous-rôles",
+    "equipe": "Équipe",
+    "services": "Services",
+    "style": "Style",
+    "whatsapp": "WhatsApp",
+    "planning": "Planning"
+  },
+  "progress": {
+    "stepCount": "Étape {{current}} / {{total}}"
+  },
+  "actions": {
+    "back": "Retour",
+    "continue": "Continuer",
+    "saving": "..."
+  },
+  "errors": {
+    "generic": "Erreur"
+  },
+  "days": {
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mer",
+    "thu": "Jeu",
+    "fri": "Ven",
+    "sat": "Sam",
+    "sun": "Dim"
+  },
+  "step1Profile": {
+    "title": "Votre restaurant",
+    "subtitle": "Quelques informations pour démarrer.",
+    "nameLabel": "Nom du restaurant",
+    "namePlaceholder": "Le Comptoir",
+    "streetLabel": "Rue",
+    "streetPlaceholder": "12 rue de la Paix",
+    "postalLabel": "Code postal",
+    "postalPlaceholder": "75002",
+    "cityLabel": "Ville",
+    "cityPlaceholder": "Paris",
+    "postalDetected": "Code postal {{code}} — zone scolaire et jours fériés calculés automatiquement.",
+    "postalHint": "Renseignez un code postal à 5 chiffres pour détecter automatiquement la zone des vacances scolaires.",
+    "siretLabel": "SIRET (optionnel)",
+    "siretPlaceholder": "14 chiffres",
+    "siretHint": "Requis pour la DPAE et les contrats. Vous pourrez l'ajouter plus tard depuis Préférences > Profil.",
+    "interfaceLocaleLabel": "Langue de l'interface",
+    "botLocaleLabel": "Langue du bot WhatsApp",
+    "botLocaleHint": "Bot actuellement en français uniquement — autres langues bientôt.",
+    "errors": {
+      "missingName": "Renseignez le nom du restaurant",
+      "missingStreet": "Renseignez la rue",
+      "invalidPostal": "Code postal invalide (5 chiffres attendus)",
+      "missingCity": "Renseignez la ville",
+      "invalidSiret": "SIRET invalide (14 chiffres requis)"
+    }
+  },
+  "step2Subroles": {
+    "title": "Sous-rôles de l'équipe",
+    "subtitle": "Sélectionnez les postes présents dans votre restaurant. Le niveau HCR est suggéré par défaut, vous pourrez l'ajuster par employé.",
+    "kitchenLabel": "Cuisine",
+    "floorLabel": "Salle",
+    "errors": {
+      "noneSelected": "Sélectionnez au moins un sous-rôle"
+    }
+  },
+  "step3Services": {
+    "title": "Vos services",
+    "subtitle": "Quel rythme de service ? Ce choix crée le modèle initial — vous pourrez l'affiner ensuite.",
+    "openDaysLabel": "Jours d'ouverture",
+    "kitchenCountLabel": "Effectif Cuisine par service",
+    "floorCountLabel": "Effectif Salle par service",
+    "options": {
+      "midi": {
+        "label": "Midi seulement",
+        "desc": "Un service de 11h00 à 15h00."
+      },
+      "soir": {
+        "label": "Soir seulement",
+        "desc": "Un service de 18h00 à 23h00."
+      },
+      "midi-soir": {
+        "label": "Midi + Soir",
+        "desc": "Deux services distincts dans la même journée."
+      },
+      "coupure": {
+        "label": "Coupure",
+        "desc": "Une journée en deux parties séparées par une longue coupure (ex. 11h–15h puis 18h–23h)."
+      },
+      "custom": {
+        "label": "Personnalisé",
+        "desc": "Concevoir vos services dans l'éditeur visuel — vous reviendrez ici ensuite."
+      }
+    },
+    "errors": {
+      "noOpenDays": "Sélectionnez au moins un jour d'ouverture",
+      "noStaff": "Indiquez au moins un effectif (cuisine ou salle)"
+    }
+  },
+  "step4Employees": {
+    "title": "Votre équipe",
+    "subtitle": "Ajoutez vos premiers employés. Seuls le nom, le téléphone et le poste sont requis pour démarrer — contrat, IBAN et coordonnées peuvent être complétés plus tard.",
+    "kitchenLabel": "Cuisine",
+    "floorLabel": "Salle",
+    "kitchenLower": "cuisine",
+    "floorLower": "salle",
+    "count_one": "{{count}} employé",
+    "count_other": "{{count}} employés",
+    "emptySection": "Aucun employé en {{section}}.",
+    "addInSection": "Ajouter en {{section}}",
+    "missingSideWarn": "Aucun employé en {{section}} — vous pourrez en ajouter plus tard depuis l'équipe.",
+    "removeTitle": "Retirer",
+    "loading": "Chargement…"
+  },
+  "stepStyle": {
+    "title": "Votre logique d'équipe",
+    "subtitle": "Comment l'auto-staffing arbitre entre stabilité, masse salariale et flexibilité. Modifiable à tout moment depuis Préférences › Règle.",
+    "styleDescriptions": {
+      "equilibre": "Répartit l'effort équitablement. Remplit les heures contractuelles avant d'ouvrir des HS.",
+      "equipe-stable": "Favorise les mêmes employés sur les mêmes services d'une semaine à l'autre.",
+      "economique": "Évite les heures supplémentaires — le levier le plus direct sur la masse salariale.",
+      "resilience": "Répartit les heures équitablement — personne n'est surchargé et tout le monde peut absorber un imprévu."
+    },
+    "advancedRule": "Règle avancée",
+    "loading": "Chargement…",
+    "overtime": {
+      "title": "Heures supplémentaires",
+      "intro": "Plafond légal des HS et règle de répartition entre employés. Convention HCR : seuil à 39h/semaine.",
+      "modeLabel": "Mode",
+      "modes": {
+        "strict": { "label": "Strict", "desc": "Pas d'HS - plafonné à 39h/sem" },
+        "controlled": { "label": "Contrôlé", "desc": "Jusqu'à un plafond hebdo que vous définissez" },
+        "flexible": { "label": "Flexible", "desc": "Jusqu'au max légal (48h)" }
+      },
+      "capLabel": "Plafond hebdomadaire",
+      "tick39": "39h (no OT)",
+      "tick43": "43h (110%)",
+      "tick47": "47h (120%)",
+      "tick48": "48h (150%)",
+      "capExplanation39": "Pas d'heures supplémentaires - identique au mode strict.",
+      "capExplanation110": "Jusqu'à {{count}}h d'HS à 110% par employé par semaine.",
+      "capExplanation120": "Jusqu'à 4h à 110% + {{count}}h à 120% par employé par semaine.",
+      "capExplanationMax": "Jusqu'à 4h à 110% + 4h à 120% + 1h à 150% par employé par semaine. Maximum légal.",
+      "distributionLabel": "Distribution",
+      "distributionIntro": "Quand le staffing auto a besoin d'HS, qui les reçoit en priorité.",
+      "distributions": {
+        "willing-first": { "label": "Volontaires d'abord", "desc": "Les employés volontaires reçoivent les HS en premier, puis par priorité" },
+        "by-priority": { "label": "Par priorité", "desc": "P1 reçoit les HS en premier, indépendamment des préférences" },
+        "even": { "label": "Répartition égale", "desc": "Répartir les HS équitablement entre les employés éligibles" }
+      }
+    },
+    "tapInOut": {
+      "label": "Suivi du temps",
+      "desc": "Pointage des entrées/sorties par les employés.",
+      "adminConfirmLabel": "Notifier et confirmer par le gérant",
+      "adminConfirmDesc": "À chaque pointage, WhatsApp demande au gérant de confirmer. Le pointage reste enregistré mais marqué “à confirmer”.",
+      "modeLabel": "Mode",
+      "syncLabel": "Synchroniser les heures",
+      "syncDesc": "Les heures pointées remplacent les heures planifiées dans le récap mensuel — la masse salariale reflète les heures réellement travaillées.",
+      "latenessLabel": "Rapport de retards",
+      "latenessDesc": "Le récap mensuel reste basé sur le planning. Les retards et départs anticipés sont juste listés sur la fiche employé (et dans l'email mensuel).",
+      "earlyLabel": "Compter les arrivées anticipées",
+      "earlyDesc": "Si un employé pointe avant l'heure prévue, les minutes en avance s'ajoutent à ses heures payées. Sinon, seul le pointage de sortie compte — les heures démarrent à l'heure planifiée."
+    },
+    "workerPreferences": {
+      "label": "Préférences employés",
+      "desc": "Les employés peuvent indiquer leurs disponibilités et préférences."
+    },
+    "compliance": {
+      "title": "Conformité — Droit du travail",
+      "intro": "Convention HCR. Décocher une règle la désactive pour le planificateur — laissez tout coché si vous n'êtes pas sûr."
+    }
+  },
+  "stepWhatsApp": {
+    "title": "Assistant WhatsApp",
+    "subtitle": "Envoyez un message à Bernardo depuis WhatsApp pour vérifier que votre numéro est bien reconnu.",
+    "connectTitle": "Envoyer un message à Bernardo",
+    "connectBodyReady": "Ouvrez WhatsApp avec le bouton ci-dessous, envoyez le message prérempli, puis vérifiez que Bernardo vous répond.",
+    "connectBodyMissing": "Le numéro WhatsApp de Bernardo n'est pas configuré sur cet environnement. Ajoutez le lien WhatsApp pour pouvoir envoyer le message de test.",
+    "openWhatsapp": "Ouvrir WhatsApp",
+    "phoneFallbackTitle": "Pas WhatsApp sur cet ordinateur ?",
+    "phoneFallbackBody": "Depuis votre téléphone, ouvrez WhatsApp et envoyez ce message au numéro de Bernardo.",
+    "bernardoNumberLabel": "Numéro Bernardo",
+    "testMessageLabel": "Message à envoyer",
+    "copy": "Copier",
+    "copied": "Copié",
+    "pairingTitle": "Association par numéro de téléphone",
+    "pairingBody": "Bernardo reconnaît chaque personne grâce au numéro enregistré dans Comptoir. Si un salarié utilise un autre numéro, corrigez sa fiche avant de l'inviter.",
+    "adminPhoneLabel": "Votre numéro WhatsApp",
+    "adminPhoneHelp": "Utilisez le même numéro que celui avec lequel vous écrirez à Bernardo.",
+    "adminPhoneSave": "Enregistrer",
+    "adminPhoneSaving": "Enregistrement...",
+    "adminPhoneSaved": "Numéro enregistré.",
+    "adminPhoneRequired": "Renseignez votre numéro WhatsApp.",
+    "phoneRows": {
+      "team_one": "{{count}} salarié avec un numéro de téléphone",
+      "team_other": "{{count}} salariés avec un numéro de téléphone"
+    },
+    "remindersTitle": "Rappels WhatsApp aux employés",
+    "remindersBody": "Choisissez la fréquence des rappels de planning envoyés par WhatsApp. Vous pourrez la modifier plus tard dans Préférences → Règle.",
+    "reminderOptions": {
+      "off": "OFF",
+      "offDesc": "Aucun rappel automatique.",
+      "daily": "QUOTIDIEN",
+      "dailyDesc": "Un rappel la veille au soir pour les services du lendemain.",
+      "weekly": "HEBDO",
+      "weeklyDesc": "Un résumé de la semaine le dimanche soir."
+    },
+    "whatWorksTitle": "À quoi sert Bernardo ?",
+    "whatWorks": {
+      "schedule": "Répondre aux questions sur le planning publié.",
+      "replacements": "Recevoir les indisponibilités et aider à trouver un remplaçant.",
+      "timeclock": "Gérer le pointage si vous l'activez dans la règle avancée."
+    },
+    "continueReady": "J'ai testé, continuer",
+    "continueMissing": "Configurer plus tard"
+  },
+  "step5Finish": {
+    "title": "Vous êtes prêt",
+    "subtitle": "Récapitulatif de votre configuration. Vous pouvez tout modifier plus tard depuis Préférences et Équipe.",
+    "summary": {
+      "address": "Adresse : {{address}}",
+      "zones": "Zone scolaire {{schoolZone}} · jours fériés {{holidayZone}}",
+      "subRoles_one": "{{count}} sous-rôle au catalogue",
+      "subRoles_other": "{{count}} sous-rôles au catalogue",
+      "profiles_one": "{{count}} profil de service configuré",
+      "profiles_other": "{{count}} profils de service configurés",
+      "employees_one": "{{count}} employé ajouté",
+      "employees_other": "{{count}} employés ajoutés"
+    },
+    "afterTitle": "Et après ?",
+    "after": {
+      "schedule": "Construisez votre première semaine sur <strong>/planning</strong>, ou laissez l'auto-staffing proposer un planning.",
+      "preferences": "Ajustez le détail des services et sous-rôles depuis <strong>/preferences</strong>.",
+      "staff": "Complétez les fiches employés (adresse, IBAN, contrats) sur <strong>/équipe</strong>.",
+      "whatsapp": "WhatsApp reste optionnel : si vous ne l'avez pas testé maintenant, ajoutez le lien plus tard."
+    },
+    "finishButton": "Terminer et accéder au planning"
+  }
+}

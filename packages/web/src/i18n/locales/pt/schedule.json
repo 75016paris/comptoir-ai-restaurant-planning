@@ -1,0 +1,441 @@
+{
+  "page": {
+    "title": "Escala",
+    "loading": "A carregar..."
+  },
+  "viewModes": {
+    "stack": "Stack",
+    "calendar": "Calendário",
+    "list": "Lista"
+  },
+  "timeRange": {
+    "week": "Semana",
+    "month": "Mês"
+  },
+  "roleFilter": {
+    "all": "Todos",
+    "kitchen": "Cozinha ({{count}})",
+    "floor": "Sala ({{count}})",
+    "missing": "Em falta ({{count}})"
+  },
+  "roles": {
+    "kitchen": "Cozinha",
+    "floor": "Sala",
+    "kitchenMobile": "COZINHA",
+    "floorMobile": "SALA",
+    "kitchenMobileWithCount": "COZINHA ({{count}})",
+    "floorMobileWithCount": "SALA ({{count}})",
+    "kitchenColon": "COZINHA:",
+    "floorColon": "SALA:",
+    "kitchenAbbr": "COZ",
+    "floorAbbr": "SAL"
+  },
+  "actions": {
+    "today": "Hoje",
+    "todayShort": "Hoje",
+    "previous": "Anterior",
+    "next": "Seguinte",
+    "back": "Voltar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "close": "Fechar",
+    "understood": "Entendido",
+    "clear": "Limpar",
+    "scrollTop": "Topo",
+    "scrollBottom": "Fim",
+    "expand": "Expandir",
+    "restack": "Reagrupar",
+    "configureServices": "Configurar os serviços",
+    "print": "Imprimir",
+    "printAria": "Imprimir a escala",
+    "refreshPreview": "Atualizar pré-visualização",
+    "addServices": "Adicionar os serviços",
+    "complete": "Completar",
+    "replace": "Substituir",
+    "unlock": "Desbloquear",
+    "deleteWeek": "Apagar a semana",
+    "scheduleAnyway": "Planear mesmo assim",
+    "loadingShort": "..."
+  },
+  "buttons": {
+    "wipeWeek": "Apagar toda a semana",
+    "gridVertical": "Vista vertical (dias em colunas)",
+    "gridHorizontal": "Vista horizontal (dias em linhas)",
+    "exitFullscreen": "Sair do ecrã inteiro",
+    "fullscreen": "Ecrã inteiro",
+    "stackDayView": "Vista 2 dias",
+    "stackWeekView": "Vista semana (7 dias)",
+    "auto": "Auto",
+    "autoStaff": "Auto-staffing",
+    "optimizationStyle": "Estilo de otimização para o próximo auto-staffing"
+  },
+  "status": {
+    "published": "Publicado",
+    "draft": "Rascunho",
+    "locked": "Bloqueada",
+    "unlocked": "Desbloqueada",
+    "publishedTooltip": "Escala publicada — clicar para gerir",
+    "draftTooltip": "Escala não publicada — clicar para verificar conformidade e publicar",
+    "lockedTooltip": "Semana passada e publicada — clicar para desbloquear e corrigir",
+    "unlockedTooltip": "Desbloqueada nesta sessão — as alterações são registadas no histórico",
+    "manual": "Manual",
+    "auto": "Auto",
+    "autoWithProfile": "Auto · {{name}}",
+    "autoModifiedSuffix": " · modificado",
+    "closed": "FECHADO",
+    "closedWithReason": "FECHADO - {{reason}}",
+    "noService": "Sem serviço",
+    "todayBadge": "Hoje"
+  },
+  "profiles": {
+    "default": "Padrão",
+    "objectiveLabel": "Objetivo",
+    "noneObjective": "Sem objetivo",
+    "editProfile": "Editar perfil",
+    "createProfile": "Criar perfil"
+  },
+  "gaps": {
+    "missingPositions_one": "{{count}} posto em falta",
+    "missingPositions_other": "{{count}} postos em falta"
+  },
+  "legend": {
+    "selected_one": "{{count}} selecionado",
+    "selected_other": "{{count}} selecionados",
+    "employees": "{{count}} colaboradores",
+    "sharedWorker": "Colaborador partilhado"
+  },
+  "empty": {
+    "noServicesConfiguredTitle": "Nenhum serviço configurado",
+    "noServicesConfiguredHint": "Configure os horários de serviço (almoço, jantar, etc.) no calendário de objetivos antes de criar a escala."
+  },
+  "ghost": {
+    "missing": "Em falta",
+    "tooltip": "Em falta · {{label}} · {{start}}–{{end}}"
+  },
+  "coupure": {
+    "tooltip": "Turno partido {{start}}–{{end}}",
+    "description": "Turno partido · {{date}} ({{legs}})"
+  },
+  "touch": {
+    "holdToPlace": "→ premir longo para colocar"
+  },
+  "drag": {
+    "release": "Largar",
+    "delete": "Eliminar",
+    "willDelete": "O turno será eliminado"
+  },
+  "moveDescription": {
+    "moved": "{{src}} ({{srcLeft}} restante) → {{dst}} (era {{was}}, agora {{now}})",
+    "addedToZone": "Adicionado a {{date}} {{zone}} (era {{was}}, agora {{now}})",
+    "addedToTimes": "Adicionado a {{date}} {{start}}-{{end}}",
+    "addedToType": "Adicionado a {{date}} {{type}}"
+  },
+  "deleteToast": {
+    "removed": "{{name}} eliminado",
+    "rangeDescription": "{{date}} {{start}}-{{end}}"
+  },
+  "toasts": {
+    "previewFailed": "Falha na pré-visualização",
+    "servicesGenerated_one": "{{count}} serviço gerado",
+    "servicesGenerated_other": "{{count}} serviços gerados",
+    "skippedOverlaps": " ({{count}} ignorados - sobreposições)",
+    "skippedSimple": " ({{count}} ignorados)",
+    "generationFailed": "Falha na geração",
+    "saveFailed": "Falha ao guardar",
+    "servicesAdded_one": "{{count}} serviço adicionado",
+    "servicesAdded_other": "{{count}} serviços adicionados",
+    "fillFailed": "Falha ao preencher",
+    "servicesReplaced_one": "{{count}} serviço criado (substituição)",
+    "servicesReplaced_other": "{{count}} serviços criados (substituição)",
+    "replaceFailed": "Falha na substituição",
+    "servicesDeleted_one": "{{count}} serviço eliminado",
+    "servicesDeleted_other": "{{count}} serviços eliminados",
+    "deleteFailed": "Falha na eliminação",
+    "wipePastAndDelay": "Esta semana contém datas passadas e dias dentro do prazo de modificação de 8 dias (HCR-L3121-47). Os colaboradores podem recusar estas alterações.",
+    "wipePast": "Esta semana contém datas passadas. Isto irá afetar o histórico.",
+    "wipeDelay": "Esta semana contém dias dentro do prazo de modificação de 8 dias (HCR-L3121-47). Os colaboradores podem recusar estas alterações.",
+    "weekPublished": "Semana publicada — visível para os colaboradores",
+    "publishRemoved": "Publicação retirada",
+    "failed": "Falha",
+    "weekUnlocked": "Semana desbloqueada nesta sessão — as alterações serão registadas",
+    "moveFailed": "Falha ao mover",
+    "undoFailed": "Falha ao anular",
+    "undo": "Anular",
+    "createServiceFailed": "Falha ao criar o serviço",
+    "modificationFailed": "Falha ao modificar"
+  },
+  "dialogs": {
+    "autoStaffing": {
+      "title": "Auto-staffing",
+      "existsDescription": "Já existe um staffing automático para esta semana."
+    },
+    "unlockWeek": {
+      "title": "Desbloquear a semana",
+      "description": "A semana de <strong>{{from}}</strong> a <strong>{{to}}</strong> é passada e publicada — está bloqueada por princípio (registo salarial e conformidade HCR).",
+      "details": "Pode desbloqueá-la nesta sessão para corrigir um serviço. Cada alteração será marcada <em>[Semana bloqueada — override]</em> no histórico."
+    },
+    "wipeWeek": {
+      "title": "Apagar toda a semana",
+      "description": "Todos os serviços da semana de <strong>{{from}}</strong> a <strong>{{to}}</strong> serão eliminados definitivamente. Esta ação é irreversível."
+    },
+    "pastDate": {
+      "title": "Data passada",
+      "description": "Vai modificar um serviço numa data passada. Isto irá afetar o histórico."
+    },
+    "closure": {
+      "title": "Restaurante fechado",
+      "description": "Esta data ocorre durante um período de encerramento. Não deve haver pessoal escalado. Continuar?",
+      "descriptionWithReason": "Esta data ocorre durante um período de encerramento ({{reason}}). Não deve haver pessoal escalado. Continuar?"
+    },
+    "autoStaffPreview": {
+      "title": "Geração automática",
+      "description": "{{from}} → {{to}} · {{count}} serviços",
+      "targetsLabel": "Objetivos de staffing",
+      "zeroMeansAll": "0 = todos os disponíveis",
+      "rowLabel": "{{role}} {{zone}}"
+    },
+    "gapWarning": {
+      "title": "Postos não preenchidos",
+      "description": "O auto-staffing não conseguiu preencher todos os postos pedidos. Os horários em falta estão marcados a vermelho na escala."
+    },
+    "auditLog": {
+      "title": "Histórico da semana",
+      "noChanges": "Sem alterações esta semana.",
+      "actionInsert": "criação",
+      "actionUpdate": "modif",
+      "actionDelete": "elim"
+    },
+    "timeEdit": {
+      "title": "Modificar horários",
+      "description": "{{name}} — {{date}}",
+      "startLabel": "Início",
+      "endLabel": "Fim",
+      "note": "Estes horários afetam apenas este serviço nesta semana. O objetivo de referência não é alterado."
+    }
+  },
+  "modals": {
+    "serviceType": {
+      "zoneTitle": "Serviço de {{zone}}",
+      "zoneTimes": "{{start}} - {{end}}",
+      "customTitle": "Personalizado",
+      "customSubtitle": "Horários personalizados",
+      "startLabel": "Início",
+      "endLabel": "Fim"
+    }
+  },
+  "help": {
+    "scheduleTitle": "A escala",
+    "engineTitle": "Motor CP-SAT (Constraint Programming)",
+    "engineExplanation": "Técnica de otimização por programação com restrições: cada atribuição colaborador × turno é uma variável binária (0 ou 1). O solver <link>CP-SAT</link> encontra a atribuição ótima respeitando todas as restrições legais.",
+    "priorityTitle": "Hierarquia de prioridades (função objetivo)",
+    "priorityIntro": "O solver otimiza vários objetivos ponderados, do mais importante para o menos importante:",
+    "engineFooter": "Motor: <link1>CP-SAT</link1> (Google OR-Tools) — <link2>código-fonte</link2>.",
+    "items": {
+      "dragDrop": "<strong>Arrastar e largar</strong> — arraste um colaborador da legenda para um dia para criar um serviço, ou mova um serviço existente entre dias.",
+      "objectives": "<strong>Perfis de objetivos</strong> — selecione um perfil de staffing para ver os objetivos por turno e os postos em falta.",
+      "fillTeam": "<strong>Completar a equipa</strong> — o motor <link>CP-SAT</link> preenche automaticamente os turnos vazios respeitando as restrições.",
+      "compliance": "<strong>Conformidade</strong> — o badge de conformidade verifica em tempo real as regras HCR: máx 10h/dia, descanso mínimo de 10h, 6 dias consecutivos máx, média de 46h em 12 semanas.",
+      "views": "<strong>Vistas</strong> — calendário (grelha horária), lista (compacto), ou stack (agrupado por zona)."
+    },
+    "priorities": {
+      "fillSlots": "<strong>Preencher os turnos</strong> (peso 1000) — objetivo dominante: cobrir cada serviço.",
+      "underHours": "<strong>Horas em défice contratual</strong> (peso 80/h) — privilegiar colaboradores que ainda não atingiram as horas contratuais.",
+      "moderateOT": "<strong>Penalização horas extra moderadas</strong> (peso −40/h) — desencorajar a ultrapassagem para além de 115% do contrato.",
+      "lightOT": "<strong>Excesso ligeiro</strong> (peso 20/h) — aceitar horas extra ligeiras (100-115%) quando necessário.",
+      "consistency": "<strong>Coerência da escala</strong> (peso 5) — privilegiar colaboradores já atribuídos a outros turnos no mesmo dia.",
+      "preferences": "<strong>Preferências do colaborador</strong> (peso 3) — respeitar as preferências de disponibilidade quando possível.",
+      "priority": "<strong>Prioridade do colaborador</strong> (peso 2) — privilegiar os colaboradores prioritários para cada turno.",
+      "flexibility": "<strong>Flexibilidade residual</strong> (peso 1) — preservar a capacidade de adaptação a mudanças imprevistas."
+    }
+  },
+  "laborCost": {
+    "title": "Massa salarial",
+    "perWeek": "/ sem",
+    "tooltip": "Massa salarial — estimativa baseada nas tarifas horárias, nas horas planeadas e nos acréscimos HCR por horas extra",
+    "weekHeader": "Semana",
+    "unpricedNote_one": "* {{count}} colaborador sem tarifa indicada (excluído do cálculo).",
+    "unpricedNote_other": "* {{count}} colaboradores sem tarifa indicada (excluídos do cálculo).",
+    "footnote": "Bruto indicativo com acréscimos HCR por horas extra, encargos não incluídos."
+  },
+  "worker": {
+    "title": "O Meu Horário",
+    "viewModes": {
+      "week": "Semana",
+      "month": "Mês",
+      "list": "Lista"
+    },
+    "dismissAria": "Fechar",
+    "imposedLeave": {
+      "title": "Férias impostas pelo seu empregador",
+      "dateRange": "De {{from}} a {{to}}",
+      "dateRangeWithReason": "De {{from}} a {{to}} · {{reason}}",
+      "legalNote": "Code du travail art. L3141-16 — datas bloqueadas no seu horário."
+    },
+    "proposedLeave": {
+      "title": "Férias propostas pelo seu empregador"
+    },
+    "yes": "Sim",
+    "no": "Não",
+    "toasts": {
+      "proposalAccepted": "Proposta aceite",
+      "proposalRejected": "Proposta recusada",
+      "error": "Erro"
+    },
+    "servicesSummary_one": "{{count}} serviço · {{hours}}h",
+    "servicesSummary_other": "{{count}} serviços · {{hours}}h",
+    "notPublished": {
+      "title": "Horário não publicado",
+      "body": "O seu gerente ainda não publicou o horário desta semana. Vai aparecer aqui assim que estiver disponível."
+    },
+    "timeclock": {
+      "clockedIn": "Picado",
+      "clockedOut": "Não picado",
+      "since": "Desde {{time}}",
+      "tapIn": "Picar entrada",
+      "tapOut": "Picar saída",
+      "tapping": "..."
+    },
+    "todayBadge": "HOJE",
+    "requestReplacement": "Pedir substituição",
+    "noServicesThisWeek": "Sem serviços esta semana",
+    "replacementModal": {
+      "title": "Sinalizar indisponibilidade",
+      "successTitle": "Pedido enviado",
+      "successBody": "O seu responsável está a procurar um substituto. Será informado assim que houver uma solução.",
+      "ittReminder": "Por favor envie o seu certificado de baixa o mais cedo possível. Será enviado um lembrete automático se o documento não for recebido a tempo.",
+      "intro": "O seu responsável será notificado e organizará a sua substituição. Não lhe será pedida qualquer outra ação após o envio.",
+      "reasonLabel": "Motivo",
+      "reasonPlaceholder": "Opcional",
+      "medicalToggle": "Baixa médica",
+      "medicalExplanation": "A procura de um substituto começa imediatamente. O seu <itt>ITT</itt> (certificado de Interrupção Temporária de Trabalho), emitido pelo seu médico, pode ser carregado aqui ou entregue diretamente ao seu responsável após receção. Será enviado um lembrete automático em caso de não receção.",
+      "submit": "Enviar pedido",
+      "submitFailed": "Falha no envio",
+      "fileDropZone": "Largue o seu certificado aqui ou ",
+      "fileDropZoneBrowse": "procurar"
+    }
+  },
+  "cards": {
+    "errorBadge": "Erro",
+    "warningBadge": "Aviso",
+    "dropTag": "Aqui"
+  },
+  "mobileTutorial": {
+    "closeAria": "Fechar tutorial",
+    "iframeTitle": "Tutorial móvel — planeamento"
+  },
+  "compliance": {
+    "dialog": {
+      "title": "Conformidade legal",
+      "description": "Verificação Convenção Coletiva HCR — Código do Trabalho francês"
+    },
+    "badges": {
+      "error": "ERRO",
+      "warning": "ALERTA",
+      "info": "INFO",
+      "compliant": "Conforme",
+      "errCount": "{{count}} erro",
+      "alertCount_one": "{{count}} alerta",
+      "alertCount_other": "{{count}} alertas"
+    },
+    "panel": {
+      "verifying": "A verificar...",
+      "loadError": "Erro de verificação",
+      "weekRange": "Semana {{from}} — {{to}}",
+      "workersChecked_one": "{{count}} colaborador",
+      "workersChecked_other": "{{count}} colaboradores",
+      "errors_one": "{{count}} erro",
+      "errors_other": "{{count}} erros",
+      "warnings_one": "{{count}} alerta",
+      "warnings_other": "{{count}} alertas",
+      "info_one": "{{count}} info",
+      "info_other": "{{count}} infos",
+      "subroleSubstitutionTitle": "Cobertura por substituição de sub-função",
+      "subroleSubstitutionBody": "Estes postos estão cobertos por um colaborador com uma sub-função diferente da exigida. Aceitável mas a vigiar.",
+      "filledAs": "(cobre o posto como {{name}})",
+      "noViolations": "Nenhuma violação detetada",
+      "noViolationsBody": "O planeamento respeita a convenção HCR",
+      "points_one": "{{count}} ponto",
+      "points_other": "{{count}} pontos",
+      "viewSchedule": "Ver no planeamento",
+      "overtimeTitle": "Horas extra",
+      "totalHours": "{{value}}h total",
+      "overtimeHours": "{{value}}h extra",
+      "rate": "{{rate}}%: {{value}}h",
+      "legend": "Convenção HCR · 39h limiar · 46h média 12 sem · 48h máx absoluto · 11h descanso (10h HCR)",
+      "publishWarning_one": "⚠ Publicar agora tornará este planeamento visível aos colaboradores apesar de {{count}} incumprimento HCR.",
+      "publishWarning_other": "⚠ Publicar agora tornará este planeamento visível aos colaboradores apesar de {{count}} incumprimentos HCR.",
+      "unpublishButton": "Retirar publicação",
+      "publishWithErrorsButton_one": "Publicar apesar de {{count}} erro",
+      "publishWithErrorsButton_other": "Publicar apesar de {{count}} erros",
+      "publishButton": "Publicar a semana",
+      "publishedFooter": "Os colaboradores estão atualmente a ver este planeamento na sua aplicação.",
+      "unpublishedFooter": "Após publicação, os colaboradores verão o seu planeamento e as suas horas."
+    }
+  },
+  "actionsMenu": {
+    "trigger": "Ações do serviço",
+    "ghostTrigger": "Atribuir um colaborador",
+    "swap": "Trocar",
+    "assign": "Atribuir",
+    "solver": "Escolha do solver",
+    "subRoleEmpty": "Sub-função (—)",
+    "subRoleWith": "Sub-função ({{name}})",
+    "allKitchen": "Todos · Cozinha",
+    "allFloor": "Todos · Sala",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "deleteService": {
+      "title": "Eliminar este serviço?",
+      "irreversible": "Esta ação não pode ser anulada.",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar"
+    },
+    "editTime": {
+      "title": "Editar horários",
+      "startLabel": "Início",
+      "endLabel": "Fim",
+      "cancel": "Cancelar",
+      "save": "Guardar"
+    },
+    "swapDialog": {
+      "solverTitle": "Escolha do solver",
+      "subRoleTitle": "Sub-função",
+      "subRoleTitleWith": "Sub-função · {{name}}",
+      "allKitchenTitle": "Todos os colaboradores · Cozinha",
+      "allFloorTitle": "Todos os colaboradores · Sala",
+      "description": "Substituir {{name}} no serviço de {{date}} ({{start}}–{{end}})",
+      "calculating": "A calcular candidatos…",
+      "noCandidates": "Nenhum candidato encontrado.",
+      "noEligible": "Nenhum colaborador elegível.",
+      "close": "Fechar"
+    },
+    "assignDialog": {
+      "subRoleTitle": "Sub-função",
+      "subRoleTitleWith": "Sub-função · {{name}}",
+      "allKitchenTitle": "Todos os colaboradores · Cozinha",
+      "allFloorTitle": "Todos os colaboradores · Sala",
+      "description": "Atribuir um colaborador ao período {{date}} ({{start}}–{{end}}) · {{role}}",
+      "descriptionWithSub": "Atribuir um colaborador ao período {{date}} ({{start}}–{{end}}) · {{role}} · {{sub}}",
+      "noEligible": "Nenhum colaborador elegível.",
+      "close": "Fechar"
+    },
+    "candidateLegend": {
+      "subRoleFallback": "sub-função",
+      "matchFree": "{{label}} · livre",
+      "matchBusy": "{{label}} · ocupado",
+      "otherFree": "outra sub-função · livre",
+      "otherBusy": "outra sub-função · ocupado"
+    },
+    "toasts": {
+      "deleted": "Serviço de {{name}} eliminado",
+      "deleteFailed": "Falha ao eliminar",
+      "saveFailed": "Falha ao modificar",
+      "solverFailed": "Falha do solver",
+      "swapped": "{{from}} → {{to}}",
+      "swapFailed": "Falha na troca",
+      "assigned": "{{name}} atribuído(a) a este período",
+      "assignFailed": "Falha na atribuição"
+    }
+  }
+}

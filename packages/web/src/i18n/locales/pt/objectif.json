@@ -1,0 +1,196 @@
+{
+  "shared": {
+    "kitchen": "Cozinha",
+    "floor": "Sala",
+    "kitchenLower": "cozinha",
+    "floorLower": "sala",
+    "save": "Guardar",
+    "savePending": "...",
+    "saved": "Guardado",
+    "delete": "Eliminar",
+    "loading": "A carregar...",
+    "loadError": "Erro ao carregar",
+    "saveError": "Erro ao guardar",
+    "continue": "Continuar →"
+  },
+  "calendar": {
+    "back": {
+      "onboarding": "Instalação",
+      "preferences": "Preferências"
+    },
+    "header": {
+      "renameTitle": "Renomear o objetivo",
+      "untitled": "Sem nome",
+      "titulairesButton": "Equipa titular",
+      "titulairesNeedReview": "{{count}} titular(es) a rever",
+      "continueOnboarding": "Continuar →",
+      "continueKitchen": "Continuar para Cozinha →",
+      "continueTitulaires": "Equipa titular →",
+      "needsFloorTooltip": "Adicione pelo menos um serviço de Sala para continuar"
+    },
+    "tabs": {
+      "floor": "Sala",
+      "kitchen": "Cozinha"
+    },
+    "priority": {
+      "label": "Prioridade",
+      "tooltip": "Para que serve a prioridade?",
+      "popupTitle": "Prioridade dos dias",
+      "popupP1": "O solver de auto-planeamento processa os dias por ordem de prioridade: <strong>Prioridade 1</strong> é preenchida primeiro, depois Prioridade 2, etc.",
+      "popupP2": "Use-a para garantir a cobertura dos dias mais importantes (sexta à noite, brunch de domingo…) em caso de falta de pessoal — o solver privilegia esses dias quando tem de fazer concessões.",
+      "popupP3": "Vários dias podem partilhar a mesma prioridade — são então tratados em conjunto.",
+      "raise": "Aumentar a prioridade",
+      "lower": "Baixar a prioridade",
+      "value": "Prioridade {{n}}"
+    },
+    "palette": {
+      "drag": "Arrastar:",
+      "classic": "Clássico",
+      "coupure": "Horário partido"
+    },
+    "copyDay": {
+      "instruction": "Clique no dia destino para colar {{day}}",
+      "cancel": "Cancelar cópia",
+      "copyTitle": "Copiar {{day}}",
+      "toast": "{{from}} copiado para {{to}}"
+    },
+    "day": {
+      "openTitle": "Abrir {{day}}",
+      "closeTitle": "Fechar {{day}}",
+      "closed": "fechado"
+    },
+    "missing": {
+      "badgeKitchen": "Cozinha sem planeamento",
+      "badgeFloor": "Sala sem planeamento",
+      "titleKitchen": "Cozinha em falta",
+      "titleFloor": "Sala em falta",
+      "explainKitchen": "<day>{{day}}</day> tem pelo menos um serviço de sala mas nenhum serviço de <em>cozinha</em>. O restaurante não pode funcionar sem equipa de cozinha nesse dia.",
+      "explainFloor": "<day>{{day}}</day> tem pelo menos um serviço de cozinha mas nenhum serviço de <em>sala</em>. O restaurante não pode funcionar sem equipa de sala nesse dia.",
+      "actionKitchen": "Arraste um cartão <strong>Clássico</strong> ou <strong>Horário partido</strong> para a coluna {{day}} na vista Cozinha para preencher.",
+      "actionFloor": "Arraste um cartão <strong>Clássico</strong> ou <strong>Horário partido</strong> para a coluna {{day}} na vista Sala para preencher."
+    },
+    "warning": {
+      "title": "Não conformidade HCR",
+      "amplitude": "Amplitude {{value}} > 13h (HCR-L3121-34)",
+      "coupure": "Horário partido {{value}} > 5h máx",
+      "amplitudeExplain": "A duração entre o início e o fim do dia (incluindo as paragens) não deve exceder <strong>13 horas</strong>. Reduza a amplitude ou desloque os horários.",
+      "coupureExplain": "A paragem entre dois períodos de trabalho não deve exceder <strong>5 horas</strong>. Reduza a sua duração."
+    },
+    "block": {
+      "configure": "Configurar o serviço",
+      "totalShort": "Total {{value}}",
+      "amplitudeShort": "Amplitude: {{value}}",
+      "coupureShort": "paragem {{value}}"
+    },
+    "footer": {
+      "help": "Arrastar para criar · Bordas ↕ horário · Pega → efetivo · Duplo-clique para editar"
+    },
+    "namePrompt": {
+      "title": "Nomear o perfil",
+      "description": "Dê um nome a este perfil para o guardar. Caso contrário, será aplicado apenas à semana selecionada.",
+      "placeholder": "Nome do perfil…",
+      "useWeekOnly": "Usar apenas de {{from}} a {{to}}",
+      "applyThisWeek": "Aplicar esta semana",
+      "save": "Guardar"
+    },
+    "shiftLabels": {
+      "night": "Noite",
+      "morning": "Manhã",
+      "midday": "Almoço",
+      "afternoon": "Tarde",
+      "evening": "Jantar",
+      "coupure": "Horário partido",
+      "coupureMorning": "Horário partido manhã",
+      "coupureEvening": "Horário partido tarde"
+    },
+    "toast": {
+      "saved": "Objetivo guardado",
+      "appliedWeek": "Objetivo aplicado a esta semana",
+      "saveFailed": "Falha ao guardar",
+      "loadError": "Erro ao carregar",
+      "profileNotFound": "Perfil não encontrado - pode ter sido alterado",
+      "nameRequired": "Dê um nome a este objetivo"
+    },
+    "edit": {
+      "name": "Nome",
+      "nameTaken": "Este nome já existe para este papel",
+      "start": "Início",
+      "end": "Fim",
+      "worked": "trabalhadas",
+      "service": "de serviço",
+      "coupureLabel": "Horário partido",
+      "coupureValue": "{{value}} de paragem",
+      "staffPerRole": "Efetivo por posto",
+      "total": "Total: <b>{{n}}</b>"
+    },
+    "names": {
+      "standard": "Padrão",
+      "temporary": "Temporário"
+    }
+  },
+  "titulaires": {
+    "header": {
+      "back": "Voltar ao objetivo",
+      "title": "Equipa titular — {{name}}",
+      "untitled": "Objetivo",
+      "needsReview": "{{count}} titular(es) a rever"
+    },
+    "intro": {
+      "title": "Porquê definir uma equipa titular?",
+      "p1": "Enquanto o Comptoir não tiver histórico do seu restaurante, o auto-planeamento não sabe quem costuma colocar em cada franja. O planeamento gerado continua viável, mas pode afastar-se dos hábitos no papel — fonte de atrito para as equipas no momento da transição.",
+      "p2": "Ao designar uma equipa titular, fornece ao solver um planeamento de referência que ele privilegia. É uma orientação, não uma regra estrita: se uma restrição mais forte o exigir (férias, indisponibilidade, limite de horas, descanso legal HCR…), substituirá outro funcionário para produzir uma semana válida.",
+      "p3": "Após cerca de 12 semanas de planeamento real, o modelo tem histórico suficiente para inferir esses hábitos automaticamente e seguir a evolução natural da equipa. Os titulares passam então a ser facultativos e podem ser aliviados.",
+      "drag": "Arraste os funcionários para as franjas para definir a equipa titular de cada dia."
+    },
+    "pool": {
+      "title": "Funcionários",
+      "subtitle": "(arraste para uma franja)"
+    },
+    "card": {
+      "pinnedTitle": "{{count}} franja(s) · {{hours}}h planeadas",
+      "pinnedTitleWithContract": "{{count}} franja(s) · {{hours}}h planeadas / {{contract}}h contrato",
+      "viewReason": "Ver o motivo",
+      "viewAlert": "Ver o motivo do alerta",
+      "endingTitle": "Contrato a terminar",
+      "close": "Fechar",
+      "removeAll": "Retirar de todas as franjas",
+      "removeShift": "Retirar esta franja",
+      "viewWarning": "Ver o motivo do aviso"
+    },
+    "tooltip": {
+      "subRoleNotCovered": "Subpapel não coberto: {{sub}} ({{roles}})",
+      "noSubRoles": "nenhum",
+      "substitution": "Substituição: {{sub}} (papel original {{roles}})",
+      "substitutionVerbose": "Substituição: {{name}} ({{roles}}) cobre um posto {{sub}}.",
+      "subRoleMissing": "{{sub}} em falta"
+    },
+    "errors": {
+      "wrongRole": "{{name}} não pode cobrir um posto de {{role}}",
+      "profileNotFound": "Perfil não encontrado.",
+      "noTargets": "Nenhum objetivo de staffing definido para este perfil. Defina primeiro os serviços e o efetivo na página Objetivo."
+    },
+    "staleness": {
+      "inactive": "Inativo",
+      "tempInactive": "Indisponível (período)",
+      "contractEnded": "Contrato terminado",
+      "contractEndedOn": "Contrato terminado em {{date}}",
+      "contractEnding": "Contrato a termo a terminar em breve",
+      "contractEndingOn": "Contrato a termo termina em {{date}}"
+    },
+    "verdict": {
+      "header": "Conformidade",
+      "ok": "Planeável",
+      "tendu": "Apertado",
+      "insuffisant": "Insuficiente",
+      "slotsPinned": "Franjas fixadas",
+      "capacity": "Capacidade titulares",
+      "demand": "Procura objetivo",
+      "coverageHours": "Cobertura em horas",
+      "substitutions": "Substituições",
+      "overContract": "Acima do contrato",
+      "overContractItem": "{{name}} · {{pinned}}h vs {{contract}}h",
+      "stale_one": "{{count}} titular inativo ou contrato a terminar",
+      "stale_other": "{{count}} titulares inativos ou contratos a terminar"
+    }
+  }
+}

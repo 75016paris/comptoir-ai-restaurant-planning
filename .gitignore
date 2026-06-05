@@ -1,0 +1,39 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+coverage/
+
+# Environment and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+.mcp.json
+
+# Runtime data
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.log
+*.pid
+
+# Local agent/tool state
+.pi/
+.agent/
+.agents/
+.codex/
+.claude/
+
+# Test/browser artifacts
+.playwright-cli/
+playwright-report/
+test-results/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,30 @@
+{
+  "name": "comptoir",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev": "bun run --filter '*' dev",
+    "dev:api": "bun run --filter '@comptoir/api' dev",
+    "dev:web": "bun run --filter '@comptoir/web' dev",
+    "dev:wa": "bun run --filter '@comptoir/whatsapp' dev",
+    "dev:check": "scripts/dev-check.sh",
+    "typecheck": "bun run --filter '*' typecheck",
+    "verify": "bun run typecheck && bun test && bun run --filter '@comptoir/web' lint",
+    "verify:multi-restaurant": "bun run typecheck && bun test && bun run --cwd packages/api test:tenant-scope && bun run --cwd packages/api test:active-context-coverage && bun run --cwd packages/api test:shared-worker-boundary && bun run --cwd packages/api test:deferred-phase-boundary && bun run --cwd packages/web test:query-keys && bun run --cwd packages/web test:worker-share-locales && bun run --cwd packages/web lint && bun run --cwd packages/web build",
+    "db:generate": "bun run --filter '@comptoir/api' db:generate",
+    "db:migrate": "bun run --filter '@comptoir/api' db:migrate",
+    "db:seed": "bun run --filter '@comptoir/api' db:seed",
+    "db:studio": "bun run --filter '@comptoir/api' db:studio",
+    "wa:test": "cd packages/whatsapp && bun run src/cli-test.ts"
+  },
+  "overrides": {
+    "@hono/node-server": "^1.19.13",
+    "esbuild": "^0.25.0",
+    "fast-uri": "^3.1.2",
+    "hono": "^4.12.18",
+    "ip-address": "^10.2.0",
+    "path-to-regexp": "^8.4.0",
+    "picomatch": "^2.3.2",
+    "postcss": "^8.5.10"
+  }
+}

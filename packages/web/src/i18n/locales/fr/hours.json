@@ -1,0 +1,92 @@
+{
+  "title": "Heures",
+  "tabs": {
+    "weekly": "Hebdo",
+    "monthly": "Mensuel",
+    "payroll": "Paie"
+  },
+  "nav": {
+    "thisWeek": "Cette semaine",
+    "thisMonth": "Ce mois"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "total": "Total",
+    "noServicesThisMonth": "Aucun service ce mois",
+    "noServices": "Aucun service",
+    "dualValueLegend": "Haut = réel · Bas = projeté"
+  },
+  "summary": {
+    "hours": "Heures",
+    "worked": "Travaillé",
+    "overtime": "HS",
+    "services": "Services",
+    "totalHours": "Total",
+    "baseHours": "Normales",
+    "holidays": "Congés",
+    "sickDays": "Maladie"
+  },
+  "alerts": {
+    "workersWithOTWeekly_one": "{{count}} employé avec heures supplémentaires cette semaine",
+    "workersWithOTWeekly_other": "{{count}} employés avec heures supplémentaires cette semaine",
+    "workersWithOTMonthly_one": "{{count}} employé avec heures supplémentaires ce mois",
+    "workersWithOTMonthly_other": "{{count}} employés avec heures supplémentaires ce mois"
+  },
+  "table": {
+    "headers": {
+      "name": "Nom",
+      "role": "Rôle",
+      "contract": "Contrat",
+      "services": "Services",
+      "hours": "Heures",
+      "worked": "Travaillé",
+      "paidLeave": "CP payé",
+      "delta": "Δ",
+      "weekDelta": "Écart sem.",
+      "payrollDelta": "Écart paie",
+      "ot110": "HS sem. 110%",
+      "ot120": "HS sem. 120%",
+      "ot150": "HS sem. 150%"
+    }
+  },
+  "payroll": {
+    "noData": "Aucune donnée de paie ce mois",
+    "loadError": "Échec du chargement des données de paie",
+    "downloadSuccess": "{{filename}} téléchargé",
+    "downloadError": "Erreur lors du téléchargement",
+    "headerInfo": "{{name}} — Base {{base}}h/mois — Seuil HS {{threshold}}h/sem (HCR)",
+    "headers": {
+      "days": "Jours",
+      "baseHours": "H. Norm",
+      "ot110": "HS 110%",
+      "ot120": "HS 120%",
+      "ot150": "HS 150%",
+      "holidays": "Congés",
+      "meals": "Repas"
+    },
+    "weekRow": {
+      "label": "S{{num}} · {{from}} → {{to}}",
+      "straddling": "(chevauchement)",
+      "weekHoursSuffix": "({{hours}}h sem)"
+    },
+    "legend": {
+      "abbr": "H. Norm = heures normales (hors HS) · HS = heures supplémentaires · Repas = jours avantage en nature",
+      "calc": "HS calculées par semaine civile (lun→dim) · Semaines à cheval : HS affectées au mois du dimanche",
+      "exports": "CSV = récap comptable · Silae = import direct (Matricule;Code;Valeur;Date début;Date fin;Section analytique) · Mat. = matricule Silae (fiche employé)"
+    }
+  },
+  "worker": {
+    "title": "Mes Heures",
+    "prevMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "thisYear": "Cette année",
+    "actual": "Réel",
+    "servicesDone": "Services faits",
+    "actualOT": "HS réelles",
+    "projected": "Projeté",
+    "servicesTotal": "Services totaux",
+    "projectedOT": "HS projetées",
+    "actualHoursSuffix": "{{hours}}h réel",
+    "weeklyDetail": "Détail par semaine"
+  }
+}

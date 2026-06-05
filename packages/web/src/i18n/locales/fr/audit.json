@@ -1,0 +1,49 @@
+{
+  "title": "Journal d'audit",
+  "buttons": {
+    "filters": "Filtres",
+    "refresh": "Actualiser"
+  },
+  "filters": {
+    "from": "Du",
+    "to": "Au",
+    "allTables": "Toutes les tables",
+    "allActions": "Toutes les actions",
+    "allSources": "Toutes les sources"
+  },
+  "tables": {
+    "services": "Services",
+    "holiday_requests": "Congés",
+    "replacement_requests": "Remplacements",
+    "restaurant_closures": "Fermetures",
+    "restaurants": "Paramètres"
+  },
+  "actions": {
+    "insert": "Créé",
+    "update": "Modifié",
+    "delete": "Supprimé"
+  },
+  "sources": {
+    "dashboard": "Dashboard",
+    "bot:admin": "Bot (gérant)",
+    "bot:worker": "Bot (employé)",
+    "auto-scheduler": "Auto-staffing",
+    "cron": "Cron"
+  },
+  "table": {
+    "headers": {
+      "date": "Date",
+      "table": "Table",
+      "action": "Action",
+      "source": "Source",
+      "actor": "Acteur",
+      "summary": "Résumé"
+    }
+  },
+  "loading": "Chargement…",
+  "empty": "Aucun événement trouvé",
+  "system": "Système",
+  "summaryDash": "—",
+  "moreFields": "+{{count}} champs...",
+  "limitedNote": "Affichage limité à 100 entrées — affinez les filtres pour voir plus"
+}

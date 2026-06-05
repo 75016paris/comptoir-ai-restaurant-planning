@@ -1,0 +1,207 @@
+{
+  "analysis": {
+    "title": "Staffing analysis",
+    "loading": "Loading...",
+    "loadError": "Loading error",
+    "noTargetsTitle": "No staffing targets",
+    "noTargetsBody": "Define how many employees you want per service in Prefs → Staffing Targets to enable analysis.",
+    "objectiveLabel": "Objective",
+    "objectivePlanned": "Planned",
+    "objectiveDefault": "Default",
+    "refreshTitle": "Refresh analysis",
+    "demand": "Demand",
+    "contract": "Contract",
+    "perWeekUnit": "/wk",
+    "hoursPerWeek": "{{n}}h/wk",
+    "verdict": {
+      "oversized": "OVERSIZED",
+      "undersized": "UNDERSIZED",
+      "tight": "TIGHT",
+      "balanced": "BALANCED"
+    },
+    "surplusOne": "~{{n}} EXTRA POSITION",
+    "surplusMany": "~{{n}} EXTRA POSITIONS",
+    "toHire": "~{{n}} TO HIRE",
+    "slotsUncovered": "UNCOVERED SLOTS",
+    "surplus": "SURPLUS",
+    "slotsUnderstaffed": "{{n}} slots understaffed",
+    "slotsTight": "{{n}} slots tight",
+    "heatmap": {
+      "label": "Slots",
+      "legendCovered": "Covered",
+      "legendTight": "Tight",
+      "legendUnderstaffed": "Under",
+      "legendOverstaffed": "Over"
+    },
+    "utilization": "Utilization per employee ({{n}})",
+    "howItWorks": {
+      "toggle": "How does this analysis work?",
+      "indicatorsHeader": "The indicators shown",
+      "indicator1": "Demand (h/wk) — total hours required by your staffing targets in a typical week.",
+      "indicator2": "Contract (h/wk) — sum of contracted hours of all employees in the role (kitchen or floor).",
+      "indicator3": "Surplus / Deficit (h/wk) — difference between contract and demand. Positive = extra hours, negative = missing hours.",
+      "indicator4": "Verdict — oversized (>20% surplus), balanced (10-20%), tight (<10%), undersized (deficit).",
+      "indicator5": "Understaffed / tight slots — number of slots where the solver fails to meet the target, or barely meets it.",
+      "engineHeader": "How the engine works",
+      "engineBody": "CP-SAT constraint optimization — a mathematical optimization technique. The <link>Google OR-Tools CP-SAT</link> solver resolves this program to find the best possible assignment.",
+      "engineFooter": "Engine: CP-SAT (Google OR-Tools)."
+    },
+    "expansion": {
+      "title": "Possible openings",
+      "analyze": "Analyze",
+      "running": "Solver running…",
+      "empty": "No relevant additional opening — all slots are already open or there is no comparable history.",
+      "viable": "Viable",
+      "needsHire": "Hiring required",
+      "unrealistic": "Unrealistic",
+      "demandAdded": "Demand added: {{kitchen}}h kitchen + {{floor}}h floor"
+    },
+    "holidaysCard": {
+      "title": "Leave intelligence",
+      "subtitle": "Tips + balances + recommendations on /holidays"
+    },
+    "optimizeCta": "Simulate & optimize"
+  },
+  "actions": {
+    "cancelTempAbsence": "Cancel temporary absence",
+    "deactivate": "Deactivate",
+    "deactivateConfirm": "Deactivate this employee? They will be removed from the active roster and from auto-staffing.",
+    "reactivate": "Reactivate",
+    "tempAbsence": "Temporary absence"
+  },
+  "addModal": {
+    "contact": {
+      "address": "Address",
+      "emergencyContact": "Emergency contact",
+      "emergencyPhone": "Emergency phone",
+      "iban": "IBAN",
+      "notes": "Notes"
+    },
+    "errors": {
+      "createFailed": "Failed to create employee"
+    },
+    "hiring": {
+      "generateContractHint": "(ready to print / sign)",
+      "generateContractLabel": "Generate the {{type}} contract immediately after creation",
+      "inviteSelfServiceHint": "— they'll receive a link to fill in address, IBAN and emergency contact before the DPAE.",
+      "inviteSelfServiceLabel": "Invite the employee to complete their profile"
+    },
+    "identity": {
+      "firstName": "First name",
+      "lastName": "Last name"
+    },
+    "legendRequired": "required field",
+    "legendSelfService": "= can be completed by the employee from their workspace",
+    "position": {
+      "addCustomButton": "Add the custom one",
+      "addSubRoleButton": "+ New",
+      "addSubRoleButtonTooltip": "Add a sub-role to the {{role}} catalog",
+      "customLabel": "Create a custom sub-role",
+      "customLabelOr": "Or create a custom sub-role",
+      "customNameLabel": "Name",
+      "customNamePlaceholderFloor": "e.g. Sommelier",
+      "customNamePlaceholderKitchen": "e.g. Pastry chef",
+      "errors": {
+        "saveFailed": "Failed to save",
+        "subRoleExists": "This sub-role already exists.",
+        "subRoleNameRequired": "Name is required."
+      },
+      "newSubRoleHeader": "New sub-role for {{role}} — will be added to the restaurant catalog.",
+      "noSkillsWarning": "Without skills, auto-staffing won't be able to target specific positions.",
+      "startDate": "Start date",
+      "subRoleHelpHcr": "The highest sub-role automatically determines the HCR level below.",
+      "subRolesLabel": "Skills / sub-roles"
+    },
+    "priority": {
+      "helpBody1Highlight": "priority 1",
+      "helpBody1Prefix": "When auto-staffing has to choose between several available employees for the same slot, it favours those at ",
+      "helpBody1Suffix": ", then 2, then 3.",
+      "helpBody2": "Useful for distinguishing a regular (priority 1) from a seasonal or extra worker (priority 3) without excluding them entirely — they remain available if the main team can't cover everything.",
+      "helpButtonTitle": "What is priority for?",
+      "helpTitle": "Employee priority",
+      "label": "Priority"
+    },
+    "sections": {
+      "contact": "Contact details",
+      "contract": "Contract",
+      "hiring": "Hiring & filings",
+      "identity": "Identity",
+      "positionSkills": "Position & skills",
+      "role": "Role"
+    },
+    "selfServiceBadge": "employee",
+    "selfServiceBadgeTooltip": "The employee can complete this field from their personal workspace",
+    "submit": "Add the employee",
+    "successBody": "{{name}} is now part of the team.",
+    "successInviteNote": "An invitation will be sent to collect the remaining information (address, IBAN, emergency contact).",
+    "successTitle": "Added",
+    "title": "New employee"
+  },
+  "alerts": {
+    "holidayApproved": "Leave",
+    "holidayPending": "Leave (pending)",
+    "replacementIncoming": "Incoming replacement",
+    "replacementOutgoing": "Outgoing replacement"
+  },
+  "page": {
+    "addButton": "+ Add an employee",
+    "addButtonShort": "+ Add",
+    "title": "Team"
+  },
+  "stats": {
+    "active": "Active",
+    "managerShort": "Mgr."
+  },
+  "table": {
+    "contractAbbr": {
+      "saisonnier": "Seas."
+    },
+    "deactivatedSection": "Deactivated",
+    "headers": {
+      "contract": "Contract",
+      "name": "Name",
+      "phone": "Phone",
+      "priority": "P",
+      "skills": "Skills"
+    },
+    "subRolePlaceholder": "Name...",
+    "tempAbsentRange": "absent {{from}} – {{until}}",
+    "tempReturning": "back {{date}}"
+  },
+  "tempAbsenceModal": {
+    "description": "<0>{{name}}</0> will be greyed out in the list and ignored by auto-staffing during this period.",
+    "title": "Temporary absence"
+  },
+  "permissions": {
+    "title": "Manager permissions",
+    "intro": "Toggle each item to adjust what this manager can do. By default a manager has access to everything except billing, preferences and role management.",
+    "modifiedBadge": "(modified)",
+    "saveButton": "Save",
+    "savingButton": "Saving...",
+    "resetButton": "Reset to defaults",
+    "errors": {
+      "updateFailed": "Update failed",
+      "network": "Network error"
+    },
+    "items": {
+      "BILLING": { "label": "Billing", "help": "Stripe, subscription, customer portal" },
+      "RESTAURANT_SETTINGS": { "label": "Restaurant preferences", "help": "HCR grid, sub-roles, opening days, time tracking" },
+      "MANAGE_ROLES": { "label": "Role management", "help": "Promote / demote / delete an employee" },
+      "PLANNING_EDIT": { "label": "Schedule editing", "help": "Add, move, delete services" },
+      "PUBLISH_WEEK": { "label": "Publishing", "help": "Publish the week to the team" },
+      "REPLACEMENT_APPROVE": { "label": "Replacements", "help": "Pick a replacement or cancel a request" },
+      "LEAVE_APPROVE": { "label": "Leave approval", "help": "Approve / reject a leave request" },
+      "TEAM_VIEW": { "label": "View team", "help": "Employee list, contracts, contacts" },
+      "TEAM_EDIT": { "label": "Edit team", "help": "Notes, contract, HCR, availability" },
+      "HR_DATA_VIEW": { "label": "View sensitive HR data", "help": "IBAN, NIR, address and DPAE profile fields" },
+      "HR_DATA_EDIT": { "label": "Edit sensitive HR data", "help": "Edit IBAN, NIR, address and DPAE profile fields" },
+      "PAYROLL_VIEW": { "label": "View payroll / contract", "help": "Hourly rate, HCR level and contract fields" },
+      "DPAE_EXPORT": { "label": "DPAE export", "help": "Generate URSSAF DPAE exports" },
+      "MEDICAL_DOC_VIEW": { "label": "Medical documents", "help": "View and manage medical documents" },
+      "MANAGER_NOTES_EDIT": { "label": "Internal notes", "help": "Edit internal manager/admin notes" },
+      "HOURS_VIEW": { "label": "View hours", "help": "Hours dashboard + overtime" },
+      "AUDIT_VIEW": { "label": "Activity log", "help": "Restaurant audit log" },
+      "OPTIMIZE_RUN": { "label": "Auto-staffing", "help": "Run the optimiser" }
+    }
+  }
+}
