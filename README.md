@@ -149,6 +149,6 @@ That repo should focus specifically on tool routing, relative dates, permissions
 
 This Comptoir mirror keeps the assistant source and relevant tests in context, while the future Bernardo repo will make the AI-evaluation evidence easier to inspect independently.
 
-## License / usage
+## License
 
-License not decided yet. For now, this repository is published as portfolio/source-available material; reuse requires explicit permission.
+This repository is shared publicly as portfolio/source-available material. Please contact me before reusing substantial parts of the code.
