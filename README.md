@@ -8,10 +8,10 @@ It combines a web dashboard with a WhatsApp AI assistant to help restaurant team
 
 ## Video
 ### Dashboard Demo
-https://github.com/user-attachments/assets/0158cd1b-5f8d-44ab-9856-a1ad2cff218b
+https://github.com/user-attachments/assets/31e9babc-7d78-4a99-89ac-ceac632f1912
 
 ### Whatsapp Demo
-https://github.com/user-attachments/assets/0d95adb6-1321-4cd9-97cd-b5fc630621d2
+https://github.com/user-attachments/assets/2b7c3381-ee36-4188-b3b3-9055be9b3133
 
 ## Try the live demo
 
