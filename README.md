@@ -36,7 +36,6 @@ Screenshots below use the public demo with synthetic restaurant data.
 
 ![Comptoir planning dashboard with synthetic restaurant staffing data](docs/screenshots/dashboard-planning.png)
 
-![Comptoir public demo entry page with fake restaurant profiles](docs/screenshots/demo-entry.png)
 
 ## Why this project matters
 
