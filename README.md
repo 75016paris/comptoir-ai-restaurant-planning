@@ -6,11 +6,14 @@ It combines a web dashboard with a WhatsApp AI assistant to help restaurant team
 
 > Status: portfolio/publication mirror. Demo restaurants and users are synthetic. The original private history, secrets, runtime databases, logs, and deployment internals are intentionally excluded.
 
-## Video
-### Dashboard Demo
+## Videos
+
+### Dashboard demo
+
 https://github.com/user-attachments/assets/31e9babc-7d78-4a99-89ac-ceac632f1912
 
-### Whatsapp Demo
+### WhatsApp demo
+
 https://github.com/user-attachments/assets/2b7c3381-ee36-4188-b3b3-9055be9b3133
 
 ## Try the live demo
@@ -26,6 +29,14 @@ The demo page lets you enter without a password as several fake restaurant accou
 - **The Grand Brasserie** — larger restaurant with richer staffing, holidays, replacements, preferences, and planning constraints.
 
 The local seed reproduces these fake demo restaurants. In local development, run `bun run db:seed`, then open `/demo`.
+
+## Screenshots
+
+Screenshots below use the public demo with synthetic restaurant data.
+
+![Comptoir planning dashboard with synthetic restaurant staffing data](docs/screenshots/dashboard-planning.png)
+
+![Comptoir public demo entry page with fake restaurant profiles](docs/screenshots/demo-entry.png)
 
 ## Why this project matters
 

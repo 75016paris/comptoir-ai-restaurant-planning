@@ -33,6 +33,9 @@ coverage/
 playwright-report/
 test-results/
 
+# Local video sources uploaded as GitHub user attachments
+/docs/screenshots/*.mp4
+
 # OS/editor
 .DS_Store
 .vscode/
