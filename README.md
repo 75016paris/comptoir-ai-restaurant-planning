@@ -6,14 +6,12 @@ It combines a web dashboard with a WhatsApp AI assistant to help restaurant team
 
 > Status: portfolio/publication mirror. Demo restaurants and users are synthetic. The original private history, secrets, runtime databases, logs, and deployment internals are intentionally excluded.
 
-## DEMO VIDEO
+## Video
+### Dashboard Demo
 https://github.com/user-attachments/assets/0158cd1b-5f8d-44ab-9856-a1ad2cff218b
 
-## WHATSAPP DEMO
+### Whatsapp Demo
 https://github.com/user-attachments/assets/0d95adb6-1321-4cd9-97cd-b5fc630621d2
-
-
-
 
 ## Try the live demo
 
